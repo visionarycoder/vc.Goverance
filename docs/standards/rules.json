@@ -13,7 +13,7 @@
       "instruction": "Do not derive the architecture by mapping the requirements' functionalities into components. Analyze requirements to discover volatility and required behavior; do not ignore them. See also pp. 84-87.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -29,7 +29,7 @@
       "instruction": "Reject functional decomposition.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -45,7 +45,7 @@
       "instruction": "Use volatility as the basis of decomposition.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -61,7 +61,7 @@
       "instruction": "Produce a design whose components compose to deliver the required behaviors.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -77,7 +77,7 @@
       "instruction": "Deliver features through integration rather than feature-shaped implementation units.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -93,7 +93,7 @@
       "instruction": "Iterate the design and construct the system incrementally.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -109,7 +109,7 @@
       "instruction": "Engineer the project that will construct the system.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -125,7 +125,7 @@
       "instruction": "Enable informed decisions through feasible alternatives trading schedule, cost, and risk.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -141,7 +141,7 @@
       "instruction": "Construct according to the project's critical path.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -157,7 +157,7 @@
       "instruction": "Maintain schedule commitments throughout execution.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426
         ],
@@ -173,7 +173,7 @@
       "instruction": "Record the behavior required of the system rather than a list of functionalities.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -190,7 +190,7 @@
       "instruction": "Express that behavior as use cases.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -207,7 +207,7 @@
       "instruction": "Use activity diagrams for use cases with nested conditions.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -224,7 +224,7 @@
       "instruction": "Remove proposed solutions disguised as requirements.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -241,7 +241,7 @@
       "instruction": "Validate the architecture against every core use case.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -258,7 +258,7 @@
       "instruction": "In a system without subsystems, avoid exceeding five Managers.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -275,7 +275,7 @@
       "instruction": "Keep the number of subsystems to a handful.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -292,7 +292,7 @@
       "instruction": "Keep each subsystem to no more than three Managers.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -309,7 +309,7 @@
       "instruction": "Seek the observed golden-ratio relationship between Engines and Managers.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -326,7 +326,7 @@
       "instruction": "Permit a ResourceAccess component to serve multiple Resources where needed.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -343,7 +343,7 @@
       "instruction": "Expect less volatility toward the bottom of the architecture.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -360,7 +360,7 @@
       "instruction": "Expect greater reuse toward the bottom.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -377,7 +377,7 @@
       "instruction": "Do not design encapsulation around a change to the business's fundamental nature.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -394,7 +394,7 @@
       "instruction": "Keep Managers almost expendable, rather than expensive monoliths or empty pass-throughs.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -411,7 +411,7 @@
       "instruction": "Seek architectural symmetry.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -428,7 +428,7 @@
       "instruction": "Keep public communication channels out of internal system interactions.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -445,7 +445,7 @@
       "instruction": "Avoid an open architecture.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -462,7 +462,7 @@
       "instruction": "Avoid a semi-open or semi-closed architecture.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -479,7 +479,7 @@
       "instruction": "Prefer a closed architecture, with the following constraints.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -496,7 +496,7 @@
       "instruction": "Do not make upward calls.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -513,7 +513,7 @@
       "instruction": "Do not make sideways calls, with the specified queued Manager exception.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -530,7 +530,7 @@
       "instruction": "Do not skip downward across multiple layers.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -547,7 +547,7 @@
       "instruction": "Meet needs that would open the architecture through queued calls or asynchronous event publication.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -564,7 +564,7 @@
       "instruction": "Extend through subsystems.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -581,7 +581,7 @@
       "instruction": "Every component may use Utilities.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -598,7 +598,7 @@
       "instruction": "Managers and Engines may invoke ResourceAccess services.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -615,7 +615,7 @@
       "instruction": "Managers may invoke Engines.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -632,7 +632,7 @@
       "instruction": "A Manager may queue a call to another Manager.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -649,7 +649,7 @@
       "instruction": "A Client does not invoke several Managers to execute one use case.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -666,7 +666,7 @@
       "instruction": "A Manager does not queue calls to several Managers in one use case.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -683,7 +683,7 @@
       "instruction": "An Engine does not receive queued calls.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -700,7 +700,7 @@
       "instruction": "ResourceAccess does not receive queued calls.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -717,7 +717,7 @@
       "instruction": "Clients do not publish events.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -734,7 +734,7 @@
       "instruction": "Engines do not publish events.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -751,7 +751,7 @@
       "instruction": "ResourceAccess does not publish events.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -768,7 +768,7 @@
       "instruction": "Resources do not publish events.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -785,7 +785,7 @@
       "instruction": "Engines, ResourceAccess services, and Resources do not subscribe to events.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           426,
           427
@@ -802,7 +802,7 @@
       "instruction": "Avoid overengineering project design for perfect precision; make it sufficient for informed, feasible commitments. See p. 365.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -820,7 +820,7 @@
       "instruction": "Do not design the project without an architecture that contains volatility.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -838,7 +838,7 @@
       "instruction": "State and verify the assumptions underlying the plan.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -856,7 +856,7 @@
       "instruction": "Follow the prescribed sequence for designing the project.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -874,7 +874,7 @@
       "instruction": "Develop multiple options, including at least normal, compressed, and subcritical solutions.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -892,7 +892,7 @@
       "instruction": "Communicate with management using Optionality.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -910,7 +910,7 @@
       "instruction": "Complete the Software Development Plan review before the main work begins.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -928,7 +928,7 @@
       "instruction": "Avoid multiple accountable system architects.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -946,7 +946,7 @@
       "instruction": "Establish the core team at the outset.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -964,7 +964,7 @@
       "instruction": "Seek the minimum staffing that permits uninterrupted critical-path progress.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -982,7 +982,7 @@
       "instruction": "Allocate resources according to float.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1000,7 +1000,7 @@
       "instruction": "Preserve the appropriate staffing distribution over the project.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1018,7 +1018,7 @@
       "instruction": "Plan earned value as a shallow S curve.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1036,7 +1036,7 @@
       "instruction": "Maintain one-to-one component and developer assignments.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1054,7 +1054,7 @@
       "instruction": "Preserve continuity between a resource's successive tasks where possible.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1072,7 +1072,7 @@
       "instruction": "Avoid large, mass integration events.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1090,7 +1090,7 @@
       "instruction": "Do not defer integration to the project's end.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1108,7 +1108,7 @@
       "instruction": "Avoid overestimating.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1126,7 +1126,7 @@
       "instruction": "Avoid underestimating.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1144,7 +1144,7 @@
       "instruction": "Prefer accuracy over numerical precision.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1162,7 +1162,7 @@
       "instruction": "Estimate activities in five-day quanta.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1180,7 +1180,7 @@
       "instruction": "Use a whole-project estimate to check, or help initiate, the detailed project design.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1198,7 +1198,7 @@
       "instruction": "Actively reduce estimation uncertainty.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1216,7 +1216,7 @@
       "instruction": "Use the correct estimation dialogue when eliciting estimates.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1234,7 +1234,7 @@
       "instruction": "Include resource dependencies as actual dependencies.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1252,7 +1252,7 @@
       "instruction": "Ensure each activity belongs to a chain that begins and ends on a critical path.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1270,7 +1270,7 @@
       "instruction": "Assign a resource to every activity.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1288,7 +1288,7 @@
       "instruction": "Avoid node network diagrams.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1306,7 +1306,7 @@
       "instruction": "Prefer arrow network diagrams.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1324,7 +1324,7 @@
       "instruction": "Avoid oversized god activities.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1342,7 +1342,7 @@
       "instruction": "Represent large projects through a network of networks.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1360,7 +1360,7 @@
       "instruction": "Handle near-critical chains as critical.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1378,7 +1378,7 @@
       "instruction": "Seek project cyclomatic complexity as low as 10-12.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1396,7 +1396,7 @@
       "instruction": "Use design by layers to reduce complexity.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1414,7 +1414,7 @@
       "instruction": "First accelerate through clean, efficient engineering practices rather than compression.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1432,7 +1432,7 @@
       "instruction": "Do not commit to an option in the project's death zone.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1450,7 +1450,7 @@
       "instruction": "Prefer parallel work as a compression technique over reliance on top resources.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1468,7 +1468,7 @@
       "instruction": "Use top-resource compression cautiously.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1486,7 +1486,7 @@
       "instruction": "Avoid compressing by more than 30 percent.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1504,7 +1504,7 @@
       "instruction": "Avoid a project efficiency above 25 percent.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1522,7 +1522,7 @@
       "instruction": "Explore compression even when choosing a compressed option is unlikely.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1540,7 +1540,7 @@
       "instruction": "Tailor criticality-risk category ranges to the project.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1558,7 +1558,7 @@
       "instruction": "Use activity risk to account for float outliers.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1576,7 +1576,7 @@
       "instruction": "Decompress the normal solution beyond the risk curve's tipping point.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1594,7 +1594,7 @@
       "instruction": "Aim toward 0.5 risk when decompressing.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1612,7 +1612,7 @@
       "instruction": "Prefer the tipping point over adherence to a particular risk number.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1630,7 +1630,7 @@
       "instruction": "Avoid excessive decompression.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1648,7 +1648,7 @@
       "instruction": "Decompress design-by-layers options, potentially substantially.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1666,7 +1666,7 @@
       "instruction": "Keep normal options below 0.7 risk.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1684,7 +1684,7 @@
       "instruction": "Avoid risk below 0.3.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1702,7 +1702,7 @@
       "instruction": "Avoid risk above 0.75.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1720,7 +1720,7 @@
       "instruction": "Avoid options beyond either risk crossover boundary.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           427,
           428,
@@ -1738,7 +1738,7 @@
       "instruction": "Use binary completion criteria for the internal phases of an activity.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           429,
           430
@@ -1755,7 +1755,7 @@
       "instruction": "Apply phase weighting consistently across activities.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           429,
           430
@@ -1772,7 +1772,7 @@
       "instruction": "Track progress and effort every week.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           429,
           430
@@ -1789,7 +1789,7 @@
       "instruction": "Do not use features as the basis of progress reports.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           429,
           430
@@ -1806,7 +1806,7 @@
       "instruction": "Base progress reporting on integration points.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           429,
           430
@@ -1823,7 +1823,7 @@
       "instruction": "Monitor the float of near-critical chains.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           429,
           430
@@ -1840,7 +1840,7 @@
       "instruction": "Design contracts for reuse.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1856,7 +1856,7 @@
       "instruction": "Apply the service-contract design metrics below.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1872,7 +1872,7 @@
       "instruction": "Avoid a one-operation contract.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1888,7 +1888,7 @@
       "instruction": "Aim for three to five operations in a contract.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1904,7 +1904,7 @@
       "instruction": "Avoid a contract with more than twelve operations.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1920,7 +1920,7 @@
       "instruction": "Reject a contract with twenty or more operations.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1936,7 +1936,7 @@
       "instruction": "Avoid operations that expose property-like access.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1952,7 +1952,7 @@
       "instruction": "Keep a service to one or two contracts.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1968,7 +1968,7 @@
       "instruction": "Avoid the junior handoff.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -1984,7 +1984,7 @@
       "instruction": "Entrust contract design to the architect or capable senior developers.",
       "condition": "Apply with the linked source context and interaction exceptions.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           430
         ],
@@ -2000,7 +2000,7 @@
       "instruction": "Use functional decomposition only to discover requirements. Do not use it to decompose the architecture.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           22,
           30,
@@ -2017,7 +2017,7 @@
       "instruction": "Examine volatility across time and across customers. Distinguish volatility from variability.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           30,
           31,
@@ -2044,7 +2044,7 @@
       "instruction": "Do not add Engines solely to obtain a target Manager-to-Engine ratio.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           63,
           67,
@@ -2061,7 +2061,7 @@
       "instruction": "Treat Managers and Engines as members of the business logic layer. Permit the explicit Manager-to-Engine interaction.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           77,
           78,
@@ -2078,7 +2078,7 @@
       "instruction": "Reject Client-to-Engine, Engine-to-Engine, and ResourceAccess-to-ResourceAccess calls.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           80,
           81
@@ -2094,7 +2094,7 @@
       "instruction": "Classify a message as a request or an event before applying event rules. A bus does not authorize forbidden interactions.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           118,
           119,
@@ -2114,7 +2114,7 @@
       "instruction": "Distinguish architectural symmetry from symmetry inside component implementations.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           82
         ]
@@ -2129,7 +2129,7 @@
       "instruction": "Do not adopt the example message bus or workflow technology without application-specific justification.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           95,
           118,
@@ -2150,7 +2150,7 @@
       "instruction": "Establish vision, objectives, mission, and architecture. Trace objectives and architecture in both directions.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           108,
           109,
@@ -2169,7 +2169,7 @@
       "instruction": "Keep one architect accountable for system and project design. Delegate support without dividing that accountability.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           148,
           149,
@@ -2186,7 +2186,7 @@
       "instruction": "Assign one developer to one service at a time. Permit sequential assignments. Evaluate pair programming separately.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           153,
           154,
@@ -2203,7 +2203,7 @@
       "instruction": "Represent activities as arrows. Represent instantaneous dependency events as nodes. Give dummy activities zero duration.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           195,
           196,
@@ -2221,7 +2221,7 @@
       "instruction": "Include resource dependencies in the network. Assign available work in increasing order of total float.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           171,
           172,
@@ -2241,7 +2241,7 @@
       "instruction": "For simulated dependencies, plan contract design, simulator work, integration with real services, and retesting.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           211,
           212,
@@ -2271,7 +2271,7 @@
       "instruction": "Decompress by adding float. Preserve activity estimates and planned staffing.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           249,
           250
@@ -2287,7 +2287,7 @@
       "instruction": "Interpret normalized project risk as relative design fragility. Do not interpret it as a probability of success.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           239,
           240,
@@ -2304,7 +2304,7 @@
       "instruction": "Do not apply arithmetic risk thresholds directly to geometric activity risk.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           318,
           319,
@@ -2321,7 +2321,7 @@
       "instruction": "Use full-precision model coefficients for calculations. Round displayed results only.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           301,
           310,
@@ -2339,7 +2339,7 @@
       "instruction": "Measure project-network complexity separately from source-code complexity.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           320,
           321,
@@ -2356,7 +2356,7 @@
       "instruction": "Follow the project-design dependency network. Do not serialize independent design activities merely because the checklist is numbered.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           370,
           371,
@@ -2373,7 +2373,7 @@
       "instruction": "Review delegated detailed designs before handoff. Require developers to consult the designer about refinements.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           374,
           375,
@@ -2391,7 +2391,7 @@
       "instruction": "Distinguish defect-prevention QA from test engineering and test execution.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           378,
           379,
@@ -2410,7 +2410,7 @@
       "instruction": "Define the review moderator, owner, scribe, critics, and follow-up responsibilities.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           380,
           381,
@@ -2427,7 +2427,7 @@
       "instruction": "Use SRS for Service Requirements Specification. Use STP for Service Test Plan.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           388,
           389,
@@ -2444,7 +2444,7 @@
       "instruction": "After successful SRS review, permit test planning and detailed-design work to proceed on parallel paths.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           388,
           389,
@@ -2461,7 +2461,7 @@
       "instruction": "Repeat the preceding activity after a failed review. Require successful STP review before plan-based testing.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           388,
           389,
@@ -2478,7 +2478,7 @@
       "instruction": "Retain the developer white-box test client during construction. Perform plan-based black-box testing after integration.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           388,
           389,
@@ -2495,7 +2495,7 @@
       "instruction": "Credit completed phases only. Keep duration-weighted progress separate from resource-cost effort.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           390,
           391,
@@ -2514,7 +2514,7 @@
       "instruction": "When resource costs differ, compare actual direct cost with the planned direct-cost curve.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           394
         ]
@@ -2529,7 +2529,7 @@
       "instruction": "Project direct cost at the projected completion date. Assess schedule-related indirect cost separately.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           395,
           396,
@@ -2554,7 +2554,7 @@
       "instruction": "Assess duration and cost changes after a scope change. Obtain management acceptance of revised commitments.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           405
         ]
@@ -2569,7 +2569,7 @@
       "instruction": "Evaluate contract cohesion, consistency, independence, and reuse. Do not treat operation counts as design validation.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           412,
           413,
@@ -2595,7 +2595,7 @@
       "instruction": "Investigate a contract with twelve operations. Reject a contract with twenty or more operations.",
       "condition": "Apply within the cited discussion; do not infer a universal rule from an example.",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           420
         ]

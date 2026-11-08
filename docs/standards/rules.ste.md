@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Standard Technical English rules
 
-Standard Technical English (STE) extraction of [Righting Software](<../references/Righting Software.pdf>). The [JSON records](rules.json) contain stable identifiers, source locators, classification, context, decision ownership, and exception policy. The source governs. Organizational assignments are separate from source rules.
+Standard Technical English (STE) extraction of [Righting Software](https://www.amazon.com/dp/0136524036). The [JSON records](rules.json) contain stable identifiers, source locators, classification, context, decision ownership, and exception policy. The source governs. Organizational assignments are separate from source rules.
 
 Read applicable records together. Preserve explicit interaction exceptions. Guidelines require strong, unusual justification through the responsible authority; workers cannot approve departures. Directives cannot be waived. The twenty-operation contract rejection has no standing exception. The records assist review. They do not prove semantic compliance or enforce permissions.
 

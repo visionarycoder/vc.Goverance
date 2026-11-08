@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Topic index
 
-[Repository overview](../README.md) · [Table of contents](toc.md)
+[Repository overview](../README.md) · [Documentation guide](README.md) · [Table of contents](toc.md)
 
 | Governance topic | Document |
 | --- | --- |
@@ -39,7 +39,7 @@ updated: "2026-11-08"
 | Repository ownership and distinct scope | [Open](implementation/repository-ownership.md) |
 | Required architecture and contract standards | [Open](standards/design-standard.md) |
 | Requirements and work assignments | [Open](templates/artifacts/work-assignment.md) |
-| Source availability and research history | [Open](references/README.md) |
+| Source availability and research history | [Open](sources.md) |
 | Standard Technical English extraction | [Open](standards/rules.ste.md) |
 | Test-plan reviews and testing evidence | [Open](templates/artifacts/service-test-plan.md) |
 | Token cost accounting | [Open](process/token-costing.md) |

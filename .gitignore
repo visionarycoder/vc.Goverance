@@ -433,3 +433,6 @@ FodyWeavers.xsd
 !docs/artifacts/**
 !docs/templates/artifacts/
 !docs/templates/artifacts/**
+
+# The owner removed reference copies; keep this directory out of future commits.
+/docs/references/

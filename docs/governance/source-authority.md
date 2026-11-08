@@ -20,9 +20,9 @@ On 2026-11-07 the owner explicitly directed this framework to follow Appendix C,
 
 Juval Löwy, Righting Software: A Method for System and Project Design, Pearson / Addison-Wesley, copyright 2020, ISBN 978-0-13-652403-8.
 
-Repository reference: [Righting Software](<../references/Righting Software.pdf>).
+External book reference: [Righting Software](https://www.amazon.com/dp/0136524036).
 
-Verified file identity:
+Historical identity of the reviewed copy (no source PDF is distributed by this repository):
 
 - 480 PDF pages.
 - SHA-256: `b9b911aaa7700021644eca54433525c7e181f50b2158ed2dc678091aa9e20792`.
@@ -33,7 +33,7 @@ Verified file identity:
 
 References such as RS C, System Design Guidelines 4.c refer to the printed heading and item in this edition. Repository identifiers such as `C-SD-4.c` are navigation identifiers, not Löwy's own identifiers.
 
-The human owner supplied the repository copy. Its hash matches the PDF used for the review. Temporary extracted text and rendered research pages are not repository references.
+The human owner supplied the copy used for the recorded review and later removed the reference directory. The hash above identifies that historical file, not the Amazon listing. Obtain authorized access to the same edition when source verification requires the text. Temporary extracted text and rendered research pages are not repository references.
 
 ## Three kinds of statements
 
@@ -77,7 +77,7 @@ The companion `Decompression Target.xlsx` uses full-precision coefficients and `
 
 ## Supporting implementation ideas
 
-The owner requested implementation patterns informed by the additional [local references](../references/README.md). The [pattern catalog](../patterns/README.md) records source scope, applicability, constraints, and verification. Supporting material from other authors supplies techniques to evaluate. It does not replace The Method. Löwy's later fractal paper supplies conditional supplementary guidance, not an automatically adopted replacement standard. Pattern records are separate from the 148 source-derived rule records. Architects must select and review any application realization before worker handoff.
+The owner requested implementation patterns informed by the additional [supporting bibliography](../sources.md). The [pattern catalog](../patterns/README.md) records source scope, applicability, constraints, and verification. Supporting material from other authors supplies techniques to evaluate. It does not replace The Method. Löwy's later fractal paper supplies conditional supplementary guidance, not an automatically adopted replacement standard. Pattern records are separate from the 148 source-derived rule records. Architects must select and review any application realization before worker handoff.
 
 ## Current implementation guidance
 

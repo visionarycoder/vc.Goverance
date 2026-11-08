@@ -1,0 +1,175 @@
+{
+  "purpose": "Historical source-copy identities and external source locations. Hashes identify previously reviewed files, not web listings or files in this checkout.",
+  "external_sources": [
+    {
+      "title": "Fractal Architecture - Juval Lowy",
+      "url": "https://www.idesign.net/Resources",
+      "reviewed_copy_sha256": "0164ace36fbe4dc4db26261525f182bb3b187517b09dd2d0c1c9fddee4d415a9",
+      "availability": "External source; repository copy removed by owner on 2026-11-08."
+    },
+    {
+      "title": "Anti-fragile ICT Systems",
+      "url": "https://www.amazon.com/dp/3319300687",
+      "reviewed_copy_sha256": "12f9178485f772aeaf0ec60efe161308599a657b953bae16b7aa5b34bafac834",
+      "availability": "External source; repository copy removed by owner on 2026-11-08."
+    },
+    {
+      "title": "Writing Software Requirements Specifications",
+      "url": "https://techwhirl.com/writing-software-requirements-specifications/",
+      "reviewed_copy_sha256": "0158dc920ebe33e78704e128af9c993fa250583b4f14b07f6249806e413e0207",
+      "availability": "External source; repository copy removed by owner on 2026-11-08."
+    },
+    {
+      "title": "Framework Design Guidelines",
+      "url": "https://www.amazon.com/dp/0321545613",
+      "reviewed_copy_sha256": "550508259e6f8040471e9d7e300b0fc3770560d7f15c940b4b688f6e6f75fdde",
+      "availability": "External source; repository copy removed by owner on 2026-11-08."
+    }
+  ],
+  "removed_files": [
+    {
+      "former_document": "docs/references/Metaprogramming in NET.pdf",
+      "sha256": "e7c03dc5c3c35af4fc20804b09a22f0c6bf15d35db3ce846881dabc70f871b88",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/IDesign Licence.pdf",
+      "sha256": "3a99978c2a84cced50796ac5c61f4653d48bd15e8965a84d8728fec38c61ff50",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Inheritance - proxy chaining.sln",
+      "sha256": "7454c6e95bca341d9b38b306a730c02c04b234e9dbc5d97d7671659183abf9da",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/App.config",
+      "sha256": "c57162c43dd8cfb2768c6e733c513f60df366f373bef8841b4e0f7c8e87d87d3",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/MyClient.cs",
+      "sha256": "e860440a8edb79170d645cf7bc3d1885e1a24fd30bb1141bb93006225f1504d6",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/MyClient.csproj",
+      "sha256": "bc7572032c0ad720b3b3c303825a8531dfbd8e39e33f047474faa0d8578d0aca",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/ScientificProxy.cs",
+      "sha256": "9a2c4ac6959f63b210784ce4ac3cf5e946d3a8c0f812e0850e36b03ffcd6a34d",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/SimpleProxy.cs",
+      "sha256": "aeec8d9ad234647aa96a1b6cc7e3362d8fba4a93c89c74bf2f7983afeb19f5c6",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Service/App.config",
+      "sha256": "95fafd25feba8135ae7b649d415e926c3ff84e24f7c4a54ef19c4870cf9a1f58",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Service/Host.csproj",
+      "sha256": "ec9a37d6c9b9c9b2c264deeb019a7b1fd2ff6aea67950d256790a3675021ed64",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Service/MyCalculator.cs",
+      "sha256": "3eb2178e371762d054d158d483ea9a239e952d7a227e2f63dcdb9033fcd80904",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Service/Program.cs",
+      "sha256": "586806c41fa4cf76d8c13bc2e149f49f05b1c6c66e2301f7cc20bcf55ef7e246",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Service/Properties/AssemblyInfo.cs",
+      "sha256": "8f395464ce55357d0707baff7e027dc2866be82107b0700ce0914e9346bd7ac1",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/Properties/AssemblyInfo.cs",
+      "sha256": "f52edfc9ad67bedc36bd26f703708fb70189e46a429c9a70ac33a66fbc660aaa",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/Designing Data Visualizations.pdf",
+      "sha256": "f6e479e95171497dc1da52b3f3063ece60f567f5ed295e45cc512df0adcb2def",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/BoundaryProxy.cs",
+      "sha256": "5d7b4a46b7649f5bd8ee00cb9bfc374c9d147ee336ff57ff7a62e39154ca4b5b",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/BoundaryProxyServiceCollectionExtensions.cs",
+      "sha256": "9ad9975d2e7f0bfa0720ff9f63ab395eac1cba67af82ad8338651601eb5bd41d",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Core/MethodContext.cs",
+      "sha256": "63eb750a44686d09c8436b2de1413ebe101244b55fe4a951d3536dc53b1deae4",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Core/MethodArgument.cs",
+      "sha256": "5a4e3e59c2265656bcd5058982e4c8b45a11221609ed2be5a12515168af94517",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Core/HandlerDelegate.cs",
+      "sha256": "aac280ac70aa1b0a3bffcc7c8d9e725301e56bff93e6292038518382d2f0ac5a",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Status/StatusInterceptor.cs",
+      "sha256": "a5ae67371353b597ccc7ab6e608c04f6d4848e1487dc928b1c7ccf67d77dc68a",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Status/StatusUpdated.cs",
+      "sha256": "6aeaa25db94ceeb63a6852cb24a68c7d77c35ba3df7948fd28bda399d6031362",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Telemetry/TelemetryInterceptor.cs",
+      "sha256": "36a206e5bb32b60ca1d4f5f08f52f559b3d7036ff4fbe16765034047f615ecd0",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    },
+    {
+      "former_document": "docs/references/experimental-proxies/Interceptors/Redaction/RedactionInterceptor.cs",
+      "sha256": "ba73ba136eb3af75df8e92eef1e1457603a7e57a21121f8ded7fdded9b35d11a",
+      "status": "owner-removed; historical review provenance only",
+      "recorded_on": "2026-11-08"
+    }
+  ]
+}

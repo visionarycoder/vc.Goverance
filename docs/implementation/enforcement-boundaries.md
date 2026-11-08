@@ -16,7 +16,7 @@ The owner requires agents to be unable to change constraints or approvals owned 
 
 These are mechanisms for enforcing the chosen authority model. They do not change The Method, choose an application architecture, or establish a new development lifecycle.
 
-The source requirements for reviews, architecture preservation, and project control come from [Righting Software](<../references/Righting Software.pdf>). The permission mechanism is the owner's implementation choice, not a substituted design method.
+The source requirements for reviews, architecture preservation, and project control come from [Righting Software](https://www.amazon.com/dp/0136524036). The permission mechanism is the owner's implementation choice, not a substituted design method.
 
 ## Separate controlled areas
 

@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # UI visualization pattern
 
-**Pattern:** PAT-010. **Scope:** data visualization within an application's UI. The owner approved Designing Data Visualizations (source copy removed from this repository), Noah Iliinsky and Julie Steele, O’Reilly, 2011, as a supporting reference for UI usage. It does not replace the governing Method or establish a general UI standard. No chart library or application stack is selected.
+**Pattern:** PAT-010. **Scope:** data visualization within an application's UI. The owner approved [Designing Data Visualizations](https://www.amazon.com/dp/1449312284) (source copy removed from this repository), Noah Iliinsky and Julie Steele, O’Reilly, 2011, as a supporting reference for UI usage. It does not replace the governing Method or establish a general UI standard. No chart library or application stack is selected.
 
 ## Standard Technical English guidance
 

@@ -16,7 +16,7 @@ The human owner defines the organization and reserves authority over the governi
 
 RS Chapter 7, pp. 147-150 and 194 requires one accountable architect, supported by a project manager and product manager. Application Architects implement the delegated detailed-design arrangement in Chapter 14, pp. 376-377. The owner's title Product Owner maps to the source's product-manager function.
 
-Book source: [Righting Software](<../references/Righting Software.pdf>). See [system and project design](../process/system-and-project-design.md) for the source-derived activities assigned to these roles.
+Book source: [Righting Software](https://www.amazon.com/dp/0136524036). See [system and project design](../process/system-and-project-design.md) for the source-derived activities assigned to these roles.
 
 | Role | Accountable work | Boundary |
 | --- | --- | --- |

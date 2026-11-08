@@ -12,7 +12,7 @@ updated: "2026-11-08"
 
 ## Authority and scope
 
-The human owner directed token-based costing on 2026-11-07. This assigns a consumption measure to agent workers. It does not replace the design principles, project network, schedule, float, risk, or progress definitions in [Righting Software](<../references/Righting Software.pdf>).
+The human owner directed token-based costing on 2026-11-07. This assigns a consumption measure to agent workers. It does not replace the design principles, project network, schedule, float, risk, or progress definitions in [Righting Software](https://www.amazon.com/dp/0136524036).
 
 The source separates measurable direct value from ongoing indirect value, models the total cost of each project option, and distinguishes consumed effort from earned progress. See pp. 184-187, 222-231, 364 and 392-395. The token ledger below is the framework's worker-cost implementation, not a claim that Löwy prescribed tokens.
 

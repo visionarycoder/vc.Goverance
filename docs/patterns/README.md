@@ -30,7 +30,7 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 **Sources:**
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 
@@ -61,7 +61,7 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 - ScientificProxy.cs (source copy removed from this repository): IScientificCalculator and ScientificCalculatorClient; Lowy/IDesign sample.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 
@@ -95,7 +95,7 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 - Metaprogramming in NET.pdf (source copy removed from this repository): Sections 7.1.1–7.1.2, printed pp. 200–202; PDF pp. 225–227; supporting technique.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 
@@ -125,7 +125,7 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 - Metaprogramming in NET.pdf (source copy removed from this repository): Section 2.3.2 and 2.4.1, printed pp. 50–55; PDF pp. 75–80; supporting technique.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 
@@ -156,9 +156,9 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 **Sources:**
 
-- [Anti-fragile ICT Systems.pdf](<../references/Anti-fragile ICT Systems.pdf>): Chapter 4, printed pp. 35–42; PDF pp. 50–57; supporting principle.
+- [Anti-fragile ICT Systems](https://www.amazon.com/dp/3319300687): Chapter 4, printed pp. 35–42; PDF pp. 50–57; supporting principle.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 
@@ -185,9 +185,9 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 **Sources:**
 
-- [Anti-fragile ICT Systems.pdf](<../references/Anti-fragile ICT Systems.pdf>): Section 4.5, printed p. 39; PDF p. 54; supporting principle.
+- [Anti-fragile ICT Systems](https://www.amazon.com/dp/3319300687): Section 4.5, printed p. 39; PDF p. 54; supporting principle.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 14, printed pp. 378–383; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 14, printed pp. 378–383; governing.
 
 **Preserve:**
 
@@ -214,9 +214,9 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 **Sources:**
 
-- [Fractal Architecture - Juval Lowy.pdf](<../references/Fractal Architecture - Juval Lowy.pdf>): Printed/PDF pp. 4–8; Figures 1 and 2 on p. 7; Lowy supplementary guidance.
+- [Fractal Architecture, Juval Löwy](https://www.idesign.net/Resources): Printed/PDF pp. 4–8; Figures 1 and 2 on p. 7; Lowy supplementary guidance.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 
@@ -251,9 +251,9 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 **Sources:**
 
-- [Writing Software Requirements Specifications.htm](<../references/Writing Software Requirements Specifications.htm>): Sections on requirement identifiers, source linking, traceability matrix, and language quality; supporting article: Donn Le Vie, Jr..
+- [Writing Software Requirements Specifications.htm](https://techwhirl.com/writing-software-requirements-specifications/): Sections on requirement identifiers, source linking, traceability matrix, and language quality; supporting article: Donn Le Vie, Jr..
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 4; Appendix A, printed pp. 388–390; C-SD-1; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 4; Appendix A, printed pp. 388–390; C-SD-1; governing.
 
 **Preserve:**
 
@@ -281,9 +281,9 @@ The JSON selection fields describe a proposed evidence format. They do not estab
 
 **Sources:**
 
-- [Framework Design Guidelines.pdf](<../references/Framework Design Guidelines.pdf>): Second edition, Chapter 1 pp. 1–3 and Chapter 2 pp. 12–14; PDF pp. 47–49 and 58–60; supporting library-design guidance.
+- [Framework Design Guidelines](https://www.amazon.com/dp/0321545613): Second edition, Chapter 1 pp. 1–3 and Chapter 2 pp. 12–14; PDF pp. 47–49 and 58–60; supporting library-design guidance.
 
-- [Righting Software.pdf](<../references/Righting Software.pdf>): Chapter 3; Appendix B; Appendix C; governing.
+- [Righting Software](https://www.amazon.com/dp/0136524036): Chapter 3; Appendix B; Appendix C; governing.
 
 **Preserve:**
 

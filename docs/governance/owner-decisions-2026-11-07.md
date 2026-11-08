@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Owner decisions: approvals and artifact contracts
 
-These decisions record the human owner's answers during construction of the [decision matrix](decision-and-approval-matrix.md). They are organizational assignments; the source requirements remain in [Righting Software](<../references/Righting Software.pdf>).
+These decisions record the human owner's answers during construction of the [decision matrix](decision-and-approval-matrix.md). They are organizational assignments; the source requirements remain in [Righting Software](https://www.amazon.com/dp/0136524036).
 
 | ID | Owner decision | Consequence |
 | --- | --- | --- |

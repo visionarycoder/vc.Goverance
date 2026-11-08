@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # System and project design
 
-Source: [Righting Software](<../references/Righting Software.pdf>), Chapters 1-14. Appendix C governs; the chapter discussions supply its context. The Solution Architect is accountable for both designs. The Product Owner supplies the business view. The Project Manager supplies execution constraints and manages the selected design.
+Source: [Righting Software](https://www.amazon.com/dp/0136524036), Chapters 1-14. Appendix C governs; the chapter discussions supply its context. The Solution Architect is accountable for both designs. The Product Owner supplies the business view. The Project Manager supplies execution constraints and manages the selected design.
 
 ## Establish the business basis
 

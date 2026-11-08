@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Table of contents
 
-[Repository overview](../README.md) · [Topic index](index.md)
+[Repository overview](../README.md) · [Documentation guide](README.md) · [Topic index](index.md)
 
 The primary documentation governs how code is designed, assigned, reviewed, tested, and changed. Retained implementation notes appear after governance and process documents. Only current repository files are linked.
 
@@ -62,7 +62,7 @@ The primary documentation governs how code is designed, assigned, reviewed, test
 
 ## Source and reconciliation records
 
-- [Reference index](references/README.md)
+- [Sources and bibliography](sources.md)
 - [Source review](research/source-review.md)
 - [Whole-book reconciliation](research/reconciliation.md)
 - [Supporting-pattern review](research/supporting-pattern-review.md)
@@ -89,4 +89,4 @@ The primary documentation governs how code is designed, assigned, reviewed, test
 - [Operational conformance obligations](artifacts/conformance-checks.json).
 - [Lifecycle/validity acceptance cases](artifacts/lifecycle-validity-cases.json).
 - [Lifecycle/validity validation report](artifacts/lifecycle-validity-validation.json).
-- [Current and historical source identities](references/supporting-sources.json).
+- [Historical source identities](research/source-identities.json).

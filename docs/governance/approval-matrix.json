@@ -45,7 +45,7 @@
       "approval_role": "human-owner",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           425,
           426
@@ -69,7 +69,7 @@
       "approval_role": "ceo",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           108,
           109,
@@ -95,7 +95,7 @@
       "approval_role": "product-owner",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           149,
           150
@@ -121,7 +121,7 @@
       "approval_role": "ceo",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           150,
           381
@@ -145,7 +145,7 @@
       "approval_role": "solution-architect",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           149,
           389
@@ -171,7 +171,7 @@
       "approval_role": "ceo",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           148,
           150,
@@ -195,7 +195,7 @@
       "approval_role": "solution-architect",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           374,
           376,
@@ -224,7 +224,7 @@
       "approval_role": "test-architect",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           380,
           381
@@ -248,7 +248,7 @@
       "approval_role": "test-architect",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           389,
           390
@@ -273,7 +273,7 @@
       "approval_role": "ceo",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           150,
           153,
@@ -295,7 +295,7 @@
       "approval_role": "project-manager",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           149,
           153,
@@ -320,7 +320,7 @@
       "approval_role": "target-owner",
       "assignment_status": "operational_format",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           381
         ]
@@ -345,7 +345,7 @@
       "approval_role": "target-owner",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           153,
           377,
@@ -376,7 +376,7 @@
       "approval_role": "affected-owner",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           376,
           405
@@ -409,7 +409,7 @@
       "approval_role": "human-owner",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           425
         ]
@@ -431,7 +431,7 @@
       "approval_role": "application-architect",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           376,
           377,
@@ -454,7 +454,7 @@
       "approval_role": "test-architect",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           380,
           389
@@ -479,7 +479,7 @@
       "approval_role": "solution-architect",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           376,
           377,
@@ -500,7 +500,7 @@
       "approval_role": "project-manager",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           389,
           390,
@@ -525,7 +525,7 @@
       "approval_role": "project-manager",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           388,
           393,
@@ -551,7 +551,7 @@
       "approval_role": "ceo",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           149,
           150
@@ -573,7 +573,7 @@
       "approval_role": "qa",
       "assignment_status": "established",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           381,
           382
@@ -595,7 +595,7 @@
       "approval_role": "issuing-architect within upstream bounds; ceo for solution-architect decisions",
       "assignment_status": "owner_decision",
       "source": {
-        "document": "docs/references/Righting Software.pdf",
+        "document": "https://www.amazon.com/dp/0136524036",
         "printed_pages": [
           150,
           376,

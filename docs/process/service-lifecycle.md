@@ -12,7 +12,7 @@ updated: "2026-11-08"
 
 ## Source and scope
 
-The owner selected the workflow in [Righting Software](<../references/Righting Software.pdf>), Figure A-2, printed p. 390. Figure A-1 on p. 388 and its explanation on p. 389 establish task order, concurrent paths, and review retries. This is the activity lifecycle inside the broader [system and project design](system-and-project-design.md) process. It does not replace those design efforts or the Software Development Plan review.
+The owner selected the workflow in [Righting Software](https://www.amazon.com/dp/0136524036), Figure A-2, printed p. 390. Figure A-1 on p. 388 and its explanation on p. 389 establish task order, concurrent paths, and review retries. This is the activity lifecycle inside the broader [system and project design](system-and-project-design.md) process. It does not replace those design efforts or the Software Development Plan review.
 
 In these figures, **SRS means service requirement spec** and **STP means service test plan**. System requirements specifications and system test plans are separate system-level artifacts; use explicit names in handoffs to avoid confusing them.
 

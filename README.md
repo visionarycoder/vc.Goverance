@@ -12,7 +12,7 @@ updated: "2026-11-08"
 
 vc.Governance defines how agent teams design, assign, write, review, test, integrate, and change software.
 
-Juval Löwy's **The Method** governs system and project design. Appendix C of [Righting Software](<docs/references/Righting Software.pdf>) is the adopted design standard. The human owner's decisions define the role hierarchy and approval authority.
+Juval Löwy's **The Method** governs system and project design. Appendix C of [Righting Software](https://www.amazon.com/dp/0136524036) is the adopted design standard. The human owner's decisions define the role hierarchy and approval authority.
 
 ## Start here
 
@@ -27,11 +27,12 @@ Juval Löwy's **The Method** governs system and project design. Appendix C of [R
 
 ## Documentation navigation
 
+- [Documentation guide](docs/README.md): reading order, ownership, source access, and maintenance.
 - [Table of contents](docs/toc.md): documents grouped by responsibility.
 - [Topic index](docs/index.md): direct links for common governance questions.
 - [Architecture decision records](docs/adr/README.md): decision context, approval structure, and trade-offs.
 - [Repository-local agent skills](.agents/README.md): workflows for maintaining and reviewing governance documentation.
-- [Reference index](docs/references/README.md): current local sources and supplementary web resources.
+- [Sources and bibliography](docs/sources.md): Amazon book links and supplementary web resources.
 
 ## Repository boundaries
 

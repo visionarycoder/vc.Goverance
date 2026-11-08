@@ -10,7 +10,9 @@ updated: "2026-11-08"
 
 # Source review
 
-Source: [Righting Software](<../references/Righting Software.pdf>), file identity in [source authority](../governance/source-authority.md).
+Source: [Righting Software](https://www.amazon.com/dp/0136524036), file identity in [source authority](../governance/source-authority.md).
+
+This record describes the earlier review. The owner has since removed all source copies from the repository. External book links do not imply that a new source review occurred.
 
 ## Completed review scope
 
@@ -44,7 +46,7 @@ The printed scaling-factor discrepancy was escalated. The owner authorized the c
 
 ## Supplementary sources
 
-The IDesign management overview supports the distinction between system design, project design, and detailed design. The supplied InformIT decomposition and risk excerpts overlap the reviewed book. The New Standard for Software Design article supports retaining the book's rationale when applying a checklist. The O’Reilly architecture article body was unavailable in the retrieved page; no new rule was imported from it. The CODE interface article was inspected in part, not reviewed in full. The remaining historical technology articles are cataloged in [references](../references/README.md); they have not established a technology baseline or been claimed as fully reviewed.
+The IDesign management overview supports the distinction between system design, project design, and detailed design. The supplied InformIT decomposition and risk excerpts overlap the reviewed book. The New Standard for Software Design article supports retaining the book's rationale when applying a checklist. The O’Reilly architecture article body was unavailable in the retrieved page; no new rule was imported from it. The CODE interface article was inspected in part, not reviewed in full. The remaining historical technology articles are cataloged in [references](../sources.md); they have not established a technology baseline or been claimed as fully reviewed.
 
 A newer online design-standard download was not obtained or adopted. No registration information was submitted. Appendix C of the repository edition remains the baseline.
 

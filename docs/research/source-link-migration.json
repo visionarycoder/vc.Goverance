@@ -1,0 +1,17 @@
+{
+  "recorded_on": "2026-11-08",
+  "scope": "Source-location migration after owner deleted reference directory; not a new book review or operational approval.",
+  "markdown_files_checked": 67,
+  "markdown_errors": 0,
+  "validator_tests_passed": 35,
+  "json_records_with_non_document_fields_unchanged": 27,
+  "artifact_schema_changed": false,
+  "reference_directory_restored": false,
+  "limitations": [
+    "Amazon links identify books; current stock and full-text access are not verified.",
+    "The Fractal Architecture URL is a publisher resource entry point, not a verified direct paper download.",
+    "Earlier policy/source-validation reports remain historical and do not certify revised bytes."
+  ],
+  "artifact_examples_revalidated": 23,
+  "skill_format_checks_passed": 4
+}

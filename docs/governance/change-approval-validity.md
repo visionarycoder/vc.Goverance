@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Change and approval validity
 
-Version 1.0.0, reviewed 2026-11-08. This policy governs how work remains authorized when requirements, designs, code, plans, or evidence change. It follows [Righting Software](<../references/Righting Software.pdf>), especially pp. 194, 376–377, 388–391, and 405, and the owner's [approval assignments](decision-and-approval-matrix.md) and [validity decisions](owner-decisions-2026-11-08.md). The [23 STE rules](change-approval-validity.json) are the machine-readable policy.
+Version 1.0.0, reviewed 2026-11-08. This policy governs how work remains authorized when requirements, designs, code, plans, or evidence change. It follows [Righting Software](https://www.amazon.com/dp/0136524036), especially pp. 194, 376–377, 388–391, and 405, and the owner's [approval assignments](decision-and-approval-matrix.md) and [validity decisions](owner-decisions-2026-11-08.md). The [23 STE rules](change-approval-validity.json) are the machine-readable policy.
 
 ## Evaluate a decision in context
 

@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Project tracking
 
-Source: [Righting Software](<../references/Righting Software.pdf>), Appendix A, printed pp. 387-405; Chapters 7-8. The Project Manager tracks execution. The Solution Architect redesigns the project with the Project Manager when the observed situation requires it.
+Source: [Righting Software](https://www.amazon.com/dp/0136524036), Appendix A, printed pp. 387-405; Chapters 7-8. The Project Manager tracks execution. The Solution Architect redesigns the project with the Project Manager when the observed situation requires it.
 
 ## Keep the measurements distinct
 

@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Lifecycle gate criteria
 
-Version 1.0.0, reviewed 2026-11-08. Governing sources: [Righting Software](<../references/Righting Software.pdf>), pp. 153, 194, 376–377, 380–381, 388–391, and 405; the owner's [approval matrix](../governance/decision-and-approval-matrix.md) supplies role assignments. The [gate catalog](lifecycle-gates.json) is the machine-readable specification. Predicate names and record mechanics are governance choices, not wording attributed to Löwy.
+Version 1.0.0, reviewed 2026-11-08. Governing sources: [Righting Software](https://www.amazon.com/dp/0136524036), pp. 153, 194, 376–377, 380–381, 388–391, and 405; the owner's [approval matrix](../governance/decision-and-approval-matrix.md) supplies role assignments. The [gate catalog](lifecycle-gates.json) is the machine-readable specification. Predicate names and record mechanics are governance choices, not wording attributed to Löwy.
 
 ## Gate meaning
 

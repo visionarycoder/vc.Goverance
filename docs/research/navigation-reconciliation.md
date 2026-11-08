@@ -28,4 +28,10 @@ Canonical ownership remains vc.Governance for rules/process, vc.Ifx for reusable
 
 The remaining files are indexed as they exist. Retained technology constraints are not silently revoked by removal of a supporting book or sample. Their implementation remains in the distinct owning repository. No deleted source copy was recreated.
 
-Runtime enforcement and adoption decisions remain in [open decisions](../governance/open-decisions.md). See the [table of contents](../toc.md), [topic index](../index.md), and [reference index](../references/README.md). Validation checks local links, index targets, active manifest entries, JSON parsing, policy cases, and the existing artifact examples. It does not validate runtime identities or permissions.
+Runtime enforcement and adoption decisions remain in [open decisions](../governance/open-decisions.md). See the [table of contents](../toc.md), [topic index](../index.md), and [reference index](../sources.md). Validation checks local links, index targets, active manifest entries, JSON parsing, policy cases, and the existing artifact examples. It does not validate runtime identities or permissions.
+
+## Reference-directory removal
+
+The owner deleted the reference directory in GitHub commit `f24bc45` on 2026-11-08. The checkout was synchronized with that commit before documentation changes. The [documentation guide](../README.md) and [bibliography](../sources.md) replace the removed reference index. Book links use Amazon; article citations use external publisher locations. Historical copy hashes remain provenance, not active local file targets. Source locators, Method instructions, and approval routes retain their meaning.
+
+Earlier JSON validation reports describe their recorded revisions. Their local-source counts and policy hashes are historical; they do not certify this source-link migration. Current verification results are recorded in the [source-link migration report](source-link-migration.json).

@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Decision and approval matrix
 
-Version 1.0.0. Applies to vc.Governance contracts, not as an instruction to modify another repository. The [machine-readable matrix](approval-matrix.json) and [owner decisions](owner-decisions-2026-11-07.md) distinguish source responsibilities from organizational sign-offs. The source is [Righting Software](<../references/Righting Software.pdf>), especially pp. 148–153, 374–377, 380–382, 388–390, 405, and Appendix C.
+Version 1.0.0. Applies to vc.Governance contracts, not as an instruction to modify another repository. The [machine-readable matrix](approval-matrix.json) and [owner decisions](owner-decisions-2026-11-07.md) distinguish source responsibilities from organizational sign-offs. The source is [Righting Software](https://www.amazon.com/dp/0136524036), especially pp. 148–153, 374–377, 380–382, 388–390, 405, and Appendix C.
 
 ## Accountability and approval
 

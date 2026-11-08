@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Whole-book reconciliation
 
-Governing source: [Righting Software](<../references/Righting Software.pdf>). Review scope and limits are recorded in [source review](source-review.md).
+Governing source: [Righting Software](https://www.amazon.com/dp/0136524036). Review scope and limits are recorded in [source review](source-review.md).
 
 | Finding | Framework resolution | Source |
 | --- | --- | --- |

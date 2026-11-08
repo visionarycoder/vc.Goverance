@@ -24,7 +24,7 @@
       "when": "A call crosses an approved component boundary; internal collaborator calls are outside this requirement.",
       "sources": [
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -88,7 +88,7 @@
           "availability": "Historical review record only; original source copy removed from vc.Governance."
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -138,7 +138,7 @@
           "availability": "Historical review record only; original source copy removed from vc.Governance."
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -186,7 +186,7 @@
           "availability": "Historical review record only; original source copy removed from vc.Governance."
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -228,12 +228,12 @@
       "when": "Availability requirements identify a risk of dependency failure propagation.",
       "sources": [
         {
-          "document": "docs/references/Anti-fragile ICT Systems.pdf",
+          "document": "https://www.amazon.com/dp/3319300687",
           "locator": "Chapter 4, printed pp. 35–42; PDF pp. 50–57",
           "authority": "supporting principle"
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -272,12 +272,12 @@
       "when": "The system has approved failure-containment and recovery behavior.",
       "sources": [
         {
-          "document": "docs/references/Anti-fragile ICT Systems.pdf",
+          "document": "https://www.amazon.com/dp/3319300687",
           "locator": "Section 4.5, printed p. 39; PDF p. 54",
           "authority": "supporting principle"
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 14, printed pp. 378–383",
           "authority": "governing"
         }
@@ -316,12 +316,12 @@
       "when": "Business analysis establishes a recurring participant structure and canonical interaction.",
       "sources": [
         {
-          "document": "docs/references/Fractal Architecture - Juval Lowy.pdf",
+          "document": "https://www.idesign.net/Resources",
           "locator": "Printed/PDF pp. 4–8; Figures 1 and 2 on p. 7",
           "authority": "Lowy supplementary guidance"
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -366,12 +366,12 @@
       "when": "Business, system, or service requirements are recorded for design and test handoff.",
       "sources": [
         {
-          "document": "docs/references/Writing Software Requirements Specifications.htm",
+          "document": "https://techwhirl.com/writing-software-requirements-specifications/",
           "locator": "Sections on requirement identifiers, source linking, traceability matrix, and language quality",
           "authority": "supporting article: Donn Le Vie, Jr."
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 4; Appendix A, printed pp. 388–390; C-SD-1",
           "authority": "governing"
         }
@@ -411,12 +411,12 @@
       "when": "An approved reusable library exposes an API to component developers.",
       "sources": [
         {
-          "document": "docs/references/Framework Design Guidelines.pdf",
+          "document": "https://www.amazon.com/dp/0321545613",
           "locator": "Second edition, Chapter 1 pp. 1–3 and Chapter 2 pp. 12–14; PDF pp. 47–49 and 58–60",
           "authority": "supporting library-design guidance"
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "Chapter 3; Appendix B; Appendix C",
           "authority": "governing"
         }
@@ -464,7 +464,7 @@
           "availability": "Historical review record only; original source copy removed from vc.Governance."
         },
         {
-          "document": "docs/references/Righting Software.pdf",
+          "document": "https://www.amazon.com/dp/0136524036",
           "locator": "C-SD-1 and C-SD-4 through C-SD-6",
           "authority": "governing"
         }

@@ -18,7 +18,7 @@ Accepted as a record of existing human-owner decisions. Recorded on 2026-11-08. 
 
 Implementation agents need clear limits on what they may decide, change, and accept. An agent must not weaken requirements, designs, tests, or approval rules to simplify its implementation.
 
-The human owner adopted Juval Löwy's The Method and Appendix C of [Righting Software](<../references/Righting Software.pdf>). The book governs design and engineering responsibilities. The human owner's decisions assign logical roles and sign-offs. These organizational assignments are not claims that Löwy prescribed these role names or record formats.
+The human owner adopted Juval Löwy's The Method and Appendix C of [Righting Software](https://www.amazon.com/dp/0136524036). The book governs design and engineering responsibilities. The human owner's decisions assign logical roles and sign-offs. These organizational assignments are not claims that Löwy prescribed these role names or record formats.
 
 The adopted structure separates accountable ownership, authorship, independent critique, approval, and work assignment. The [source authority](../governance/source-authority.md) and [design standard](../standards/design-standard.md) remain governing references. Relevant book discussions include pp. 148–153, 194, 374–377, 380–382, 388–390, 405, and Appendix C, pp. 425–430.
 

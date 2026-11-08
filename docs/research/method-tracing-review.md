@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Existing method-tracing evidence
 
-**Current availability, 2026-11-08:** selected technology-specific source copies and sample code were removed by the owner. This record preserves the earlier review history. The [reference index](../references/README.md) lists current local sources; a historical finding does not imply its source copy remains in the repository.
+**Current availability, 2026-11-08:** the owner removed the reference directory and earlier selected sample copies. This record preserves historical review findings. [Sources and bibliography](../sources.md) lists external source locations. No local source copy is supplied.
 
 Read-only review on 2026-11-07. The owner-supplied directory was absent. A sibling repository named vc.App.Latimessis was found, along with service-proxy infrastructure in vc.Ifx. Neither repository was modified. This is an in-repository review record; no external filesystem document links are needed to understand the findings.
 

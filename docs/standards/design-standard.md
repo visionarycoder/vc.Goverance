@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Design standard
 
-**Governing source:** [Righting Software](<../references/Righting Software.pdf>), Appendix C, printed pp. 425-430. Adopted by the human owner on 2026-11-07. Every numbered checklist item is mapped below in paraphrase. Read the source for exact wording and the chapters for context. See [source authority](../governance/source-authority.md).
+**Governing source:** [Righting Software](https://www.amazon.com/dp/0136524036), Appendix C, printed pp. 425-430. Adopted by the human owner on 2026-11-07. Every numbered checklist item is mapped below in paraphrase. Read the source for exact wording and the chapters for context. See [source authority](../governance/source-authority.md).
 
 Identifiers preserve the appendix's hierarchy: `C-D` for directives; `C-SD` for system design; `C-PD` for project design; `C-PT` for tracking; and `C-SC` for service contracts. An identifier ending in a letter or Roman numeral corresponds to that source subitem. Category headings do not create additional rules.
 

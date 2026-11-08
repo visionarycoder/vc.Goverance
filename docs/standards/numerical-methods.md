@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Numerical methods
 
-Source: [Righting Software](<../references/Righting Software.pdf>), Chapters 7–13 and Appendix A. These definitions constrain future calculators; no planning engine is implemented here.
+Source: [Righting Software](https://www.amazon.com/dp/0136524036), Chapters 7–13 and Appendix A. These definitions constrain future calculators; no planning engine is implemented here.
 
 | Quantity | Required interpretation |
 | --- | --- |

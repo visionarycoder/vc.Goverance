@@ -15,7 +15,7 @@ Determine whether the request records an existing authorized decision, proposes 
 
 1. Allocate the next unused four-digit ADR number from the existing directory. Use a descriptive kebab-case filename.
 2. Include status, context, decision, consequences, alternatives, and related decisions. Use Standard Technical English and the [Markdown metadata contract](../../../docs/standards/markdown-authoring.md).
-3. Identify the source constraint, organizational assignment, or enforcement choice. Cite in-repository source locators and actual owner decisions. Attribute only supported Method guidance to Löwy.
+3. Identify the source constraint, organizational assignment, or enforcement choice. Cite edition-specific source locators, external book links from the [bibliography](../../../docs/sources.md), and actual owner decisions. Attribute only supported Method guidance to Löwy.
 4. Mark a new unresolved decision as proposed. Record accepted status only when an actual authorized decision supports it; cite that basis. A request to document a process does not manufacture approval of a new rule.
 5. Preserve authority boundaries, independent critique, exact-revision applicability, and the distinction between technical, business, project, and management acceptance. Do not turn a diagram of relationships into a new universal approval chain.
 6. Preserve prior decision history when recording a replacement. Link a successor only when the authorized decision establishes supersession. Describe the actual trade-offs; do not invent a history of deliberation.
