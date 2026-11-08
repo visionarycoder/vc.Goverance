@@ -1,0 +1,1346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<!-- saved from url=(0080)http://www.techwr-l.com/techwhirl/magazine/writing/softwarerequirementspecs.html -->
+  <title>Writing Software Requirements Specifications</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <noindex></noindex>
+  <link
+ href="Writing%20Software%20Requirements%20Specifications_files/msie.css"
+ type="text/css" rel="stylesheet">
+  <script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+var SymRealWinOpen = window.open;
+
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+
+window.open = SymWinOpen;
+
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+//Specify help popup
+function Help(page) {HelpWin = this.open(page,"HelpWindow",   "toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes,directories=0,status=0,width=450,height=450,left=100,top=100");
+HelpWin.focus();
+}
+//Break out of frames
+function breakFrames() {
+    if (window.top.location != window.self.location) {window.top.location = window.self.location };
+    return true;
+}
+// added for logging purposes
+function whenReady() {}
+//-->
+  </script>
+  <meta content="MSHTML 6.00.2800.1458" name="GENERATOR">
+</head>
+<body onload="breakFrames()">
+<!-- Google -->
+<table align="center">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript"><!--
+google_ad_client = "pub-8702042079555100";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="";
+google_ad_type = "text";
+google_color_border = "FDFFCA";
+google_color_bg = "FDFFCA";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+      <script
+ src="Writing%20Software%20Requirements%20Specifications_files/show_ads.js"
+ type="text/javascript">
+  </script> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Header -->
+<table class="cream" align="center" border="0" width="760">
+  <tbody>
+    <tr align="left" valign="top">
+      <td colspan="3" align="left" valign="top" width="130"><!-- Preceeding table encapsulates sponsors --><br>
+<!-- Following is beginning of body content -->
+      <table width="640">
+        <tbody>
+          <tr>
+            <td>
+            <h4><a href="http://www.techwr-l.com/techwhirl/">TECHWR-L
+Home</a> &gt; <a href="http://www.techwr-l.com/techwhirl/magazine/">Magazine</a>
+&gt; <a href="http://www.techwr-l.com/techwhirl/magazine/writing/">Writing</a></h4>
+            </td>
+            <td valign="top">
+            <h4 align="right"><a
+ href="http://www.techwr-l.com/techwhirl/phpapps/pfv/pfv.php?/techwhirl/magazine/writing/softwarerequirementspecs.html"
+ target="_new">Printer-friendly version</a></h4>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+<!-- CONTENT --><font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <h2><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Writing Software
+Requirements Specifications</font></font></h2>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>by Donn
+Le Vie, Jr.</i> </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Here's the
+scenario: You're finishing up your latest HTML Help project...no more
+late nights or weekends...back to a "normal" 50-hour work week. That's
+when the development team lead strolls into your office and says she
+just got your manager's okay for you to help the development team "put
+together the functional requirements specification template for the
+next major project." </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">"A what?"
+you ask with a look of semi-shock. Panic sets in. "What did I do to
+deserve this? I don't even know where to start! Maybe someone on the
+TECHWR-L list can help...." </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">For
+technical writers who haven't had the experience of designing <i>software
+requirements specifications</i> (SRSs, also known as software
+functional specifications or system specifications) templates or even
+writing SRSs, they might assume that being given the opportunity to do
+so is either a reward or punishment for something they did (or failed
+to do) on a previous project. Actually, SRSs are ideal projects for
+technical writers to be involved with because they lay out the
+foundation for the development of a new product and for the types of
+user documentation and media that will be required later in the project
+development life cycle. It also doesn't hurt that you'd be playing a
+visible role in contributing to the success of the project. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">This article
+will describe what an SRS is and why it's important, discuss how and
+why technical writers should be involved with them, and discuss the
+critical elements for writing an SRS. Although this article does not
+attempt to address all aspects of developing SRSs, it aims to help you
+determine the scope for such a project, to provide some guidelines for
+writing SRSs, and to provide additional resources. Hopefully with this
+information, you'll not be asking, "Why me?" but proclaiming "Why not
+me?" </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h3><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">What is a Software
+Requirements Specification?</font></font></h3>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">An SRS is
+basically an organization's understanding (in writing) of a customer or
+potential client's system requirements and dependencies <i>at a
+particular point in time</i> (usually) prior to any actual design or
+development work. It's a two-way insurance policy that assures that
+both the client and the organization understand the other's
+requirements from that perspective at a given point in time. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">The SRS
+document itself states in precise and explicit language those functions
+and capabilities a software system (i.e., a software application, an
+eCommerce Web site, and so on) must provide, as well as states any
+required constraints by which the system must abide. The SRS also
+functions as a blueprint for completing a project with as little cost
+growth as possible. The SRS is often referred to as the "parent"
+document because all subsequent project management documents, such as
+design specifications, statements of work, software architecture
+specifications, testing and validation plans, and documentation plans,
+are related to it. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">It's
+important to note that an SRS contains functional and nonfunctional
+requirements only; it doesn't offer design suggestions, possible
+solutions to technology or business issues, or any other information
+other than what the development team understands the customer's system
+requirements to be. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">A
+well-designed, well-written SRS accomplishes four major goals: </font></p>
+      <ul>
+        <font face="Arial,Helvetica,sans-serif" size="-1"><font
+ face="Arial,Helvetica,sans-serif" size="-1"> <li>It provides feedback
+to the customer. An SRS is the customer's assurance that the
+development organization understands the issues or problems to be
+solved and the software behavior necessary to address those problems.
+Therefore, the SRS should be written in natural language (versus a
+formal language, explained later in this article), in an unambiguous
+manner that may also include charts, tables, data flow diagrams,
+decision tables, and so on. </li>
+        <li>It decomposes the problem into component parts. The simple
+act of writing down software requirements in a well-designed format
+organizes information, places borders around the problem, solidifies
+ideas, and helps break down the problem into its component parts in an
+orderly fashion. </li>
+        <li>It serves as an input to the design specification. As
+mentioned previously, the SRS serves as the parent document to
+subsequent documents, such as the software design specification and
+statement of work. Therefore, the SRS must contain sufficient detail in
+the functional system requirements so that a design solution can be
+devised. </li>
+        <li>It serves as a product validation check. The SRS also
+serves as the parent document for testing and validation strategies
+that will be applied to the requirements for verification. </li>
+        </font></font>
+      </ul>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">SRSs are
+typically developed during the first stages of "Requirements
+Development," which is the initial product development phase in which
+information is gathered about what requirements are needed--and not.
+This information-gathering stage can include onsite visits,
+questionnaires, surveys, interviews, and perhaps a return-on-investment
+(ROI) analysis or needs analysis of the customer or client's current
+business environment. The actual specification, then, is written after
+the requirements have been gathered and analyzed. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h3><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Why Should Technical
+Writers be Involved with Software Requirements Specifications?</font></font></h3>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Unfortunately,
+much of the time, systems architects and programmers write SRSs with
+little (if any) help from the technical communications organization.
+And when that assistance is provided, it's often limited to an edit of
+the final draft just prior to going out the door. Having technical
+writers involved throughout the entire SRS development process can
+offer several benefits: </font></p>
+      <ul>
+        <font face="Arial,Helvetica,sans-serif" size="-1"><font
+ face="Arial,Helvetica,sans-serif" size="-1"> <li>Technical writers
+are skilled information gatherers, ideal for eliciting and articulating
+customer requirements. The presence of a technical writer on the
+requirements-gathering team helps balance the type and amount of
+information extracted from customers, which can help improve the SRS. </li>
+        <li>Technical writers can better assess and plan documentation
+projects and better meet customer document needs. Working on SRSs
+provides technical writers with an opportunity for learning about
+customer needs firsthand--early in the product development process. </li>
+        <li>Technical writers know how to determine the questions that
+are of concern to the user or customer regarding ease of use and
+usability. Technical writers can then take that knowledge and apply it
+not only to the specification and documentation development, but also
+to user interface development, to help ensure the UI (User Interface)
+models the customer requirements. </li>
+        <li>Technical writers, involved early and often in the process,
+can become an information resource throughout the process, rather than
+an information gatherer at the end of the process. </li>
+        </font></font>
+      </ul>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">In short, a
+requirements-gathering team consisting solely of programmers, product
+marketers, systems analysts/architects, and a project manager runs the
+risk of creating a specification that may be too heavily loaded with
+technology-focused or marketing-focused issues. The presence of a
+technical writer on the team helps place at the core of the project
+those user or customer requirements that provide more of an overall
+balance to the design of the SRS, product, and documentation. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h3><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">What Kind of
+Information Should an SRS Include?</font></font></h3>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">You probably
+will be a member of the SRS team (if not, ask to be), which means SRS
+development will be a collaborative effort for a particular project. In
+these cases, your company will have developed SRSs before, so you
+should have examples (and, likely, the company's SRS template) to use.
+But, let's assume you'll be starting from scratch. Several standards
+organizations (including the IEEE) have identified nine topics that
+must be addressed when designing and writing an SRS: </font></p>
+      <ol>
+        <font face="Arial,Helvetica,sans-serif" size="-1"><font
+ face="Arial,Helvetica,sans-serif" size="-1"> <li>Interfaces </li>
+        <li>Functional Capabilities </li>
+        <li>Performance Levels </li>
+        <li>Data Structures/Elements </li>
+        <li>Safety </li>
+        <li>Reliability </li>
+        <li>Security/Privacy </li>
+        <li>Quality </li>
+        <li>Constraints and Limitations </li>
+        </font></font>
+      </ol>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">But, how do
+these general topics translate into an SRS document? What,
+specifically, does an SRS document include? How is it structured? And
+how do you get started? An SRS document typically includes four
+ingredients, as discussed in the following sections: </font></p>
+      <ol>
+        <font face="Arial,Helvetica,sans-serif" size="-1"><font
+ face="Arial,Helvetica,sans-serif" size="-1"> <li>A template </li>
+        <li>A method for identifying requirements and linking sources </li>
+        <li>Business operation rules </li>
+        <li>A traceability matrix </li>
+        </font></font>
+      </ol>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h4><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Begin with an SRS
+Template</font></font></h4>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">The first
+and biggest step to writing an SRS is to select an existing template
+that you can fine tune for your organizational needs (if you don't have
+one already). There's not a "standard specification template" for all
+projects in all industries because the individual requirements that
+populate an SRS are unique not only from company to company, but also
+from project to project within any one company. The key is to select an
+existing template or specification to begin with, and then adapt it to
+meet your needs. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">In
+recommending using existing templates, I'm not advocating simply
+copying a template from available resources and using them as your own;
+instead, I'm suggesting that you use available templates as guides for
+developing your own. It would be almost impossible to find a
+specification or specification template that meets your particular
+project requirements exactly. But using other templates as guides is
+how it's recommended in the literature on specification development.
+Look at what someone else has done, and modify it to fit your project
+requirements. (See the sidebar called "Resources for Model Templates"
+at the end of this article for resources that provide sample templates
+and related information.) </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Table 1
+shows what a basic SRS outline might look like. This example is an
+adaptation and extension of the IEEE Standard 830-1998: </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif"><b>Table 1</b> A
+sample of a basic SRS outline</font> </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">
+      <table border="2" bordercolor="#cc9999" cellpadding="5"
+ width="350">
+        <tbody>
+          <tr>
+            <td><font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>1.
+Introduction</b></font><br>
+1.1 Purpose<br>
+1.2 Document conventions<br>
+1.3 Intended audience<br>
+1.4 Additional information<br>
+1.5 Contact information/SRS team members<br>
+1.6 References </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>2.
+Overall Description</b></font><br>
+2.1 Product perspective<br>
+2.2 Product functions<br>
+2.3 User classes and characteristics<br>
+2.4 Operating environment<br>
+2.5 User environment<br>
+2.6 Design/implementation constraints<br>
+2.7 Assumptions and dependencies </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>3.
+External Interface Requirements</b></font><br>
+3.1 User interfaces<br>
+3.2 Hardware interfaces<br>
+3.3 Software interfaces<br>
+3.4 Communication protocols and interfaces </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>4.
+System Features</b></font><br>
+4.1 System feature A<br>
+4.1.1 Description and priority<br>
+4.1.2 Action/result<br>
+4.1.3 Functional requirements<br>
+4.2 System feature B<br>
+            </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>5.
+Other Nonfunctional Requirements</b></font><br>
+5.1 Performance requirements<br>
+5.2 Safety requirements<br>
+5.3 Security requirements<br>
+5.4 Software quality attributes<br>
+5.5 Project documentation<br>
+5.6 User documentation </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>6.
+Other Requirements</b></font><br>
+Appendix A: Terminology/Glossary/Definitions list<br>
+Appendix B: To be determined </font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Table 2
+shows a more detailed SRS outline, showing the structure of an SRS
+template as found on Ken Rigby's informative Web site at <a
+ href="http://neon.airtime.co.uk/users/wysywig/srs_mt.htm">http://neon.airtime.co.uk/users/wysywig/srs_mt.htm</a>.
+Reprinted with permission. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif"><b>Table 2</b> A
+sample of a more detailed SRS outline</font> </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">
+      <table border="2" bordercolor="#cc9999" cellpadding="5"
+ width="475">
+        <tbody>
+          <tr>
+            <td valign="top" width="125">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>1. Scope</b></font></p>
+            </td>
+            <td valign="top"><font face="Arial,Helvetica,sans-serif"
+ size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">1.1
+Identification.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Identify
+the system and the software to which this document applies, including,
+as applicable, identification number(s), title(s), abbreviation(s),
+version number(s), and release number(s).</i></font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">1.2
+System overview.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>State
+the purpose of the system or subsystem to which this document applies.</i></font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">1.3
+Document overview.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Summarize
+the purpose and contents of this document.</i> </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">This
+document comprises six sections:</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <ul>
+              <font face="Arial,Helvetica,sans-serif" size="-1"> <li>Scope
+              </li>
+              <li>Referenced documents </li>
+              <li>Requirements </li>
+              <li>Qualification provisions </li>
+              <li>Requirements traceability </li>
+              <li>Notes </li>
+              </font>
+            </ul>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Describe
+any security or privacy considerations associated with its use.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" width="125">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>2. Referenced Documents</b></font></p>
+            </td>
+            <td valign="top"><font face="Arial,Helvetica,sans-serif"
+ size="-1">
+            <p>2.1 Project documents.</p>
+            <p><i>Identify the project management system documents here.</i></p>
+            <p>2.2 Other documents.</p>
+            <p>2.3 Precedence.</p>
+            <p>2.4 Source of documents.</p>
+            </font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="125">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>3. Requirements</b></font></p>
+            </td>
+            <td valign="top"><font face="Arial,Helvetica,sans-serif"
+ size="-1">
+            <p>This section shall be divided into paragraphs to specify
+the Computer Software Configuration Item (CSCI) requirements, that is,
+those characteristics of the CSCI that are conditions for its
+acceptance. CSCI requirements are software requirements generated to
+satisfy the system requirements allocated to this CSCI. Each
+requirement shall be assigned a project-unique identifier to support
+testing and traceability and shall be stated in such a way that an
+objective test can be defined for it. </p>
+            <p>3.1 Required states and modes.</p>
+            <p>3.2 CSCI capability requirements.</p>
+            <p>3.3 CSCI external interface requirements.</p>
+            <p>3.4 CSCI internal interface requirements.</p>
+            <p>3.5 CSCI internal data requirements.</p>
+            <p>3.6 Adaptation requirements.</p>
+            <p>3.7 Safety requirements.</p>
+            <p>3.8 Security and privacy requirements.</p>
+            <p>3.9 CSCI environment requirements.</p>
+            <p>3.10 Computer resource requirements.</p>
+            <p>3.11 Software quality factors.</p>
+            <p>3.12 Design and implementation constraints.</p>
+            <p>3.13 Personnel requirements.</p>
+            <p>3.14 Training-related requirements.</p>
+            <p>3.15 Logistics-related requirements.</p>
+            <p>3.16 Other requirements.</p>
+            <p>3.17 Packaging requirements.</p>
+            <p>3.18 Precedence and criticality requirements.</p>
+            </font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="125">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>4. Qualification Provisions</b></font></p>
+            </td>
+            <td valign="top"><font face="Arial,Helvetica,sans-serif"
+ size="-1">To be determined. </font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="125">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>5. Requirements Traceability</b></font></p>
+            </td>
+            <td valign="top"><font face="Arial,Helvetica,sans-serif"
+ size="-1">To be determined. </font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="125">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>6. Notes</b></font></p>
+            </td>
+            <td valign="top"><font face="Arial,Helvetica,sans-serif"
+ size="-1">
+            <p>This section contains information of a general or
+explanatory nature that may be helpful, but is not mandatory.</p>
+6.1 Intended use.
+            <p>This Software Requirements specification shall ...</p>
+6.2 Definitions used in this document.
+            <p><i>Insert here an alphabetic list of definitions and
+their source if different from the declared sources specified in the
+"Documentation standard."</i></p>
+6.3 Abbreviations used in this document.
+            <p><i>Insert here an alphabetic list of the abbreviations
+and acronyms if not identified in the declared sources specified in the
+"Documentation Standard."</i></p>
+6.4 Changes from previous issue.
+            <p><i>Will be "not applicable" for the initial issue.</i></p>
+            <p>Revisions shall identify the method used to identify
+changes from the previous issue.&nbsp; </p>
+            </font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br clear="all">
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">&nbsp;</font></p>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h4><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Identify and Link
+Requirements with Sources</font></font></h4>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">As noted
+earlier, the SRS serves to define the functional and nonfunctional
+requirements of the product. Functional requirements each have an
+origin from which they came, be it a <i>use case</i> (which is used in
+system analysis to identify, clarify, and organize system requirements,
+and consists of a set of possible sequences of interactions between
+systems and users in a particular environment and related to a
+particular goal), government regulation, industry standard, or a
+business requirement. In developing an SRS, you need to identify these
+origins and link them to their corresponding requirements. Such a
+practice not only justifies the requirement, but it also helps assure
+project stakeholders that frivolous or spurious requirements are kept
+out of the specification. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">To link
+requirements with their sources, each requirement included in the SRS
+should be labeled with a unique identifier that can remain valid over
+time as requirements are added, deleted, or changed. Such a labeling
+system helps maintain change-record integrity while also serving as an
+identification system for gathering metrics. You can begin a separate
+requirements identification list that ties a requirement identification
+(ID) number with a description of the requirement. Eventually, that
+requirement ID and description become part of the SRS itself and then
+part of the Requirements Traceability Matrix, discussed in subsequent
+paragraphs. Table 3 illustrates how these SRS ingredients work
+together. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif"><b>Table 3</b> This
+sample table identifies requirements and links them to their sources</font>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">
+      <table border="2" bordercolor="#cc9999" cellpadding="5"
+ width="475">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>ID No.</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Paragraph No.</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Requirement</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Business Rule<br>
+Source</b></font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">17</font></p>
+            </td>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">5.1.4.1</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Understand/communicate
+using SMTP protocol</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">IEEE
+STD xx-xxxx</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">18</font></p>
+            </td>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">5.1.4.1</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Understand/communicate
+using POP protocol</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">IEEE
+STD xx-xxxx</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">19</font></p>
+            </td>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">5.1.4.1</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Understand/communicate
+using IMAP protocol</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">IEEE
+STD xx-xxxx</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">20</font></p>
+            </td>
+            <td valign="top">
+            <p align="center"><font face="Arial,Helvetica,sans-serif"
+ size="-1">5.1.4.2</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Open
+at same rate as OE</font></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Use
+Case Doc 4.5.4</font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">&nbsp;</font></p>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h4><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Establish Business
+Rules for Contingencies and Responsibilities</font></font></h4>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">"The
+best-laid plans of mice and men..." begins the famous saying. It has
+direct application to writing SRSs because even the most thought-out
+requirements are not immune to changes in industry, market, or
+government regulations. A top-quality SRS should include plans for
+planned and unplanned contingencies, as well as an explicit definition
+of the responsibilities of each party, should a contingency be
+implemented. Some business rules are easier to work around than others,
+when Plan B has to be invoked. For example, if a customer wants to
+change a requirement that is tied to a government regulation, it may
+not be ethical and/or legal to be following "the spirit of the law."
+Many government regulations, as business rules, simply don't allow any
+compromise or "wiggle room." A project manager may be responsible for
+ensuring that a government regulation is followed as it relates to a
+project requirement; however, if a contingency is required, then the
+responsibility for that requirement may shift from the project manager
+to a regulatory attorney. The SRS should anticipate such actions to the
+furthest extent possible. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h4><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Establish a
+Requirements Traceability Matrix</font></font></h4>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">The business
+rules for contingencies and responsibilities can be defined explicitly
+within a Requirements Traceability Matrix (RTM), or contained in a
+separate document and referenced in the matrix, as the example in Table
+3 illustrates. Such a practice leaves no doubt as to responsibilities
+and actions under certain conditions as they occur during the
+product-development phase. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">The RTM
+functions as a sort of "chain of custody" document for requirements and
+can include pointers to links from requirements to sources, as well as
+pointers to business rules. For example, any given requirement must be
+traced back to a specified need, be it a use case, business essential,
+industry-recognized standard, or government regulation. As mentioned
+previously, linking requirements with sources minimizes or even
+eliminates the presence of spurious or frivolous requirements that lack
+any justification. The RTM is another record of mutual understanding,
+but also helps during the development phase. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">As software
+design and development proceed, the design elements and the actual code
+must be tied back to the requirement(s) that define them. The RTM is
+completed as development progresses; it can't be completed beforehand
+(see Table 3). </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h3><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">What Should I Know
+about Writing an SRS?</font></font></h3>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Unlike
+formal language that allows developers and designers some latitude, the
+natural language of SRSs must be exact, without ambiguity, and precise
+because the design specification, statement of work, and other project
+documents are what drive the development of the final product. That
+final product must be tested and validated against the design and
+original requirements. Specification language that allows for
+interpretation of key requirements will not yield a satisfactory final
+product and will likely lead to cost overruns, extended schedules, and
+missed deliverable deadlines. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Table 4
+shows the fundamental characteristics of a quality SRS, which were
+originally presented at the April 1998 Software Technology Conference
+presentation "Doing Requirements Right the First Time." Reprinted with
+permission from the Software Assurance Technology Center at NASA (<a
+ href="http://www.gsfc.nasa.gov/">http://www.gsfc.nasa.gov/</a>). These
+quality characteristics are closely tied to what are referred to as
+"indicators of strength and weakness," which will be defined next. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif"><b>Table 4</b> The
+10 language quality characteristics of an SRS</font> </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">
+      <table border="2" bordercolor="#cc9999" cellpadding="5"
+ width="475">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>SRS Quality Characteristic</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>What It Means</b></font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Complete</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">SRS
+defines precisely all the go-live situations that will be encountered
+and the system's capability to successfully address them.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Consistent</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">SRS
+capability functions and performance levels are compatible, and the
+required quality features (security, reliability, etc.) do not negate
+those capability functions. For example, the only electric hedge
+trimmer that is safe is one that is stored in a box and not connected
+to any electrical cords or outlets.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Accurate</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">SRS
+precisely defines the system's capability in a real-world environment,
+as well as how it interfaces and interacts with it. This aspect of
+requirements is a significant problem area for many SRSs.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Modifiable</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">The
+logical, hierarchical structure of the SRS should facilitate any
+necessary modifications (grouping related issues together and
+separating them from unrelated issues makes the SRS easier to modify).</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Ranked</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Individual
+requirements of an SRS are hierarchically arranged according to
+stability, security, perceived ease/difficulty of implementation, or
+other parameter that helps in the design of that and subsequent
+documents.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Testable</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">An SRS
+must be stated in such a manner that unambiguous assessment criteria
+(pass/fail or some quantitative measure) can be derived from the SRS
+itself. </font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Traceable</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Each
+requirement in an SRS must be uniquely identified to a source (use
+case, government requirement, industry standard, etc.)</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Unambiguous</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">SRS
+must contain requirements statements that can be interpreted in one way
+only. This is another area that creates significant problems for SRS
+development because of the use of natural language.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Valid</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">A
+valid SRS is one in which all parties and project participants can
+understand, analyze, accept, or approve it. This is one of the main
+reasons SRSs are written using natural language.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><i><font face="Arial,Helvetica,sans-serif" size="-1">Verifiable</font></i></p>
+            </td>
+            <td valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">A
+verifiable SRS is consistent from one level of abstraction to another.
+Most attributes of a specification are subjective and a conclusive
+assessment of quality requires a technical review by domain experts.
+Using indicators of strength and weakness provide some evidence that
+preferred attributes are or are not present.</font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">&nbsp;</font></p>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">What makes
+an SRS "good?" How do we know when we've written a "quality"
+specification? The most obvious answer is that a quality specification
+is one that fully addresses all the customer requirements for a
+particular product or system. That's part of the answer. While many
+quality attributes of an SRS are subjective, we do need indicators or
+measures that provide a sense of how strong or weak the language is in
+an SRS. A "strong" SRS is one in which the requirements are tightly,
+unambiguously, and precisely defined in such a way that leaves no other
+interpretation or meaning to any individual requirement. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">The Goddard
+Space Flight Center (GSFC) studied dozens of NASA requirements
+specifications that revealed nine categories of SRS quality indicators.
+The individual components in each category are words, phrases, and
+sentence structures that are related to quality attributes. The nine
+categories fall into two classes: those related to individual
+specification statements, and those related to the total SRS document.
+Table 5 summarizes the classes, categories, and components of these
+quality indicators. This table was also originally presented at the
+April 1998 Software Technology Conference presentation "Doing
+Requirements Right the First Time." Reprinted with permission from the
+Software Assurance Technology Center at NASA (<a
+ href="http://www.gsfc.nasa.gov/">http://www.gsfc.nasa.gov/</a>). </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif"><b>Table 5</b>
+Quality measures related to individual SRS statements</font> </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">
+      <table border="2" bordercolor="#cc9999" cellpadding="5"
+ width="475">
+        <tbody>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Imperatives</i>:
+Words and phrases that command the presence of some feature, function,
+or deliverable. They are listed below in decreasing order of strength.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Shall</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Used
+to dictate the provision of a functional capability.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Must or must not</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Most
+often used to establish performance requirement or constraints.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Is required to</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Used
+as an imperative in SRS statements when written in passive voice.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Are applicable</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Used
+to include, by reference, standards, or other documentation as an
+addition to the requirement being specified.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Responsible for</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Used
+as an imperative in SRSs that are written for systems with pre-defined
+architectures.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Will</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Used
+to cite things that the operational or development environment is to
+provide to the capability being specified. For example, The vehicle's
+exhaust system will power the ABC widget.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>Should</b></font></p>
+            </td>
+            <td colspan="3" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">Not
+used often as an imperative in SRS statements; however, when used, the
+SRS statement always reads weak. Avoid using Should in your SRSs.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Continuances</i>:
+Phrases that follow an imperative and introduce the specification of
+requirements at a lower level. There is a correlation with the
+frequency of use of <i>continuances</i> and SRS organization and
+structure, up to a point. Excessive use of <i>continuances</i> often
+indicates a very complex, detailed SRS. The <i>continuances</i> below
+are listed in decreasing order of use within NASA SRSs. Use <i>continuances</i>
+in your SRSs, but balance the frequency with the appropriate level of
+detail called for in the SRS.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>1. Below:</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>2. As follows:</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>3. Following:</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>4. Listed:</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>5. In particular:</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>6. Support:</b></font></p>
+            </font></td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Directives</i>:
+Categories of words and phrases that indicate illustrative information
+within the SRS. A high ratio of total number of <i>directives</i> to
+total text line count appears to correlate with how precisely
+requirements are specified within the SRS. The <i>directives</i> below
+are listed in decreasing order of occurrence within NASA SRSs.
+Incorporate the use of <i>directives</i> in your SRSs.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>1. Figure</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>2. Table</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>3. For example</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>4. Note</b></font></p>
+            </font></td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Options</i>:
+A category of words that provide latitude in satisfying the SRS
+statements that contain them. This category of words loosens the SRS,
+reduces the client's control over the final product, and allows for
+possible cost and schedule risks. You should avoid using them in your
+SRS. The <i>options</i> below are listed in the order they are found
+most often in NASA SRSs.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>1. Can</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>2. May</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>3. Optionally</b></font></p>
+            </font></td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Weak
+phrases</i>: A category of clauses that can create uncertainty and
+multiple/subjective interpretation. The total number of <i>weak phrases</i>
+found in an SRS indicates the relative ambiguity and incompleteness of
+an SRS. The <i>weak phrases</i> below are listed alphabetically.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>adequate</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>be able to</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>easy</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>provide for</b></font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>as a minimum</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>be capable of</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>effective</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>timely</b></font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>as applicable</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>but not limited to</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>if possible</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>tbd</b></font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>as appropriate</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>capability of</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>if practical</b></font></p>
+            </td>
+            <td valign="top">
+            <p>&nbsp;</p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>at a minimum</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>capability to</b></font></p>
+            </td>
+            <td valign="top">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>normal</b></font></p>
+            </td>
+            <td valign="top">
+            <p>&nbsp;</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Size:</i>
+Used to indicate the <i>size</i> of the SRS document, and is the total
+number of the following:</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>1. Lines of text</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>2. Number of imperatives</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>3. Subjects of SRS statements</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>4. Paragraphs</b></font></p>
+            </font></td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Text
+Structure</i>: Related to the number of statement identifiers found at
+each hierarchical level of the SRS and indicate the document's
+organization, consistency, and level of detail. The most detailed NASA
+SRSs were nine levels deep. High-level SRSs were rarely more than four
+levels deep. SRSs deemed well organized and a consistent level of
+detail had <i>text structures</i> resembling pyramids (few level 1
+headings but each lower level having more numbered statements than the
+level above it). Hour-glass-shaped <i>text structures</i> (many level
+1 headings, few a mid-levels, and many at lower levels) usually contain
+a greater amount of introductory and administrative information.
+Diamond-shaped <i>text structures</i> (pyramid shape followed by
+decreasing statement counts at levels below the pyramid) indicated that
+subjects introduced at higher levels were addressed at various levels
+of detail.</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Specification
+Depth</i>: The number of imperatives found at each of the SRS levels of
+text structure. These numbers include the count of lower level list
+items that are introduced at a higher level by an imperative and
+followed by a continuance. The numbers provide some insight into how
+much of the Requirements document was included in the SRS, and can
+indicate how concise the SRS is in specifying the requirements. </font></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" valign="top">
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Readability
+Statistics</i>: Measurements of how easily an adult can read and
+understand the requirements document. Four readability statistics are
+used (calculated by Microsoft Word). While readability statistics
+provide a relative quantitative measure, don't sacrifice sufficient
+technical depth in your SRS for a number.</font></p>
+            <font face="Arial,Helvetica,sans-serif" size="-1">
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>1. Flesch Reading Ease index</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>2. Flesch-Kincaid Grade Level index</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>3. Coleman-Liau Grade Level index</b></font></p>
+            <p><font color="#cc6666" face="Arial,Helvetica,sans-serif"
+ size="-1"><b>4. Bormuth Grade Level index</b></font></p>
+            </font></td>
+          </tr>
+        </tbody>
+      </table>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"> </font></p>
+      <h3><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Conclusion</font></font></h3>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">There's so
+much more we could say about requirements and specifications.
+Hopefully, this information will help you get started when you are
+called upon--or step up--to help the development team. Writing
+top-quality requirements specifications begins with a complete
+definition of customer requirements. Coupled with a natural language
+that incorporates strength and weakness quality indicators--not to
+mention the adoption of a good SRS template--technical communications
+professionals well-trained in requirements gathering, template design,
+and natural language use are in the best position to create and add
+value to such critical project documentation. </font></p>
+      <h3><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif">Additional Resources</font></font></h3>
+      <font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Brooks,
+Frederick P. Jr., No Silver Bullet: Essence and accidents of software
+engineering, IEEE Computer, vol. 15, no. 1, April 1987, pp. 10-18. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Gause,
+Donald C., and Weinberg, Gerald M., Exploring Requirements Quality
+Before Design, Dorset House Publishing, NY, NY, 1989. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">IEEE Std
+830-1993, Recommended Practice for Software Requirements
+Specifications, December 2, 1993. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">Wiegers,
+Karl E. Software Requirements, Microsoft Press, Redmond, WA, 1999. </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1">
+      <table border="2" bordercolor="#cc9999" cellpadding="5"
+ width="500">
+        <tbody>
+          <tr>
+            <td><font face="Arial,Helvetica,sans-serif" size="-1"> </font>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#0099cc" face="Arial,Helvetica,sans-serif" size="-1"><b>Resources
+for Model Templates</b></font> </font></p>
+            <p><font face="Arial,Helvetica,sans-serif" size="-1">As
+previously noted, you should first look for SRS documents developed by
+your company. Not only are these documents readily available to you,
+but also they're likely for products that are similar to the product
+you're developing an SRS for. Additional resources include: </font></p>
+            <ul>
+              <font face="Arial,Helvetica,sans-serif" size="-1"><font
+ face="Arial, Helvetica" size="-1"> <li>IEEE Standard 830-1998
+describes an SRS template (Table 1 is an adaptation and extension of
+this template). </li>
+              <li>Ken Rigby's informative Web site at <a
+ href="http://neon.airtime.co.uk/users/wysywig/srs_mt.htm">http://neon.airtime.co.uk/users/wysywig/srs_mt.htm</a>
+includes sample specification templates and articles about writing
+various types of specifications. </li>
+              <li>STC's Management Special Interest Group (SIG) offers
+a Reference Documents Page at <a
+ href="http://www.stcsig.org/mgt/reference.htm">http://www.stcsig.org/mgt/reference.htm</a>
+that includes a sample template and other related resources. </li>
+              <li>Other sites are also available on the Web that offer
+examples of actual SRSs and templates. A quick search for "software
+requirements specifications" at your favorite search engine should
+yield some useful results. </li>
+              </font></font>
+            </ul>
+            <font face="Arial,Helvetica,sans-serif" size="-1"> </font></td>
+          </tr>
+        </tbody>
+      </table>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><i>Donn Le
+Vie, Jr. has helped develop requirements specifications for the
+hardware and software fields, the earth and space sciences, and the
+eCommerce industry. Donn works for Intel Corporation's Communications
+Group, and Wireless Communication and Computing Group, where he
+provides process development and information engineering support for
+wireless/mobile products and storage area network projects that use the
+StrongARM&reg; and XScale&#8482; microarchitectures. He has authored more
+than 60 technical/industry-focused articles, 700 general-interest
+articles, and two nonfiction books. His latest book,</i> Designing
+Successful eBusiness Proposals<i>, will be available later this year.
+He can be reached at <a href="mailto:donald.s.levie@intel.com">donald.s.levie@intel.com</a>..</i>
+      </font></p>
+      <p><font face="Arial,Helvetica,sans-serif" size="-1"><font
+ color="#cc6666" face="Arial,Helvetica,sans-serif" size="-1"><b>Pssst!</b></font>
+      </font></p>
+      <ul>
+        <font face="Arial,Helvetica,sans-serif" size="-1"><font
+ face="Arial, Helvetica" size="-1"> <li>See also <a
+ href="http://www.techwr-l.com/techwhirl/magazine/writing/inspectionmethod.html"><i>The
+Inspection Method: An Approach to Planning and Managing a Successful
+Team Document Review</i></a> by Donn Le Vie, Jr. </li>
+        <li><a title="Recommend This Site!"
+ href="javascript:Help('/techwhirl/phpapps/recommend-popup.php3?TRLReferer=www.techwr-l.com/techwhirl/magazine/writing/softwarerequirementspecs.html')">Send
+this article</a> to someone you know! </li>
+        </font></font>
+      </ul>
+      </td>
+<!-- Following is beginning of body table cell --> </tr>
+<!-- Preceeding ends the second column cell --><!-- Replace preceeding info for each page--><!-- /CONTENT -->
+  </tbody>
+</table>
+<script language="javascript"
+ src="Writing%20Software%20Requirements%20Specifications_files/tracker.js"></script>
+<noscript><IMG src="Writing Software Requirements
+Specifications_files/tracker.gif"></noscript>
+<script language="JavaScript">
+<!--
+var SymRealOnLoad;
+var SymRealOnUnload;
+
+function SymOnUnload()
+{
+  window.open = SymWinOpen;
+  if(SymRealOnUnload != null)
+     SymRealOnUnload();
+}
+
+function SymOnLoad()
+{
+  if(SymRealOnLoad != null)
+     SymRealOnLoad();
+  window.open = SymRealWinOpen;
+  SymRealOnUnload = window.onunload;
+  window.onunload = SymOnUnload;
+}
+
+SymRealOnLoad = window.onload;
+window.onload = SymOnLoad;
+
+//-->
+</script>
+</body>
+</html>

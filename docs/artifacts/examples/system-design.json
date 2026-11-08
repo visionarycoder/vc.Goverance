@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-SYSTEM-DESIGN",
+  "artifact_type": "system-design",
+  "revision": "example-r1",
+  "title": "Fictional draft example: System design and technology baseline",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "solution-architect"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 148,150,381",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        148,
+        150,
+        381
+      ]
+    }
+  ],
+  "payload": {
+    "volatility_rationale": [
+      "EXAMPLE-REPLACE"
+    ],
+    "components": [
+      {
+        "component_id": "EXAMPLE-REPLACE",
+        "role": "client",
+        "encapsulated_volatility": "EXAMPLE-REPLACE"
+      }
+    ],
+    "allowed_edges": [],
+    "core_use_case_validation": [
+      {
+        "use_case_ref": {
+          "repository_id": "EXAMPLE-REPLACE",
+          "artifact_id": "EXAMPLE-REPLACE",
+          "artifact_type": "EXAMPLE-REPLACE",
+          "revision": "EXAMPLE-REPLACE",
+          "path": "EXAMPLE-REPLACE",
+          "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "composition_evidence": [
+          {
+            "repository_id": "EXAMPLE-REPLACE",
+            "artifact_id": "EXAMPLE-REPLACE",
+            "artifact_type": "EXAMPLE-REPLACE",
+            "revision": "EXAMPLE-REPLACE",
+            "path": "EXAMPLE-REPLACE",
+            "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ]
+      }
+    ],
+    "technology_bounds": [
+      "EXAMPLE-REPLACE"
+    ],
+    "project_design_inputs": []
+  }
+}

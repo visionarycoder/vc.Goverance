@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-DECISION-RECORD",
+  "artifact_type": "decision-record",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Revision-bound approval or rejection",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "human-owner"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 153,377,389",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        153,
+        377,
+        389
+      ]
+    }
+  ],
+  "payload": {
+    "subject": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "action": "accept-artifact",
+    "decider": {
+      "actor_id": "example-authorized-decider",
+      "role": "human-owner"
+    },
+    "authority_basis": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "outcome": "pending",
+    "reason": "EXAMPLE-REPLACE",
+    "decided_at": null,
+    "review_records": [],
+    "prerequisite_checks": [],
+    "within_owner_bounds": false,
+    "bound_inputs": []
+  }
+}

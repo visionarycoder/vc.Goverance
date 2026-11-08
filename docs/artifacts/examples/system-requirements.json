@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-SYSTEM-REQUIREMENTS",
+  "artifact_type": "system-requirements",
+  "revision": "example-r1",
+  "title": "Fictional draft example: System requirements specification",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "solution-architect"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 150,381",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        150,
+        381
+      ]
+    }
+  ],
+  "payload": {
+    "scope_statement": "EXAMPLE-REPLACE",
+    "behaviors": [
+      {
+        "requirement_id": "EXAMPLE-REPLACE",
+        "source_refs": [
+          {
+            "repository_id": "EXAMPLE-REPLACE",
+            "artifact_id": "EXAMPLE-REPLACE",
+            "artifact_type": "EXAMPLE-REPLACE",
+            "revision": "EXAMPLE-REPLACE",
+            "path": "EXAMPLE-REPLACE",
+            "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "condition": "EXAMPLE-REPLACE",
+        "required_behavior": "EXAMPLE-REPLACE",
+        "acceptance_criteria": [
+          "EXAMPLE-REPLACE"
+        ]
+      }
+    ],
+    "quality_requirements": [],
+    "constraints": [],
+    "exclusions": [],
+    "unresolved_questions": []
+  }
+}

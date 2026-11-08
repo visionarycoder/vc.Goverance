@@ -1,0 +1,90 @@
+{
+  "format": "Standard Technical English method-tracing requirements",
+  "version": 1,
+  "recorded_on": "2026-11-07",
+  "status": "Capability required; detailed implementation mechanism proposed, not implemented.",
+  "rules": [
+    {
+      "id": "TRACE-01",
+      "when": "A method has the designated tracing attribute",
+      "instruction": "Automatically provide debugging statements for method inputs and outputs. Do not require handwritten tracing statements in each method.",
+      "classification": "owner_capability_requirement",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-02",
+      "when": "Selecting methods for instrumentation",
+      "instruction": "Include public, internal, and private methods. Do not restrict tracing to service contracts or proxy entry points.",
+      "classification": "owner_capability_requirement",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-03",
+      "when": "Entering an instrumented method",
+      "instruction": "Capture the declared input values once, subject to the reviewed value-projection policy. Do not evaluate caller arguments again.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-04",
+      "when": "Completing an instrumented method",
+      "instruction": "Capture the returned value and successful ref/out results where applicable. For void methods, record completion without inventing a result.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-05",
+      "when": "Completing asynchronous work",
+      "instruction": "Observe logical completion, failure, or cancellation. Do not report a returned Task or ValueTask object as the completed output. Do not consume a ValueTask twice.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-06",
+      "when": "Leaving through failure or cancellation",
+      "instruction": "Record the agreed outcome and preserve the original failure, cancellation semantics, and stack information. Do not replace the outcome with a logging result.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-07",
+      "when": "Dispatching to the method body",
+      "instruction": "Use explicit typed code. Do not use a reflection-based proxy, runtime reflection dispatch, or runtime-generated proxy to supply instrumentation.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-08",
+      "when": "Generating instrumentation",
+      "instruction": "Preserve accessibility, signatures, business behavior, argument evaluation, and return semantics. Diagnose unsupported attributed methods rather than silently omitting them.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-09",
+      "when": "Connecting diagnostics",
+      "instruction": "Use the approved logging abstraction and DI-compatible instance wiring. Define static-method logging explicitly; do not introduce hidden service-location calls into business code.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    },
+    {
+      "id": "TRACE-10",
+      "when": "Emitting debug values",
+      "instruction": "Apply the reviewed enablement and value-projection policy before formatting. Do not implicitly enumerate lazy results, invoke arbitrary getters, or serialize whole object graphs.",
+      "classification": "proposed_correctness_constraint",
+      "decision_owner": "Application Architect within Solution Architect bounds",
+      "context": "docs/patterns/method-io-tracing.md"
+    }
+  ],
+  "implementation_repository": "vc.Ifx",
+  "repository_ownership": "docs/implementation/repository-ownership.md"
+}

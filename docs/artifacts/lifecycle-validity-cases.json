@@ -1,0 +1,1285 @@
+{
+  "version": "1.0.0",
+  "record_mode": "example",
+  "reviewed_on": "2026-11-08",
+  "purpose": "Normative abstract acceptance cases for future gate/validity implementations. Facts are synthetic; these records cannot authorize real work.",
+  "gate_catalog": "docs/process/lifecycle-gates.json",
+  "validity_rules": "docs/governance/change-approval-validity.json",
+  "cases": [
+    {
+      "id": "GATE-BASELINE-pass",
+      "kind": "gate",
+      "gate_id": "GATE-BASELINE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-BASELINE-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-BASELINE",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-BASELINE-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-BASELINE",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-SDP-pass",
+      "kind": "gate",
+      "gate_id": "GATE-SDP",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-SDP-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-SDP",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-SDP-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-SDP",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-SRS-pass",
+      "kind": "gate",
+      "gate_id": "GATE-SRS",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "stp.reviewPassed": false,
+        "design.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-SRS-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-SRS",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "stp.reviewPassed": false,
+        "design.reviewPassed": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-SRS-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-SRS",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "stp.reviewPassed": false,
+        "design.reviewPassed": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-EXPLORE-pass",
+      "kind": "gate",
+      "gate_id": "GATE-EXPLORE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "assignment.current": true,
+        "exploration.bounded": true,
+        "design.reviewPassed": false,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-EXPLORE-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-EXPLORE",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "assignment.current": true,
+        "exploration.bounded": true,
+        "design.reviewPassed": false,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-EXPLORE-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-EXPLORE",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "assignment.current": true,
+        "exploration.bounded": true,
+        "design.reviewPassed": false,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-DESIGN-pass",
+      "kind": "gate",
+      "gate_id": "GATE-DESIGN",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-DESIGN-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-DESIGN",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-DESIGN-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-DESIGN",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-CONSTRUCT-pass",
+      "kind": "gate",
+      "gate_id": "GATE-CONSTRUCT",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-CONSTRUCT-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-CONSTRUCT",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-CONSTRUCT-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-CONSTRUCT",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-STP-pass",
+      "kind": "gate",
+      "gate_id": "GATE-STP",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "stp.reviewPassed": true,
+        "design.reviewPassed": false,
+        "code.reviewPassed": false,
+        "integration.actual": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-STP-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-STP",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "stp.reviewPassed": true,
+        "design.reviewPassed": false,
+        "code.reviewPassed": false,
+        "integration.actual": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-STP-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-STP",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "stp.reviewPassed": true,
+        "design.reviewPassed": false,
+        "code.reviewPassed": false,
+        "integration.actual": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-CODE-pass",
+      "kind": "gate",
+      "gate_id": "GATE-CODE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "design.reviewPassed": true,
+        "construction.submitted": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-CODE-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-CODE",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "design.reviewPassed": true,
+        "construction.submitted": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-CODE-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-CODE",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "design.reviewPassed": true,
+        "construction.submitted": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-INTEGRATE-pass",
+      "kind": "gate",
+      "gate_id": "GATE-INTEGRATE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "stp.reviewPassed": false,
+        "verification.actual": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-INTEGRATE-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-INTEGRATE",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "stp.reviewPassed": false,
+        "verification.actual": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-INTEGRATE-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-INTEGRATE",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "stp.reviewPassed": false,
+        "verification.actual": false
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-VERIFY-pass",
+      "kind": "gate",
+      "gate_id": "GATE-VERIFY",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "stp.reviewPassed": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "verification.actual": true
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-VERIFY-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-VERIFY",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "stp.reviewPassed": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "verification.actual": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-VERIFY-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-VERIFY",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "stp.reviewPassed": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "verification.actual": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-PHASE-pass",
+      "kind": "gate",
+      "gate_id": "GATE-PHASE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "phase.criteriaSatisfied": true,
+        "phase.weightApproved": true
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-PHASE-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-PHASE",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "phase.criteriaSatisfied": true,
+        "phase.weightApproved": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-PHASE-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-PHASE",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "phase.criteriaSatisfied": true,
+        "phase.weightApproved": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-MILESTONE-pass",
+      "kind": "gate",
+      "gate_id": "GATE-MILESTONE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "delivery.projectTestsSatisfied": true,
+        "delivery.businessAccepted": true
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-MILESTONE-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-MILESTONE",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "delivery.projectTestsSatisfied": true,
+        "delivery.businessAccepted": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-MILESTONE-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-MILESTONE",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "delivery.projectTestsSatisfied": true,
+        "delivery.businessAccepted": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-RESUME-pass",
+      "kind": "gate",
+      "gate_id": "GATE-RESUME",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "change.assessed": true,
+        "change.decided": true,
+        "change.revalidated": true,
+        "assignment.released": true
+      },
+      "expected_outcome": "pass",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-RESUME-known-failure",
+      "kind": "gate",
+      "gate_id": "GATE-RESUME",
+      "facts": {
+        "common.currentContext": false,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "change.assessed": true,
+        "change.decided": true,
+        "change.revalidated": true,
+        "assignment.released": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "GATE-RESUME-unverified",
+      "kind": "gate",
+      "gate_id": "GATE-RESUME",
+      "facts": {
+        "common.currentContext": null,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "change.assessed": true,
+        "change.decided": true,
+        "change.revalidated": true,
+        "assignment.released": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "Required evidence is scope-bound; non-prerequisite branch facts do not create extra gates."
+    },
+    {
+      "id": "construction-before-stp-review",
+      "kind": "gate",
+      "gate_id": "GATE-CONSTRUCT",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": null
+      },
+      "expected_outcome": "pass",
+      "purpose": "construction-before-stp-review"
+    },
+    {
+      "id": "construction-while-stp-rework",
+      "kind": "gate",
+      "gate_id": "GATE-CONSTRUCT",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "baseline.ready": true,
+        "sdp.accepted": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "construction-while-stp-rework"
+    },
+    {
+      "id": "construction-held-for-invalid-shared-design",
+      "kind": "gate",
+      "gate_id": "GATE-CONSTRUCT",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": false,
+        "baseline.ready": true,
+        "sdp.accepted": true,
+        "srs.reviewPassed": true,
+        "design.reviewPassed": true,
+        "approach.resolved": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true,
+        "stp.reviewPassed": false
+      },
+      "expected_outcome": "fail",
+      "purpose": "construction-held-for-invalid-shared-design"
+    },
+    {
+      "id": "exploration-before-complete-design",
+      "kind": "gate",
+      "gate_id": "GATE-EXPLORE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "srs.reviewPassed": true,
+        "assignment.current": true,
+        "exploration.bounded": true,
+        "design.reviewPassed": false
+      },
+      "expected_outcome": "pass",
+      "purpose": "exploration-before-complete-design"
+    },
+    {
+      "id": "integration-before-stp-review",
+      "kind": "gate",
+      "gate_id": "GATE-INTEGRATE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "stp.reviewPassed": false,
+        "verification.actual": null
+      },
+      "expected_outcome": "pass",
+      "purpose": "integration-before-stp-review"
+    },
+    {
+      "id": "testing-without-stp-approval",
+      "kind": "gate",
+      "gate_id": "GATE-VERIFY",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "stp.reviewPassed": null,
+        "integration.actual": true,
+        "integration.accepted": true,
+        "verification.actual": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "testing-without-stp-approval"
+    },
+    {
+      "id": "code-changed-after-approval",
+      "kind": "gate",
+      "gate_id": "GATE-CODE",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": false,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "design.reviewPassed": true,
+        "construction.submitted": true,
+        "code.reviewPassed": true,
+        "assignment.current": true,
+        "construction.handoffComplete": true
+      },
+      "expected_outcome": "fail",
+      "purpose": "code-changed-after-approval"
+    },
+    {
+      "id": "resume-without-impact-disposition",
+      "kind": "gate",
+      "gate_id": "GATE-RESUME",
+      "facts": {
+        "common.currentContext": true,
+        "common.referencesVerified": true,
+        "common.authorityVerified": true,
+        "common.independenceVerified": true,
+        "common.upstreamBoundsSatisfied": true,
+        "change.assessed": null,
+        "change.decided": true,
+        "change.revalidated": true,
+        "assignment.released": true
+      },
+      "expected_outcome": "blocked",
+      "purpose": "resume-without-impact-disposition"
+    },
+    {
+      "id": "validity-exact-approved-context",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "usable",
+      "purpose": "exact-approved-context"
+    },
+    {
+      "id": "validity-pending-not-approved",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": false,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "not-approved",
+      "purpose": "pending-not-approved"
+    },
+    {
+      "id": "validity-unresolved-context",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": false,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "unresolved",
+      "purpose": "unresolved-context"
+    },
+    {
+      "id": "validity-unverified-actor",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": false,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "unresolved",
+      "purpose": "unverified-actor"
+    },
+    {
+      "id": "validity-missing-required-review",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": false,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "unresolved",
+      "purpose": "missing-required-review"
+    },
+    {
+      "id": "validity-new-subject-old-approval",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": false,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "stale-for-context",
+      "purpose": "new-subject-old-approval"
+    },
+    {
+      "id": "validity-changed-bound-input",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": false,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "stale-for-context",
+      "purpose": "changed-bound-input"
+    },
+    {
+      "id": "validity-editorial-claim-without-new-decision",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": false,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "stale-for-context",
+      "purpose": "editorial-claim-without-new-decision"
+    },
+    {
+      "id": "validity-new-reaffirmation-bound-to-current-bytes",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": true,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "usable",
+      "purpose": "new-reaffirmation-bound-to-current-bytes"
+    },
+    {
+      "id": "validity-pending-impact-review",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": true,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "stale-for-context",
+      "purpose": "pending-impact-review"
+    },
+    {
+      "id": "validity-revoked-approval",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": true,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "revoked",
+      "purpose": "revoked-approval"
+    },
+    {
+      "id": "validity-withdrawn-input",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": true,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "revoked",
+      "purpose": "withdrawn-input"
+    },
+    {
+      "id": "validity-explicit-freshness-expired",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": true,
+        "freshness_satisfied": false,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "expired",
+      "purpose": "explicit-freshness-expired"
+    },
+    {
+      "id": "validity-explicit-freshness-met",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": true,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "usable",
+      "purpose": "explicit-freshness-met"
+    },
+    {
+      "id": "validity-old-no-blanket-expiry",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": false,
+        "ordinary_agent_replacement": false,
+        "age_days": 3650,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "usable",
+      "purpose": "old-no-blanket-expiry"
+    },
+    {
+      "id": "validity-routine-agent-replacement",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": true,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "usable",
+      "purpose": "routine-agent-replacement"
+    },
+    {
+      "id": "validity-replacement-plus-effective-revocation",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": true,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": true,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": false
+      },
+      "expected_state": "revoked",
+      "purpose": "replacement-plus-effective-revocation"
+    },
+    {
+      "id": "validity-unrelated-scope-changed",
+      "kind": "validity",
+      "facts": {
+        "approved_outcome": true,
+        "context_verified": true,
+        "subject_bytes_match": true,
+        "bound_inputs_match": true,
+        "authority_verified": true,
+        "required_reviews_valid": true,
+        "reassessment_pending": false,
+        "effective_revocation": false,
+        "effective_withdrawal": false,
+        "freshness_limit_applies": false,
+        "freshness_satisfied": true,
+        "ordinary_agent_replacement": false,
+        "age_days": 0,
+        "reaffirmation_is_new_bound_decision": false,
+        "unaffected_other_scope_changed": true
+      },
+      "expected_state": "usable",
+      "purpose": "unrelated-scope-changed"
+    }
+  ]
+}

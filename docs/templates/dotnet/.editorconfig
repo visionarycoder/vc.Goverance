@@ -1,0 +1,64 @@
+# Reviewed technical template. Adopt into a controlled application baseline.
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.cs]
+csharp_new_line_before_open_brace = all
+csharp_prefer_braces = true:warning
+dotnet_style_qualification_for_field = true:warning
+dotnet_diagnostic.IDE0009.severity = warning
+dotnet_diagnostic.IDE0011.severity = warning
+dotnet_diagnostic.IDE1006.severity = error
+
+dotnet_naming_rule.fields.symbols = nonpublicFields
+dotnet_naming_rule.fields.style = camelCase
+dotnet_naming_rule.fields.severity = error
+dotnet_naming_symbols.nonpublicFields.applicable_kinds = field
+dotnet_naming_symbols.nonpublicFields.applicable_accessibilities = private, internal, private_protected
+
+dotnet_naming_rule.visibleFields.symbols = visibleFields
+dotnet_naming_rule.visibleFields.style = pascalCase
+dotnet_naming_rule.visibleFields.severity = error
+dotnet_naming_symbols.visibleFields.applicable_kinds = field
+dotnet_naming_symbols.visibleFields.applicable_accessibilities = public, protected, protected_internal
+
+dotnet_naming_rule.constants.symbols = constants
+dotnet_naming_rule.constants.style = pascalCase
+dotnet_naming_rule.constants.severity = error
+dotnet_naming_symbols.constants.applicable_kinds = field, local
+dotnet_naming_symbols.constants.applicable_accessibilities = *
+dotnet_naming_symbols.constants.required_modifiers = const
+
+dotnet_naming_rule.typesAndMembers.symbols = typesAndMembers
+dotnet_naming_rule.typesAndMembers.style = pascalCase
+dotnet_naming_rule.typesAndMembers.severity = error
+dotnet_naming_symbols.typesAndMembers.applicable_kinds = namespace, class, struct, enum, delegate, method, property, event
+dotnet_naming_symbols.typesAndMembers.applicable_accessibilities = *
+
+dotnet_naming_rule.interfaces.symbols = interfaces
+dotnet_naming_rule.interfaces.style = interfaceCase
+dotnet_naming_rule.interfaces.severity = error
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+
+dotnet_naming_rule.parametersAndLocals.symbols = parametersAndLocals
+dotnet_naming_rule.parametersAndLocals.style = camelCase
+dotnet_naming_rule.parametersAndLocals.severity = error
+dotnet_naming_symbols.parametersAndLocals.applicable_kinds = parameter, local
+dotnet_naming_symbols.parametersAndLocals.applicable_accessibilities = *
+
+dotnet_naming_style.camelCase.capitalization = camel_case
+dotnet_naming_style.camelCase.required_prefix =
+dotnet_naming_style.camelCase.required_suffix =
+dotnet_naming_style.camelCase.word_separator =
+dotnet_naming_style.pascalCase.capitalization = pascal_case
+dotnet_naming_style.pascalCase.required_prefix =
+dotnet_naming_style.pascalCase.word_separator =
+dotnet_naming_style.interfaceCase.capitalization = pascal_case
+dotnet_naming_style.interfaceCase.required_prefix = I

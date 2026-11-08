@@ -1,0 +1,565 @@
+{
+  "format": "Standard Technical English implementation pattern specifications",
+  "version": 1,
+  "status": "Review catalog; no application pattern or technology selection implied.",
+  "authority": "Righting Software remains governing. Supporting-source ideas are not additional Method directives.",
+  "selection_record_required": [
+    "pattern_id_and_version",
+    "business_need",
+    "source_locators",
+    "system_design_revision",
+    "detailed_design_revision",
+    "selected_mechanism",
+    "permitted_variation",
+    "prohibited_variation",
+    "test_design_revision",
+    "review_evidence",
+    "decision_owner"
+  ],
+  "patterns": [
+    {
+      "id": "PAT-001",
+      "title": "Contract-mediated component access",
+      "status": "mandatory owner-selected component-boundary policy; application realization remains a design decision",
+      "when": "A call crosses an approved component boundary; internal collaborator calls are outside this requirement.",
+      "sources": [
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Expose the approved contract. Keep implementation details behind the boundary.",
+        "Apply all permitted and prohibited interactions in C-SD-4, C-SD-5, and C-SD-6.",
+        "Use cohesive business operations. Do not expose property-like service operations.",
+        "Apply the current Microsoft technical standard and owner-selected unprefixed naming to derived implementations. Preserve historical reference files unchanged.",
+        "Route every cross-component call through a DI-capable contract proxy.",
+        "Generate a typed local proxy when no service-level separation exists.",
+        "Do not implement a reflection-based proxy.",
+        "Keep internal collaborator calls outside the mandatory proxy scope."
+      ],
+      "implementation_choices": [
+        "Select a service invocation proxy or generate a typed local proxy according to the approved separation.",
+        "Dapr sidecar service invocation is an accepted realization; Dapr is not mandated or deployed.",
+        "Specify injected chain collaborators, order, registrations, lifetimes, cancellation, and failure behavior in the detailed design."
+      ],
+      "verification": [
+        "Review actual dependency edges, including indirect calls.",
+        "Test contract behavior and failure paths through the boundary.",
+        "Verify that callers do not require the concrete service implementation.",
+        "Reject direct implementation or direct registration bypasses.",
+        "Verify that a local boundary uses generated typed forwarding and that proxy dispatch does not use reflection.",
+        "Test actual DI resolution and call-chain order, not just interface presence."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": [],
+      "policy": "docs/patterns/component-proxies.md",
+      "policy_rules": "docs/standards/proxy-rules.json"
+    },
+    {
+      "id": "PAT-002",
+      "title": "Service contract inheritance with proxy chaining",
+      "status": "candidate; not selected for an application",
+      "when": "A reviewed contract has a justified inherited capability, and the selected technology supports the pattern.",
+      "sources": [
+        {
+          "document": "docs/research/supporting-pattern-review.md",
+          "locator": "SimpleCalculatorClient declaration and Add",
+          "authority": "Lowy/IDesign sample",
+          "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/SimpleProxy.cs",
+          "availability": "Historical review record only; original source copy removed from vc.Governance."
+        },
+        {
+          "document": "docs/research/supporting-pattern-review.md",
+          "locator": "IScientificCalculator and ScientificCalculatorClient",
+          "authority": "Lowy/IDesign sample",
+          "former_document": "docs/references/proxy-chaining/Inheritance - proxy chaining/Client/ScientificProxy.cs",
+          "availability": "Historical review record only; original source copy removed from vc.Governance."
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Keep inheritance aligned with cohesive public capabilities. Do not grow a contract merely to reuse implementation code.",
+        "Preserve the source sample attribution and license when using its code.",
+        "Do not mistake proxy class inheritance for permission to change component dependency rules.",
+        "Apply the current Microsoft technical standard and owner-selected unprefixed naming to derived implementations. Preserve historical reference files unchanged."
+      ],
+      "implementation_choices": [
+        "The sample chains the scientific proxy through the simple proxy; the simple proxy uses a channel typed to the scientific contract.",
+        "Evaluate this channel coupling explicitly. Do not infer that the base proxy is independent of derived contracts.",
+        "Treat the sample as historical evidence, not a production-ready runtime selection."
+      ],
+      "verification": [
+        "Test inherited and added operations through their intended public interfaces.",
+        "Verify endpoint and contract compatibility, channel cleanup, and fault behavior.",
+        "Evaluate contract metrics over the effective exposed operation set."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": [
+        "Does the base-proxy dependence on the most-derived channel fit the intended contract evolution?"
+      ]
+    },
+    {
+      "id": "PAT-003",
+      "title": "Generated infrastructure around approved components",
+      "status": "candidate; not selected for an application",
+      "when": "Repeated infrastructure behavior has a stable, reviewed definition.",
+      "sources": [
+        {
+          "document": "docs/research/supporting-pattern-review.md",
+          "locator": "Sections 7.1.1–7.1.2, printed pp. 200–202; PDF pp. 225–227",
+          "authority": "supporting technique",
+          "former_document": "docs/references/Metaprogramming in NET.pdf",
+          "availability": "Historical review record only; original source copy removed from vc.Governance."
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Keep business decisions in the approved business components.",
+        "Do not use generated infrastructure to add forbidden dependencies or silently change contracts.",
+        "Keep generation inputs and templates outside implementation-worker amendment authority.",
+        "Apply the current Microsoft technical standard and owner-selected unprefixed naming to derived implementations. Preserve historical reference files unchanged."
+      ],
+      "implementation_choices": [
+        "Compare generation, composition, decorators, interception, and rewriting under the approved baseline. No mechanism is selected by this catalog.",
+        "Record generator version, approved input revision, and generated output ownership.",
+        "Make regeneration reproducible and generated behavior inspectable. These controls are proposed framework mechanisms, not quotations from Lowy."
+      ],
+      "verification": [
+        "Regenerate from the same inputs and compare outputs.",
+        "Test observable behavior, exception paths, and required infrastructure presence.",
+        "Verify that disabling or replacing a generator cannot silently bypass integration checks."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": []
+    },
+    {
+      "id": "PAT-004",
+      "title": "Explicit message-type registration",
+      "status": "candidate; not selected for an application",
+      "when": "An approved boundary transmits polymorphic message types.",
+      "sources": [
+        {
+          "document": "docs/research/supporting-pattern-review.md",
+          "locator": "Section 2.3.2 and 2.4.1, printed pp. 50–55; PDF pp. 75–80",
+          "authority": "supporting technique",
+          "former_document": "docs/references/Metaprogramming in NET.pdf",
+          "availability": "Historical review record only; original source copy removed from vc.Governance."
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Define the permitted message family in the contract design.",
+        "Do not let discovery expand the public message surface without design approval.",
+        "Treat runtime discovery as implementation of an approved type policy, not authority to invent that policy.",
+        "Apply the current Microsoft technical standard and owner-selected unprefixed naming to derived implementations. Preserve historical reference files unchanged."
+      ],
+      "implementation_choices": [
+        "Compare explicit registration, generated registration, and constrained reflection.",
+        "If discovery is selected, specify approved assemblies, permitted types, and failure behavior. These restrictions are framework proposals."
+      ],
+      "verification": [
+        "Round-trip each approved derived message through the real serializer.",
+        "Reject unapproved or incompatible message types.",
+        "Test missing registrations and deployment version combinations."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": [
+        "The explanatory text on printed p. 55 shows an apparent duplicate IsAssignableFrom expression while describing a different comparison. Resolve it before copying that explanation into implementation rules."
+      ]
+    },
+    {
+      "id": "PAT-005",
+      "title": "Failure containment at approved boundaries",
+      "status": "candidate; not selected for an application",
+      "when": "Availability requirements identify a risk of dependency failure propagation.",
+      "sources": [
+        {
+          "document": "docs/references/Anti-fragile ICT Systems.pdf",
+          "locator": "Chapter 4, printed pp. 35–42; PDF pp. 50–57",
+          "authority": "supporting principle"
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Retain volatility-based component decomposition.",
+        "Specify business-correct failure behavior. Do not report fabricated success.",
+        "Contain failures through existing permitted boundaries; do not create architecture bypasses."
+      ],
+      "implementation_choices": [
+        "Evaluate weak links, bounded dependency behavior, fallback, and redundancy against explicit failure scenarios.",
+        "The Solution Architect selects mechanisms and resource costs; developers cannot introduce new platform dependencies independently."
+      ],
+      "verification": [
+        "Inject the approved dependency failures in the designated test environment.",
+        "Measure propagation, recovery, and contractual responses against explicit acceptance criteria.",
+        "Test interactions of individually healthy components as well as isolated component failures."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": []
+    },
+    {
+      "id": "PAT-006",
+      "title": "Controlled failure learning",
+      "status": "candidate; not selected for an application",
+      "when": "The system has approved failure-containment and recovery behavior.",
+      "sources": [
+        {
+          "document": "docs/references/Anti-fragile ICT Systems.pdf",
+          "locator": "Section 4.5, printed p. 39; PDF p. 54",
+          "authority": "supporting principle"
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 14, printed pp. 378–383",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Use findings to propose reviewed corrections. Do not let a learning loop rewrite architecture or policy.",
+        "Keep experiments within approved environments and impact limits.",
+        "Route fixes through the existing lifecycle and design owners."
+      ],
+      "implementation_choices": [
+        "The Test Architect specifies fault scenarios, containment preconditions, stopping conditions, and recovery checks.",
+        "QA records recurring causes and proposes process improvements within the assigned authority."
+      ],
+      "verification": [
+        "Record the injected fault, observed impact, recovery, and resulting corrective work.",
+        "Demonstrate that the same failure is detected after the correction.",
+        "Do not label a system anti-fragile merely because it survives one experiment."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": []
+    },
+    {
+      "id": "PAT-007",
+      "title": "Reusable fractal business nodes",
+      "status": "candidate; not selected for an application",
+      "when": "Business analysis establishes a recurring participant structure and canonical interaction.",
+      "sources": [
+        {
+          "document": "docs/references/Fractal Architecture - Juval Lowy.pdf",
+          "locator": "Printed/PDF pp. 4–8; Figures 1 and 2 on p. 7",
+          "authority": "Lowy supplementary guidance"
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Design the participant structure and canonical interaction before multiplying nodes.",
+        "Keep regular Method constraints inside each node.",
+        "Keep participation opt-in and specify behavior when a node operates alone or disconnects.",
+        "Do not infer unrestricted component-level upward or sideways calls from business-level participant interactions."
+      ],
+      "implementation_choices": [
+        "Evaluate a common node implementation with differences expressed through approved resources and constrained behavior configuration.",
+        "Model level-specific communication and legacy interoperability nodes.",
+        "Treat configuration and simulation as designed capabilities; constrain who can amend behavior and which contracts it may invoke."
+      ],
+      "verification": [
+        "Simulate alternative structures and representative interactions before selecting a topology.",
+        "Test identical node logic in different levels and participant configurations.",
+        "Test disconnection, reconnection, and partial structures.",
+        "Verify that configurable behavior cannot invoke unapproved dependencies."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": [
+        "Is the target business sufficiently self-similar to justify a fractal?",
+        "Which failure risks require diversity, and can they be addressed without conflicting with the common-node design?"
+      ]
+    },
+    {
+      "id": "PAT-008",
+      "title": "Traceable behavioral requirement records",
+      "status": "candidate; not selected for an application",
+      "when": "Business, system, or service requirements are recorded for design and test handoff.",
+      "sources": [
+        {
+          "document": "docs/references/Writing Software Requirements Specifications.htm",
+          "locator": "Sections on requirement identifiers, source linking, traceability matrix, and language quality",
+          "authority": "supporting article: Donn Le Vie, Jr."
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 4; Appendix A, printed pp. 388–390; C-SD-1",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Record behavior and its business source. Do not disguise a proposed design as a requirement.",
+        "Distinguish system-level Software Requirements Specification from service-level SRS in the lifecycle.",
+        "Preserve guideline modality in the framework; do not replace every SHOULD with SHALL because a requirements-writing article discourages weak requirement language."
+      ],
+      "implementation_choices": [
+        "Use stable IDs, requirement scope, source, conditions, expected behavior, acceptance criteria, owner, and revision.",
+        "Trace reviewed requirements to detailed designs, test plans, work items, and verification evidence.",
+        "Maintain traceability as design and construction progress; do not require all implementation links before design begins."
+      ],
+      "verification": [
+        "Check identifier uniqueness and valid revision links.",
+        "Review business meaning and testability with the Product Owner and responsible architect.",
+        "Check that service requirements and test plans refer to the same reviewed scope."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": []
+    },
+    {
+      "id": "PAT-009",
+      "title": "Usable and consistent internal framework APIs",
+      "status": "candidate; not selected for an application",
+      "when": "An approved reusable library exposes an API to component developers.",
+      "sources": [
+        {
+          "document": "docs/references/Framework Design Guidelines.pdf",
+          "locator": "Second edition, Chapter 1 pp. 1–3 and Chapter 2 pp. 12–14; PDF pp. 47–49 and 58–60",
+          "authority": "supporting library-design guidance"
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "Chapter 3; Appendix B; Appendix C",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3",
+        "C-SD-1.e"
+      ],
+      "invariants": [
+        "Apply library API guidance within the approved component architecture.",
+        "Do not convert local object properties into property-like service operations.",
+        "Do not substitute scenario-shaped components for volatility-based system decomposition.",
+        "Apply the current Microsoft technical standard and owner-selected unprefixed naming to derived implementations. Preserve historical reference files unchanged."
+      ],
+      "implementation_choices": [
+        "Have the Application Architect review representative caller code before finalizing the API.",
+        "Favor consistent APIs that make approved usage straightforward and expose only reviewed extension points.",
+        "Evaluate historical guidance against the selected runtime before choosing specific APIs or idioms."
+      ],
+      "verification": [
+        "Exercise normal and erroneous use through public library APIs.",
+        "Review whether typical caller code follows the intended boundary naturally.",
+        "Verify that extension points cannot override higher-level architecture or framework policy."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": []
+    },
+    {
+      "id": "PAT-010",
+      "title": "Purpose-driven UI data visualization",
+      "status": "candidate; owner approved the supporting reference for UI usage; no application realization selected",
+      "when": "An approved UI requirement needs users to understand or explore data.",
+      "sources": [
+        {
+          "document": "docs/research/supporting-pattern-review.md",
+          "locator": "Chapter 2, pp. 15–17; Chapter 3, pp. 21–24; Chapter 4, pp. 25–29; Appendix B, pp. 91–93",
+          "authority": "supporting UI design guidance: Noah Iliinsky and Julie Steele, 2011",
+          "former_document": "docs/references/Designing Data Visualizations.pdf",
+          "availability": "Historical review record only; original source copy removed from vc.Governance."
+        },
+        {
+          "document": "docs/references/Righting Software.pdf",
+          "locator": "C-SD-1 and C-SD-4 through C-SD-6",
+          "authority": "governing"
+        }
+      ],
+      "governing_rules": [
+        "C-SD-1.a",
+        "C-SD-1.e",
+        "C-SD-6.a"
+      ],
+      "invariants": [
+        "State the user information need before choosing a chart or visualization tool.",
+        "Keep UI composition within approved component and contract boundaries.",
+        "Do not use visualization convenience to authorize Client-to-Engine calls or multiple Manager calls for one use case.",
+        "Preserve source meanings: distinguish hue from ordered brightness or saturation.",
+        "Keep supporting UI guidance distinct from Method directives."
+      ],
+      "implementation_choices": [
+        "Specify audience, context of use, relevant data dimensions, relationships, units, and intended comparisons.",
+        "Choose visual encodings that match data type, order, and distinguishable values.",
+        "Keep meanings consistent across related views; use additional encoding channels when they improve comprehension.",
+        "Specify labels and vocabulary for the intended reader.",
+        "Record data-state and interaction requirements in the reviewed detailed design; see ui-visualization.md."
+      ],
+      "verification": [
+        "Have the Product Owner assess whether representative readers can answer the intended question.",
+        "Check encoded values, labels, units, ordering, and relationships against representative data.",
+        "Test distinguishability and consistency on the intended display conditions.",
+        "Test empty, unavailable, partial, and extreme data states as specified by the detailed design.",
+        "Verify that filtering or selection respects approved contracts and dependency rules."
+      ],
+      "approval": {
+        "business_information_need": "Product Owner",
+        "system_design_and_technology": "Solution Architect within CEO-approved suite bounds",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": [
+        "Select application-specific visualization tasks, supported display conditions, interaction behavior, and acceptance criteria during detailed design."
+      ]
+    },
+    {
+      "id": "PAT-011",
+      "title": "Attribute-driven method I/O tracing",
+      "status": "owner-required capability; detailed mechanism not yet selected or implemented",
+      "when": "A method is decorated with the designated tracing attribute, regardless of public, internal, or private accessibility.",
+      "sources": [
+        {
+          "document": "docs/research/method-tracing-review.md",
+          "locator": "Read-only review of existing service logging and Roslyn constraints",
+          "authority": "implementation evidence; owner-selected capability"
+        },
+        {
+          "document": "docs/research/method-tracing-review.md",
+          "locator": "Selected owner-identified experimental proxy, context, DI, status, telemetry, and redaction source snapshot",
+          "authority": "confirmed implementation reference; reflective dispatch is not adopted",
+          "former_document": "docs/references/experimental-proxies/README.md",
+          "availability": "Historical review record only; original source copy removed from vc.Governance."
+        }
+      ],
+      "governing_rules": [
+        "C-D-2",
+        "C-D-3"
+      ],
+      "policy": "docs/patterns/method-io-tracing.md",
+      "policy_rules": "docs/standards/tracing-rules.json",
+      "invariants": [
+        "Automatically trace inputs and outputs for attributed public, internal, and private methods.",
+        "Do not implement reflection-based method dispatch or proxying.",
+        "Preserve method semantics and diagnose unsupported forms.",
+        "Keep internal method instrumentation distinct from inter-component proxies."
+      ],
+      "implementation_choices": [
+        "Proposed: a build-time Roslyn source transformation for attribute-only instrumentation of existing bodies.",
+        "Alternative requiring an authoring convention: generator-created wrapper and explicitly separated implementation.",
+        "Use current approved logging APIs; source-generated logging helpers do not by themselves instrument a business method."
+      ],
+      "verification": [
+        "Exercise actual public, internal, and private method calls including private self-calls.",
+        "Verify inputs, normal and ref/out outputs, failures, cancellation, and asynchronous completion.",
+        "Verify single execution, disabled logging, value projection, source mapping, and generator interaction."
+      ],
+      "approval": {
+        "system_design_and_technology": "Solution Architect",
+        "detailed_design": "Application Architect; Solution Architect review before handoff",
+        "test_design": "Test Architect",
+        "assignment_and_schedule": "Project Manager"
+      },
+      "unresolved_questions": [
+        "Select the transformation mechanism, attribute, supported method forms, static logging, enablement, and value projection."
+      ]
+    }
+  ],
+  "technical_baseline": "docs/standards/microsoft-technical-standard.md",
+  "technical_rules": "docs/standards/technical-rules.json",
+  "implementation_repository": "vc.Ifx",
+  "repository_ownership": "docs/implementation/repository-ownership.md"
+}

@@ -1,0 +1,220 @@
+{
+  "format": "Standard Technical English technical implementation rules",
+  "version": 1,
+  "reviewed_on": "2026-11-07",
+  "authority": "Owner-authorized technical policy under the unchanged Method. No underscore prefixes is an explicit owner override, not a Microsoft prohibition.",
+  "sources": {
+    "S1": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions",
+      "reviewed_on": "2026-11-07"
+    },
+    "S2": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names",
+      "reviewed_on": "2026-11-07"
+    },
+    "S3": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules",
+      "reviewed_on": "2026-11-07"
+    },
+    "S4": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options",
+      "reviewed_on": "2026-11-07"
+    },
+    "S5": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version",
+      "reviewed_on": "2026-11-07"
+    },
+    "S6": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/tools/global-json",
+      "reviewed_on": "2026-11-07"
+    },
+    "S7": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/",
+      "reviewed_on": "2026-11-07"
+    },
+    "S8": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/null-safety/nullable-reference-types",
+      "reviewed_on": "2026-11-07"
+    },
+    "S9": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions",
+      "reviewed_on": "2026-11-07"
+    },
+    "S10": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios",
+      "reviewed_on": "2026-11-07"
+    },
+    "S11": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props",
+      "reviewed_on": "2026-11-07"
+    },
+    "S12": {
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format",
+      "reviewed_on": "2026-11-07"
+    }
+  },
+  "rules": [
+    {
+      "id": "TECH-01",
+      "when": "Implementing technical details",
+      "instruction": "Consult current official Microsoft guidance for the approved technology. Treat historical examples as evidence rather than current API instructions.",
+      "basis": "Owner policy; S1, S7",
+      "source_ids": [
+        "S1",
+        "S7"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-02",
+      "when": "Naming an owned C# identifier",
+      "instruction": "Do not use underscore naming prefixes, including _, __, m_, s_, and t_. A standalone language discard is not a naming prefix.",
+      "basis": "Explicit owner override; S2",
+      "source_ids": [
+        "S2"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-03",
+      "when": "Naming private or internal non-constant fields",
+      "instruction": "Use unprefixed camelCase for instance and static fields. Qualify instance-field access with this.; use the declaring type when static qualification is needed.",
+      "basis": "Framework convention; S2, S3",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-04",
+      "when": "Naming other symbols",
+      "instruction": "Use PascalCase for types, namespaces, methods, properties, events, and constants. Prefix interfaces with I. Use camelCase for parameters and ordinary locals. Preserve Method component semantics and suffixes.",
+      "basis": "Adapted convention; S2",
+      "source_ids": [
+        "S2"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-05",
+      "when": "Selecting SDK and language versions",
+      "instruction": "Select supported stable tooling through the Solution Architect. Record the SDK and roll-forward policy in global.json. Use the target-framework-compatible language default or an explicit compatible version. Do not set LangVersion to latest or preview.",
+      "basis": "Framework policy; S5, S6",
+      "source_ids": [
+        "S5",
+        "S6"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-06",
+      "when": "Writing C#",
+      "instruction": "Use supported modern features when they improve clarity or correctness. Use braces, four-space indentation, and consistent formatting.",
+      "basis": "Adapted convention; S1",
+      "source_ids": [
+        "S1"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-07",
+      "when": "Defining reference-type intent",
+      "instruction": "Enable nullable analysis. Annotate optional references. Resolve warnings instead of disabling analysis or adding unjustified null-forgiving operators.",
+      "basis": "Framework quality policy; S8",
+      "source_ids": [
+        "S8"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-08",
+      "when": "Handling errors",
+      "instruction": "Validate arguments with appropriate supported APIs. Handle exceptions where recovery or approved boundary translation is possible. Preserve the original stack on rethrow. Do not silently swallow failures.",
+      "basis": "Adapted guidance; S9",
+      "source_ids": [
+        "S9"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-09",
+      "when": "Implementing asynchronous operations",
+      "instruction": "Use async and await for asynchronous I/O. Return awaitable tasks except where event-handler signatures require async void. Avoid blocking with Wait or Result. Preserve reviewed contracts and cancellation semantics.",
+      "basis": "Adapted guidance; S10",
+      "source_ids": [
+        "S10"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-10",
+      "when": "Designing reusable local APIs",
+      "instruction": "Apply current Microsoft library guidance inside approved boundaries. Local properties and events do not authorize property-like service operations or forbidden event publishers.",
+      "basis": "Scoped guidance; S7; Method constraints",
+      "source_ids": [
+        "S7"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-11",
+      "when": "Configuring builds",
+      "instruction": "Enable SDK analyzers, nullable checks, and build-time style checks. Use the recommended analysis mode for the pinned SDK. Make warnings fail the quality gate. Record diagnostic decisions.",
+      "basis": "Framework quality policy; S4, S11",
+      "source_ids": [
+        "S4",
+        "S11"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-12",
+      "when": "Enforcing naming and formatting",
+      "instruction": "Configure EditorConfig naming rules and explicit build severity for IDE1006. Run dotnet format with --verify-no-changes in addition to builds and tests.",
+      "basis": "Framework quality policy; S3, S12",
+      "source_ids": [
+        "S3",
+        "S12"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-13",
+      "when": "Changing diagnostic configuration",
+      "instruction": "Do not weaken rules, add blanket suppressions, mark owned code generated, or alter SDK/build settings to make work pass. Route justified exceptions through the responsible architect with QA review and revision-bound evidence.",
+      "basis": "Owner enforcement policy; S4 explains configuration mechanics",
+      "source_ids": [
+        "S4"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    },
+    {
+      "id": "TECH-14",
+      "when": "Refreshing technical guidance",
+      "instruction": "Recheck official sources at baseline creation, planned SDK upgrades, and pattern changes. Record review date and impact. Obtain Solution Architect approval for baseline changes.",
+      "basis": "Framework maintenance policy; S5, S6",
+      "source_ids": [
+        "S5",
+        "S6"
+      ],
+      "decision_owner": "Solution Architect; Application Architect within baseline bounds; human owner for framework amendments",
+      "context": "docs/standards/microsoft-technical-standard.md"
+    }
+  ],
+  "implementation_repository": "vc.Ifx",
+  "repository_ownership": "docs/implementation/repository-ownership.md"
+}

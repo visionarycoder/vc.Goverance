@@ -1,0 +1,6 @@
+{
+  "files_checked": 66,
+  "errors": [],
+  "passed": true,
+  "limits": "Checks the scalar YAML profile, metadata, headings, local file targets, and selected prose phrases. Does not prove semantic clarity, validate remote URLs or fragments, or grant approval."
+}

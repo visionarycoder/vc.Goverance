@@ -1,0 +1,608 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "vc.Governance",
+  "status": "Source-aligned decision baseline with explicit owner decisions; records and schemas do not deploy enforcement.",
+  "roles": {
+    "human-owner": "Human owner",
+    "ceo": "CEO / Visionary",
+    "solution-architect": "Solution Architect",
+    "product-owner": "Product Owner",
+    "project-manager": "Project Manager",
+    "application-architect": "Application Architect",
+    "test-architect": "Test Architect",
+    "qa": "QA",
+    "implementation-developer": "Implementation Developer",
+    "test-developer": "Test Developer",
+    "test-agent": "Test Agent"
+  },
+  "owner_decisions": {
+    "service_test_plan_approval": "test-architect",
+    "service_test_plan_review": [
+      "application-architect",
+      "independent-test-reviewer fulfilled by test-agent"
+    ],
+    "project_management_acceptance": "ceo within human-owner bounds; human-owner beyond bounds",
+    "guideline_departure_approval": "human-owner",
+    "architect_instruction_revision": "Application/Test Architects may adjust instructions within provided bounds; Solution Architect obtains CEO approval.",
+    "leadership_round": "Each trio member records a position on the same dispute and the remaining disagreement is summarized; unresolved after three completed rounds escalates to CEO."
+  },
+  "pending_questions": [],
+  "rows": [
+    {
+      "id": "GOV-A01",
+      "artifact_type": "governance-baseline",
+      "title": "Framework amendment",
+      "accountable_owner": "human-owner",
+      "permitted_author_roles": [
+        "qa",
+        "solution-architect"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "product-owner",
+        "project-manager"
+      ],
+      "approval_role": "human-owner",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          425,
+          426
+        ]
+      },
+      "basis_note": "Human owner controls framework amendments. Method directives remain non-waivable."
+    },
+    {
+      "id": "GOV-A02",
+      "artifact_type": "suite-vision",
+      "title": "Suite vision and strategic bounds",
+      "accountable_owner": "ceo",
+      "permitted_author_roles": [
+        "ceo"
+      ],
+      "required_review_roles": [
+        "product-owner",
+        "solution-architect",
+        "project-manager"
+      ],
+      "approval_role": "ceo",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          108,
+          109,
+          110,
+          111,
+          112
+        ]
+      },
+      "basis_note": "CEO decides suite direction within human-owner delegation."
+    },
+    {
+      "id": "GOV-A03",
+      "artifact_type": "business-requirements",
+      "title": "Business requirements and acceptance criteria",
+      "accountable_owner": "product-owner",
+      "permitted_author_roles": [
+        "product-owner"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "project-manager"
+      ],
+      "approval_role": "product-owner",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          149,
+          150
+        ]
+      },
+      "basis_note": "Product Owner resolves customer behavior and priorities, not architecture."
+    },
+    {
+      "id": "GOV-A04",
+      "artifact_type": "system-requirements",
+      "title": "System requirements specification",
+      "accountable_owner": "solution-architect",
+      "permitted_author_roles": [
+        "solution-architect"
+      ],
+      "required_review_roles": [
+        "product-owner",
+        "project-manager",
+        "application-architect",
+        "test-architect",
+        "implementation-developer"
+      ],
+      "approval_role": "ceo",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          150,
+          381
+        ]
+      },
+      "basis_note": "Product Owner reviews business fidelity; system reviews include core team and developers. Human owner requires Solution Architect decisions to receive CEO approval; technical accountability remains with the Solution Architect."
+    },
+    {
+      "id": "GOV-A05",
+      "artifact_type": "service-requirements",
+      "title": "Service requirements specification",
+      "accountable_owner": "solution-architect",
+      "permitted_author_roles": [
+        "application-architect",
+        "solution-architect"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "test-architect"
+      ],
+      "approval_role": "solution-architect",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          149,
+          389
+        ]
+      },
+      "basis_note": "The architect reviews the service SRS. Product Owner participates when business meaning needs resolution."
+    },
+    {
+      "id": "GOV-A06",
+      "artifact_type": "system-design",
+      "title": "System design and technology baseline",
+      "accountable_owner": "solution-architect",
+      "permitted_author_roles": [
+        "solution-architect"
+      ],
+      "required_review_roles": [
+        "application-architect",
+        "product-owner",
+        "project-manager",
+        "implementation-developer",
+        "test-architect"
+      ],
+      "approval_role": "ceo",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          148,
+          150,
+          381
+        ]
+      },
+      "basis_note": "Use an independently qualified architectural critic; no division of whole-system ownership. CEO joins changes to suite bounds. Human owner requires Solution Architect decisions to receive CEO approval; technical accountability remains with the Solution Architect."
+    },
+    {
+      "id": "GOV-A07",
+      "artifact_type": "detailed-design",
+      "title": "Component detailed design and contracts",
+      "accountable_owner": "application-architect",
+      "permitted_author_roles": [
+        "application-architect"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "test-architect"
+      ],
+      "approval_role": "solution-architect",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          374,
+          376,
+          377
+        ]
+      },
+      "basis_note": "Application Architect owns detail; Solution Architect reviews before handoff."
+    },
+    {
+      "id": "GOV-A08",
+      "artifact_type": "system-test-plan",
+      "title": "System test plan and harness design",
+      "accountable_owner": "test-architect",
+      "permitted_author_roles": [
+        "test-architect",
+        "test-developer"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "product-owner",
+        "project-manager",
+        "application-architect",
+        "implementation-developer",
+        "test-agent"
+      ],
+      "approval_role": "test-architect",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          380,
+          381
+        ]
+      },
+      "basis_note": "Applies service-test-plan owner mapping at system scope; core team and developer review preserved."
+    },
+    {
+      "id": "GOV-A09",
+      "artifact_type": "service-test-plan",
+      "title": "Service test plan",
+      "accountable_owner": "test-architect",
+      "permitted_author_roles": [
+        "test-architect",
+        "test-developer"
+      ],
+      "required_review_roles": [
+        "application-architect",
+        "test-agent"
+      ],
+      "approval_role": "test-architect",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          389,
+          390
+        ]
+      },
+      "basis_note": "Human owner selected Test Architect approval after Application Architect and independent test reviewer input."
+    },
+    {
+      "id": "GOV-A10",
+      "artifact_type": "software-development-plan",
+      "title": "Project alternatives and selected SDP",
+      "accountable_owner": "solution-architect",
+      "permitted_author_roles": [
+        "solution-architect"
+      ],
+      "required_review_roles": [
+        "project-manager",
+        "product-owner",
+        "test-architect",
+        "qa"
+      ],
+      "approval_role": "ceo",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          150,
+          153,
+          366,
+          367
+        ]
+      },
+      "basis_note": "Architect designs the project; CEO chooses and accepts within human-owner bounds; beyond bounds requires human owner."
+    },
+    {
+      "id": "GOV-A11",
+      "artifact_type": "work-assignment",
+      "title": "Bounded work assignment and handoff",
+      "accountable_owner": "project-manager",
+      "permitted_author_roles": [
+        "project-manager"
+      ],
+      "required_review_roles": [],
+      "approval_role": "project-manager",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          149,
+          153,
+          376,
+          377
+        ]
+      },
+      "basis_note": "Only PM assigns work; design review evidence is a prerequisite, not replaced by PM acceptance."
+    },
+    {
+      "id": "GOV-A12",
+      "artifact_type": "review-record",
+      "title": "Structured review and findings",
+      "accountable_owner": "target-owner",
+      "permitted_author_roles": [
+        "qa",
+        "application-architect",
+        "test-architect",
+        "solution-architect"
+      ],
+      "required_review_roles": [],
+      "approval_role": "target-owner",
+      "assignment_status": "operational_format",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          381
+        ]
+      },
+      "basis_note": "Acceptance of this record does not approve its target. Target decision uses that artifact matrix row."
+    },
+    {
+      "id": "GOV-A13",
+      "artifact_type": "decision-record",
+      "title": "Revision-bound approval or rejection",
+      "accountable_owner": "target-owner",
+      "permitted_author_roles": [
+        "human-owner",
+        "ceo",
+        "solution-architect",
+        "product-owner",
+        "project-manager",
+        "application-architect",
+        "test-architect"
+      ],
+      "required_review_roles": [],
+      "approval_role": "target-owner",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          153,
+          377,
+          389
+        ]
+      },
+      "basis_note": "Issuer must be the authorized decider for the target and requested action. No universal approval role."
+    },
+    {
+      "id": "GOV-A14",
+      "artifact_type": "change-request",
+      "title": "Requirement, design, or commitment change",
+      "accountable_owner": "affected-owner",
+      "permitted_author_roles": [
+        "human-owner",
+        "ceo",
+        "solution-architect",
+        "product-owner",
+        "project-manager",
+        "application-architect",
+        "test-architect",
+        "qa",
+        "implementation-developer",
+        "test-developer",
+        "test-agent"
+      ],
+      "required_review_roles": [],
+      "approval_role": "affected-owner",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          405
+        ]
+      },
+      "basis_note": "Route by changed authority domain; approval in one domain cannot approve changes in another."
+    },
+    {
+      "id": "GOV-A15",
+      "artifact_type": "guideline-departure",
+      "title": "Guideline departure request",
+      "accountable_owner": "human-owner",
+      "permitted_author_roles": [
+        "human-owner",
+        "ceo",
+        "solution-architect",
+        "product-owner",
+        "project-manager",
+        "application-architect",
+        "test-architect",
+        "qa",
+        "implementation-developer",
+        "test-developer",
+        "test-agent"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "qa"
+      ],
+      "approval_role": "human-owner",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          425
+        ]
+      },
+      "basis_note": "Human owner approves every strongly justified guideline departure. Directive and explicit absolute prohibitions cannot be waived."
+    },
+    {
+      "id": "GOV-A16",
+      "artifact_type": "implementation-submission",
+      "title": "Component code and white-box test submission",
+      "accountable_owner": "application-architect",
+      "permitted_author_roles": [
+        "implementation-developer"
+      ],
+      "required_review_roles": [
+        "application-architect",
+        "test-agent"
+      ],
+      "approval_role": "application-architect",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          377,
+          389
+        ]
+      },
+      "basis_note": "Application Architect is delegated leading technical reviewer; submitting developer cannot approve own deliverable."
+    },
+    {
+      "id": "GOV-A17",
+      "artifact_type": "verification-report",
+      "title": "Execution against reviewed test plan",
+      "accountable_owner": "test-architect",
+      "permitted_author_roles": [
+        "test-agent"
+      ],
+      "required_review_roles": [
+        "application-architect"
+      ],
+      "approval_role": "test-architect",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          380,
+          389
+        ]
+      },
+      "basis_note": "Report actual pass/fail evidence. Failure does not authorize changing test expectations."
+    },
+    {
+      "id": "GOV-A18",
+      "artifact_type": "integration-record",
+      "title": "Integrated revisions and checks",
+      "accountable_owner": "solution-architect",
+      "permitted_author_roles": [
+        "implementation-developer",
+        "test-developer",
+        "test-agent"
+      ],
+      "required_review_roles": [
+        "application-architect",
+        "test-agent"
+      ],
+      "approval_role": "solution-architect",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          377,
+          389
+        ]
+      },
+      "basis_note": "A delegated authorized integration identity records exact revisions; review and STP-based testing still required."
+    },
+    {
+      "id": "GOV-A19",
+      "artifact_type": "phase-exit",
+      "title": "Binary phase completion record",
+      "accountable_owner": "project-manager",
+      "permitted_author_roles": [
+        "project-manager"
+      ],
+      "required_review_roles": [],
+      "approval_role": "project-manager",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          389,
+          390,
+          391,
+          392,
+          393
+        ]
+      },
+      "basis_note": "PM records phase completion from successful reviews/tests, not from time or commits."
+    },
+    {
+      "id": "GOV-A20",
+      "artifact_type": "progress-report",
+      "title": "Weekly progress, effort, float, and forecast",
+      "accountable_owner": "project-manager",
+      "permitted_author_roles": [
+        "project-manager"
+      ],
+      "required_review_roles": [
+        "solution-architect"
+      ],
+      "approval_role": "project-manager",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          388,
+          393,
+          394,
+          405
+        ]
+      },
+      "basis_note": "PM tracks; architect assesses redesign; CEO accepts changed commitments within bounds."
+    },
+    {
+      "id": "GOV-A21",
+      "artifact_type": "conflict-record",
+      "title": "Leadership dispute and escalation",
+      "accountable_owner": "ceo",
+      "permitted_author_roles": [
+        "project-manager"
+      ],
+      "required_review_roles": [
+        "solution-architect",
+        "product-owner",
+        "project-manager"
+      ],
+      "approval_role": "ceo",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          149,
+          150
+        ]
+      },
+      "basis_note": "Three completed discussion rounds maximum before CEO escalation; source conflict or framework amendment goes to human owner."
+    },
+    {
+      "id": "GOV-A22",
+      "artifact_type": "qa-finding",
+      "title": "Prevention and root-cause finding",
+      "accountable_owner": "qa",
+      "permitted_author_roles": [
+        "qa"
+      ],
+      "required_review_roles": [
+        "solution-architect"
+      ],
+      "approval_role": "qa",
+      "assignment_status": "established",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          381,
+          382
+        ]
+      },
+      "basis_note": "QA reports to SA. QA finding does not amend governing process or another owner’s design."
+    },
+    {
+      "id": "GOV-A23",
+      "artifact_type": "agent-instructions",
+      "title": "Bounded architect instructions to agents",
+      "accountable_owner": "issuing-architect",
+      "permitted_author_roles": [
+        "application-architect",
+        "test-architect",
+        "solution-architect"
+      ],
+      "required_review_roles": [],
+      "approval_role": "issuing-architect within upstream bounds; ceo for solution-architect decisions",
+      "assignment_status": "owner_decision",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          150,
+          376,
+          377
+        ]
+      },
+      "basis_note": "Owner permits Application/Test Architects to adjust instructions within supplied bounds. SA obtains CEO approval. A changed upstream artifact retains its own required approval."
+    }
+  ]
+}

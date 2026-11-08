@@ -1,0 +1,227 @@
+{
+  "reviewed_on": "2026-11-07",
+  "validator": "jsonschema 4.26.0",
+  "dialect": "2020-12",
+  "format_checks": true,
+  "scope": "Schema/fixture verification only; no identity, real-artifact graph, authorization engine, or runtime permission enforcement tested.",
+  "schema": "docs/artifacts/schemas/artifact.schema.json",
+  "results": [
+    {
+      "case": "draft example agent-instructions",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example business-requirements",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example change-request",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example conflict-record",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example decision-record",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example detailed-design",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example governance-baseline",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example guideline-departure",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example implementation-submission",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example integration-record",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example phase-exit",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example progress-report",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example qa-finding",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example review-record",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example service-requirements",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example service-test-plan",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example software-development-plan",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example suite-vision",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example system-design",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example system-requirements",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example system-test-plan",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example verification-report",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "draft example work-assignment",
+      "expected": "accept-structure",
+      "passed": true
+    },
+    {
+      "case": "missing revision",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "invalid date-time",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "unknown envelope field",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "construction lacks design inputs",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "developer assigns work",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "approval lacks evidence",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "directive waiver",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "absolute rejection waiver",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "credit for incomplete phase",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "path escapes repository",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "invalid digest",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "testing lacks reviewed STP",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "architect approves guideline departure",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "SA approves own system design without CEO",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "failed test presented as pass",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "passed review with blocking finding",
+      "expected": "reject-structure",
+      "passed": true
+    },
+    {
+      "case": "complete structural construction handoff without STP gate",
+      "expected": "accept-structure",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "schema_sha256": "3cbe0eaa5facd6cc33273ac8ca461d52dd267ec72cc61f24bac68adfbc3d6bb4",
+  "inventory_checks": {
+    "artifact_types": 23,
+    "templates": 23,
+    "examples_validated": 23,
+    "matrix_type_coverage": true,
+    "local_document_links_valid": true,
+    "all_json_parse": true,
+    "original_source_hashes_preserved": true,
+    "method_rule_count_preserved": 148
+  },
+  "limitations": [
+    "Operational identity and delegation checks are specified, not implemented.",
+    "Example references are fictional and do not form an authorized operational graph.",
+    "Negative checks exercise schema constraints, not filesystem permissions or role authentication."
+  ]
+}

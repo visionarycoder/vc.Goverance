@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-CONFLICT-RECORD",
+  "artifact_type": "conflict-record",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Leadership dispute and escalation",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "project-manager"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 149,150",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        149,
+        150
+      ]
+    }
+  ],
+  "payload": {
+    "dispute": "EXAMPLE-REPLACE",
+    "subject": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "applicable_constraints": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "options": [
+      "EXAMPLE-REPLACE"
+    ],
+    "rounds": [],
+    "resolution_status": "open",
+    "escalation_owner": "ceo",
+    "decision_refs": []
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-11-08",
+  "status": "Normative governance criteria; not a deployed evaluator.",
+  "fact_semantics": "Facts are scope-bound claims established from authenticated evidence. Missing or unverified facts are unknown, not true. A fixture fact is not an operational credential.",
+  "facts": {
+    "common.currentContext": "Repository, activity, component, action, subject revisions, adopted governance version, and relevant environment are explicit.",
+    "common.referencesVerified": "All required referenced revisions resolve to matching exact bytes under separately authorized repository access.",
+    "common.authorityVerified": "Required decisions were issued by authenticated roles within scope; no applicable withdrawal, revocation, expiry, or unresolved impact hold exists.",
+    "common.independenceVerified": "Required independent critics and findings dispositions are verified; workers do not self-approve deliverables.",
+    "common.upstreamBoundsSatisfied": "The action conforms to upstream bounds and adopted Method constraints; any allowable guideline departure has human-owner approval.",
+    "baseline.ready": "CEO-approved system design and technical requirements, Product Owner business inputs, and role/delegation bounds are available for the affected scope.",
+    "sdp.accepted": "Management accepted a feasible selected SDP with architecture, activities, dependencies, resource/calendar/cost assumptions, risk, quality work, and commitment bounds recorded.",
+    "srs.reviewPassed": "The exact service requirements received successful architect review and authorized acceptance, with business ambiguity resolved by the Product Owner.",
+    "assignment.current": "The PM assignment authorizes this activity, worker, component, phase, and expected output under the selected plan.",
+    "exploration.bounded": "The exploration assignment states questions, permitted experiments, constraints, and the return-to-designer boundary; no full design or production readiness is claimed.",
+    "design.reviewPassed": "The exact detailed design and contracts received Solution Architect review and acceptance before handoff, with Test Architect input.",
+    "approach.resolved": "The developer consulted the Application Architect about every discovered design refinement; changed upstream inputs have their required decisions.",
+    "construction.handoffComplete": "Requirements, detailed design, proxy/technical constraints, allowed dependencies, and applicable decisions are part of the handoff.",
+    "stp.reviewPassed": "The exact service test plan received Application Architect and independent test critique and Test Architect approval.",
+    "construction.submitted": "The assigned implementation and white-box test client are complete for review and identify their exact source and design revisions.",
+    "code.reviewPassed": "Application Architect and independent Test Agent critics completed successful review; leading-architect acceptance covers the submitted revision.",
+    "integration.actual": "The exact reviewed component revisions are integrated with the required real dependencies and the integrated snapshot and environment are recorded.",
+    "integration.accepted": "The Solution Architect accepted technical integration for that snapshot; no changed baseline or commitment is hidden in this acceptance.",
+    "verification.actual": "The required STP cases passed against the integrated snapshot, with Test Architect acceptance and applicable regression/real-service evidence.",
+    "phase.criteriaSatisfied": "The criterion for this particular phase is satisfied by valid, current reviews or tests; no incomplete phase is credited.",
+    "phase.weightApproved": "The phase-weighting basis is consistently selected and the credit matches the completed phase, not time, tokens, or commits.",
+    "delivery.projectTestsSatisfied": "The selected project/milestone requires and has passed its system, subsystem, component, interaction, regression, smoke, and real-dependency tests as applicable.",
+    "delivery.businessAccepted": "The Product Owner accepted required business behavior against the agreed evidence for this milestone.",
+    "change.assessed": "A recorded impact assessment identifies affected scope, upstream/downstream dependencies, evidence, project consequences, and unresolved questions.",
+    "change.decided": "Every affected authority domain has its required decision; SA/PM project consequences and CEO/human-owner commitment acceptance are resolved where applicable.",
+    "change.revalidated": "Required reviews, tests, new approvals, or authorized no-impact reaffirmations cover the revised subject and bound inputs.",
+    "assignment.released": "The PM assignment has been rechecked and authorizes the affected work to resume under the accepted revised inputs."
+  },
+  "gates": [
+    {
+      "id": "GATE-BASELINE",
+      "title": "Front-end baseline readiness",
+      "scope": "front-end",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "baseline.ready"
+      ],
+      "not_prerequisites": [],
+      "authorized_next_actions": [
+        "Design the project within the agreed business and architecture bounds."
+      ],
+      "failure_or_missing_evidence": "Resolve the disputed requirement, system design, or delegation; do not choose implementation boundaries ad hoc.",
+      "decision_route": "GOV-A04/GOV-A06",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          148,
+          150,
+          194
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-SDP",
+      "title": "Management acceptance before main construction",
+      "scope": "project",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "baseline.ready",
+        "sdp.accepted"
+      ],
+      "not_prerequisites": [],
+      "authorized_next_actions": [
+        "PM may assign main construction activities against the selected project design."
+      ],
+      "failure_or_missing_evidence": "Return project alternatives and commitments to the Solution Architect/PM and management; do not begin main work on an unsigned option.",
+      "decision_route": "GOV-A10",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          153,
+          194
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-SRS",
+      "title": "Successful service requirements review",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "srs.reviewPassed"
+      ],
+      "not_prerequisites": [
+        "stp.reviewPassed",
+        "design.reviewPassed"
+      ],
+      "authorized_next_actions": [
+        "Proceed on the test-plan branch.",
+        "Proceed on bounded exploration and detailed-design branch under PM assignment."
+      ],
+      "failure_or_missing_evidence": "Return to service requirements; route business clarification to Product Owner and technical ambiguity to the responsible architect.",
+      "decision_route": "GOV-A05",
+      "phase_exit": "requirements",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          388,
+          389,
+          390
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-EXPLORE",
+      "title": "Admission to some construction for design insight",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "srs.reviewPassed",
+        "assignment.current",
+        "exploration.bounded"
+      ],
+      "not_prerequisites": [
+        "design.reviewPassed",
+        "stp.reviewPassed"
+      ],
+      "authorized_next_actions": [
+        "Perform the explicitly bounded exploratory work and return findings to the Application Architect."
+      ],
+      "failure_or_missing_evidence": "Hold the experiment or refine its assignment; no unreviewed design change or phase-completion credit follows from a prototype.",
+      "decision_route": "GOV-A11/GOV-A23",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          389
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-DESIGN",
+      "title": "Successful detailed-design review",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "srs.reviewPassed",
+        "design.reviewPassed",
+        "approach.resolved"
+      ],
+      "not_prerequisites": [
+        "stp.reviewPassed"
+      ],
+      "authorized_next_actions": [
+        "Complete the Detailed Design phase for the reviewed design.",
+        "Prepare construction handoff; construction admission also requires the accepted SDP and current PM assignment."
+      ],
+      "failure_or_missing_evidence": "Return to detailed design; developer proposes refinements to Application Architect; changed system bounds go to Solution Architect/CEO.",
+      "decision_route": "GOV-A07",
+      "phase_exit": "detailed-design",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          377,
+          389
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-CONSTRUCT",
+      "title": "Admission to full construction",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "baseline.ready",
+        "sdp.accepted",
+        "srs.reviewPassed",
+        "design.reviewPassed",
+        "approach.resolved",
+        "assignment.current",
+        "construction.handoffComplete"
+      ],
+      "not_prerequisites": [
+        "stp.reviewPassed"
+      ],
+      "authorized_next_actions": [
+        "Construct the assigned service and its white-box test client within the reviewed design."
+      ],
+      "failure_or_missing_evidence": "Hold affected full construction until missing design/assignment/commitment evidence is valid. The test-plan branch can continue independently.",
+      "decision_route": "GOV-A11/GOV-A16",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          153,
+          376,
+          377,
+          389
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-STP",
+      "title": "Successful service test-plan review",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "srs.reviewPassed",
+        "stp.reviewPassed"
+      ],
+      "not_prerequisites": [
+        "design.reviewPassed",
+        "code.reviewPassed",
+        "integration.actual"
+      ],
+      "authorized_next_actions": [
+        "Complete the Test Plan phase.",
+        "Prepare plan-based testing; execution waits for the integrated implementation."
+      ],
+      "failure_or_missing_evidence": "Return to the service test plan and independent review; do not weaken expectations to match a defective implementation.",
+      "decision_route": "GOV-A09",
+      "phase_exit": "test-plan",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          388,
+          389,
+          390
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-CODE",
+      "title": "Successful component code review",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "design.reviewPassed",
+        "construction.submitted",
+        "code.reviewPassed",
+        "assignment.current",
+        "construction.handoffComplete"
+      ],
+      "not_prerequisites": [
+        "stp.reviewPassed"
+      ],
+      "authorized_next_actions": [
+        "Complete the Construction phase.",
+        "Proceed to authorized integration work."
+      ],
+      "failure_or_missing_evidence": "Return to construction and white-box testing; escalate any required contract/design refinement before proceeding under it.",
+      "decision_route": "GOV-A16",
+      "phase_exit": "construction",
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          377,
+          389
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-INTEGRATE",
+      "title": "Technical integration acceptance",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "code.reviewPassed",
+        "assignment.current",
+        "integration.actual",
+        "integration.accepted"
+      ],
+      "not_prerequisites": [
+        "stp.reviewPassed",
+        "verification.actual"
+      ],
+      "authorized_next_actions": [
+        "Perform STP-based testing once its plan review also passes."
+      ],
+      "failure_or_missing_evidence": "Correct integration/implementation as appropriate; rerun affected review if source changes. Technical acceptance alone does not complete the Integration phase.",
+      "decision_route": "GOV-A18",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          376,
+          389
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-VERIFY",
+      "title": "Successful testing against the service test plan",
+      "scope": "service",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "stp.reviewPassed",
+        "integration.actual",
+        "integration.accepted",
+        "verification.actual"
+      ],
+      "not_prerequisites": [],
+      "authorized_next_actions": [
+        "Supply test evidence for Integration phase completion."
+      ],
+      "failure_or_missing_evidence": "Return failed work for correction. Reassess source, integration, plan, and dependent evidence; the three-round leadership limit is not a test-retry limit.",
+      "decision_route": "GOV-A17",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          380,
+          381,
+          389,
+          390
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-PHASE",
+      "title": "Binary phase completion and progress credit",
+      "scope": "tracking",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "phase.criteriaSatisfied",
+        "phase.weightApproved"
+      ],
+      "not_prerequisites": [],
+      "authorized_next_actions": [
+        "PM records the specific completed phase and its approved weight."
+      ],
+      "failure_or_missing_evidence": "Record no completion credit for an incomplete phase. Preserve historical reports; show invalidated evidence and rework in the current forecast.",
+      "decision_route": "GOV-A19",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          389,
+          390,
+          391
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-MILESTONE",
+      "title": "Accepted project or system milestone",
+      "scope": "project",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "delivery.projectTestsSatisfied",
+        "delivery.businessAccepted"
+      ],
+      "not_prerequisites": [],
+      "authorized_next_actions": [
+        "Record the agreed milestone acceptance under the selected project plan."
+      ],
+      "failure_or_missing_evidence": "Resolve test, integration, or business findings through the responsible owner; do not substitute unit tests or UI demonstration for required system evidence.",
+      "decision_route": "GOV-A03/GOV-A17/GOV-A18",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          380,
+          381,
+          405
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    },
+    {
+      "id": "GATE-RESUME",
+      "title": "Resume affected work after a change",
+      "scope": "change",
+      "all_of": [
+        "common.currentContext",
+        "common.referencesVerified",
+        "common.authorityVerified",
+        "common.independenceVerified",
+        "common.upstreamBoundsSatisfied",
+        "change.assessed",
+        "change.decided",
+        "change.revalidated",
+        "assignment.released"
+      ],
+      "not_prerequisites": [],
+      "authorized_next_actions": [
+        "Resume only the assessed affected scope under the accepted revisions."
+      ],
+      "failure_or_missing_evidence": "Keep the affected scope on hold; unrelated currently authorized work may continue.",
+      "decision_route": "GOV-A14/GOV-A11",
+      "phase_exit": null,
+      "source": {
+        "document": "docs/references/Righting Software.pdf",
+        "printed_pages": [
+          194,
+          376,
+          405
+        ]
+      },
+      "basis": "Method activity/review requirements plus owner-assigned authority; fact names and evaluation format are governance mechanisms."
+    }
+  ],
+  "phase_exit_map": {
+    "requirements": [
+      "GATE-SRS"
+    ],
+    "detailed-design": [
+      "GATE-DESIGN"
+    ],
+    "test-plan": [
+      "GATE-STP"
+    ],
+    "construction": [
+      "GATE-CODE"
+    ],
+    "integration": [
+      "GATE-INTEGRATE",
+      "GATE-VERIFY"
+    ]
+  },
+  "noncoding": "Use the project-designed internal tasks and explicit binary criterion appropriate to that noncoding activity; do not force every activity through service-only gates.",
+  "deployment": "No listed gate independently authorizes deployment, live operation, or a new financial/trading capability."
+}

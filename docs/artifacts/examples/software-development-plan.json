@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-SOFTWARE-DEVELOPMENT-PLAN",
+  "artifact_type": "software-development-plan",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Project alternatives and selected SDP",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "solution-architect"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 150,153,366,367",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        150,
+        153,
+        366,
+        367
+      ]
+    }
+  ],
+  "payload": {
+    "system_design": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "options": [
+      {
+        "option_id": "example-normal",
+        "classification": "normal",
+        "feasible": false,
+        "duration_workdays": 1,
+        "direct_cost": 0,
+        "indirect_cost": 0,
+        "cost_unit": "EXAMPLE-REPLACE",
+        "risk_model": "EXAMPLE-REPLACE",
+        "risk_value": 0,
+        "network_ref": {
+          "repository_id": "EXAMPLE-REPLACE",
+          "artifact_id": "EXAMPLE-REPLACE",
+          "artifact_type": "EXAMPLE-REPLACE",
+          "revision": "EXAMPLE-REPLACE",
+          "path": "EXAMPLE-REPLACE",
+          "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "assumptions": [
+          "EXAMPLE-REPLACE"
+        ]
+      },
+      {
+        "option_id": "example-compressed",
+        "classification": "compressed",
+        "feasible": false,
+        "duration_workdays": 1,
+        "direct_cost": 0,
+        "indirect_cost": 0,
+        "cost_unit": "EXAMPLE-REPLACE",
+        "risk_model": "EXAMPLE-REPLACE",
+        "risk_value": 0,
+        "network_ref": {
+          "repository_id": "EXAMPLE-REPLACE",
+          "artifact_id": "EXAMPLE-REPLACE",
+          "artifact_type": "EXAMPLE-REPLACE",
+          "revision": "EXAMPLE-REPLACE",
+          "path": "EXAMPLE-REPLACE",
+          "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "assumptions": [
+          "EXAMPLE-REPLACE"
+        ]
+      },
+      {
+        "option_id": "example-subcritical",
+        "classification": "subcritical",
+        "feasible": false,
+        "duration_workdays": 1,
+        "direct_cost": 0,
+        "indirect_cost": 0,
+        "cost_unit": "EXAMPLE-REPLACE",
+        "risk_model": "EXAMPLE-REPLACE",
+        "risk_value": 0,
+        "network_ref": {
+          "repository_id": "EXAMPLE-REPLACE",
+          "artifact_id": "EXAMPLE-REPLACE",
+          "artifact_type": "EXAMPLE-REPLACE",
+          "revision": "EXAMPLE-REPLACE",
+          "path": "EXAMPLE-REPLACE",
+          "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "assumptions": [
+          "EXAMPLE-REPLACE"
+        ]
+      }
+    ],
+    "selected_option_id": null,
+    "do_not_proceed_option": "EXAMPLE-REPLACE",
+    "calendar_and_availability": "EXAMPLE-REPLACE",
+    "resource_basis": "EXAMPLE-REPLACE",
+    "rate_baseline": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "quality_activities": [
+      "EXAMPLE-REPLACE"
+    ],
+    "phase_weight_basis": "EXAMPLE-REPLACE",
+    "within_owner_bounds": false,
+    "management_decision": []
+  }
+}

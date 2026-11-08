@@ -426,3 +426,10 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+
+.fake
+# Governance contract documents are source, not build artifacts.
+!docs/artifacts/
+!docs/artifacts/**
+!docs/templates/artifacts/
+!docs/templates/artifacts/**

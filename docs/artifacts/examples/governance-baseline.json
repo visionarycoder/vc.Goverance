@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-GOVERNANCE-BASELINE",
+  "artifact_type": "governance-baseline",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Framework amendment",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "qa"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 425,426",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        425,
+        426
+      ]
+    }
+  ],
+  "payload": {
+    "method_source": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "rule_sets": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "delegations": [],
+    "repository_boundaries": [
+      "EXAMPLE-REPLACE"
+    ],
+    "amendment_reason": "EXAMPLE-REPLACE"
+  }
+}

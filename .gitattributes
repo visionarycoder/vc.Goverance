@@ -1,0 +1,2 @@
+# Preserve reference PDF bytes and disable text diff drivers.
+*.pdf binary

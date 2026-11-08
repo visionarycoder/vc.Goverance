@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-IMPLEMENTATION-SUBMISSION",
+  "artifact_type": "implementation-submission",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Component code and white-box test submission",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "implementation-developer"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 376,377,389",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        376,
+        377,
+        389
+      ]
+    }
+  ],
+  "payload": {
+    "work_assignment": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "source_snapshot": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "requirements": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "detailed_design": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "white_box_test_evidence": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "changes_from_design": [],
+    "proposed_review": "EXAMPLE-REPLACE"
+  }
+}

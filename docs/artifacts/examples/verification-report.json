@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-VERIFICATION-REPORT",
+  "artifact_type": "verification-report",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Execution against reviewed test plan",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "test-agent"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 380,389",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        380,
+        389
+      ]
+    }
+  ],
+  "payload": {
+    "test_plan": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "test_plan_decision": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "implementation_snapshot": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "integration_record": [],
+    "results": [
+      {
+        "test_case_id": "EXAMPLE-REPLACE",
+        "outcome": "not-run",
+        "evidence": [
+          {
+            "repository_id": "EXAMPLE-REPLACE",
+            "artifact_id": "EXAMPLE-REPLACE",
+            "artifact_type": "EXAMPLE-REPLACE",
+            "revision": "EXAMPLE-REPLACE",
+            "path": "EXAMPLE-REPLACE",
+            "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ]
+      }
+    ],
+    "overall_result": "incomplete",
+    "environment": "EXAMPLE-REPLACE",
+    "defects": []
+  }
+}

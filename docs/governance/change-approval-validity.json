@@ -1,0 +1,184 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-11-08",
+  "status": "Standard Technical English governance policy; not a deployed approval engine.",
+  "states": [
+    "usable",
+    "not-approved",
+    "stale-for-context",
+    "revoked",
+    "expired",
+    "unresolved"
+  ],
+  "state_semantics": "States are derived for a requested action and context. They do not overwrite the historical issued decision.",
+  "rules": [
+    {
+      "id": "VALID-01",
+      "when": "Evaluating permission to take an action",
+      "instruction": "Use the exact repository, subject revision, action, adopted baseline, bound inputs, scope, and relevant test environment.",
+      "basis": "operational mechanism",
+      "effect": "unresolved context blocks the action"
+    },
+    {
+      "id": "VALID-02",
+      "when": "Resolving an approval subject or input",
+      "instruction": "Verify the immutable revision and exact-byte SHA-256 through authorized access. An old approval never transfers automatically to different bytes.",
+      "basis": "owner requirement and artifact contract",
+      "effect": "mismatch is stale for the requested context"
+    },
+    {
+      "id": "VALID-03",
+      "when": "Using a decision",
+      "instruction": "Require approved outcome, authenticated authorized decider, applicable review evidence, and satisfied prerequisites. Final document status alone is not approval.",
+      "basis": "existing owner decisions",
+      "effect": "pending/rejected/changes-required is not-approved"
+    },
+    {
+      "id": "VALID-04",
+      "when": "A subject or bound input changes",
+      "instruction": "Mark affected uses for reassessment. Preserve the old decision as history; decide applicability to the new context before dependent work resumes.",
+      "basis": "Method change loop plus owner constraint",
+      "effect": "stale-for-context until reassessed"
+    },
+    {
+      "id": "VALID-05",
+      "when": "A revision is claimed to be editorial only",
+      "instruction": "Have the authorized approver examine the exact diff and impact record. Require a recorded no-impact review and new decision bound to the new revision and inputs.",
+      "basis": "owner decision GOV-OD07",
+      "effect": "old decision remains bound to old bytes"
+    },
+    {
+      "id": "VALID-06",
+      "when": "Classifying a no-impact revision",
+      "instruction": "Do not treat changed requirements, contracts, dependencies, technology, test expectations, policy, commitments, or generated behavior as editorial without substantive impact assessment. The worker cannot self-certify no impact.",
+      "basis": "operational mechanism within upstream bounds",
+      "effect": "uncertainty requires normal review"
+    },
+    {
+      "id": "VALID-07",
+      "when": "Reusing downstream evidence after an upstream change",
+      "instruction": "Identify the transitive affected scope. For each retained item record why its behavior, coverage, assumptions, and evidence remain applicable. Reaffirm required decisions through the existing approval route.",
+      "basis": "Method design/refinement loop plus owner policy",
+      "effect": "no blanket reuse of old evidence"
+    },
+    {
+      "id": "VALID-08",
+      "when": "A change affects unrelated approved work",
+      "instruction": "Allow only demonstrably unaffected, currently authorized work to continue. Do not invalidate the whole suite merely because a new revision exists elsewhere.",
+      "basis": "existing change contract",
+      "effect": "unaffected-context decisions remain usable"
+    },
+    {
+      "id": "VALID-09",
+      "when": "A subject has a newer revision",
+      "instruction": "Do not silently adopt latest. Use the explicitly selected baseline. A historical revision can remain valid in its approved context unless withdrawn, revoked, expired, or made inapplicable.",
+      "basis": "version-bound governance mechanism",
+      "effect": "supersession alone does not approve new bytes"
+    },
+    {
+      "id": "VALID-10",
+      "when": "An authorized decision withdraws an artifact or revokes approval",
+      "instruction": "Record actor, authority, affected decision/artifact revisions, effective time, scope, reason, and replacement or recovery requirements. Recompute affected gate eligibility.",
+      "basis": "owner decision GOV-OD08",
+      "effect": "revoked/withdrawn scope blocks further dependent actions"
+    },
+    {
+      "id": "VALID-11",
+      "when": "A participant changes assignment or is replaced",
+      "instruction": "Verify that approval was authorized when issued and is still permitted by the applicable baseline. A routine staffing change is not an implicit retroactive revocation; explicit authority expiry or revocation is assessed for its declared scope.",
+      "basis": "Method transient resources and governance interpretation",
+      "effect": "preserve legitimate historical review evidence"
+    },
+    {
+      "id": "VALID-12",
+      "when": "An approval or test result is old",
+      "instruction": "Apply no universal clock-based expiry. Enforce only explicit freshness limits in its approved policy, artifact, or test plan. Expired required evidence must be refreshed.",
+      "basis": "owner decision GOV-OD08",
+      "effect": "expired when the explicit applicable limit is exceeded"
+    },
+    {
+      "id": "VALID-13",
+      "when": "The environment or dependency realization changes",
+      "instruction": "Reassess evidence whose validity depends on it. A simulator result cannot establish required behavior against the real service.",
+      "basis": "Method integration and quality control",
+      "effect": "affected runtime evidence becomes stale"
+    },
+    {
+      "id": "VALID-14",
+      "when": "An implementation changes after review or testing",
+      "instruction": "Review and test the changed snapshot and affected interactions before relying on acceptance. A passing previous commit does not approve the submitted revision.",
+      "basis": "Method review and regression requirements",
+      "effect": "changed source requires current evidence"
+    },
+    {
+      "id": "VALID-15",
+      "when": "Application/Test Architect revises instructions",
+      "instruction": "Permit changes only within supplied bounds and the current PM assignment. Preserve required review of any actual detailed-design or test-plan revision.",
+      "basis": "owner decision GOV-OD04",
+      "effect": "upstream changes follow their own decision route"
+    },
+    {
+      "id": "VALID-16",
+      "when": "Solution Architect authors a decision or changes an owned baseline",
+      "instruction": "Obtain CEO approval without transferring system or project design accountability. Distinguish this from authorized technical review of delegated work.",
+      "basis": "owner decision GOV-OD04",
+      "effect": "self-authored baseline is not approved by SA alone"
+    },
+    {
+      "id": "VALID-17",
+      "when": "A change affects schedule, cost, scope, dependencies, or resources",
+      "instruction": "Have SA and PM evaluate project consequences. Obtain CEO acceptance within owner bounds, or human-owner acceptance beyond them, before adopting changed commitments.",
+      "basis": "Method pp. 194 and 405; GOV-OD02",
+      "effect": "local design acceptance does not amend commitments"
+    },
+    {
+      "id": "VALID-18",
+      "when": "A proposed change departs from a guideline",
+      "instruction": "Require strong unusual justification and human-owner approval. Do not waive directives or source absolute prohibitions.",
+      "basis": "Method Appendix C; GOV-OD03",
+      "effect": "ordinary approval is not a guideline waiver"
+    },
+    {
+      "id": "VALID-19",
+      "when": "A governance version or delegation policy changes",
+      "instruction": "Assess impact and follow the authorized adoption/effectivity decision. Preserve the prior version and decision history; do not silently rewrite existing approvals.",
+      "basis": "human-owner framework authority",
+      "effect": "hold only scope affected by the adopted policy"
+    },
+    {
+      "id": "VALID-20",
+      "when": "A review or test fails",
+      "instruction": "Return to the appropriate preceding activity. Route changed inputs to their owners. Do not convert a failed result into conditional success or count retries as leadership rounds.",
+      "basis": "Method pp. 388–390; GOV-OD05",
+      "effect": "fail or blocked; no phase completion"
+    },
+    {
+      "id": "VALID-21",
+      "when": "Resuming affected work",
+      "instruction": "Require impact assessment, all domain decisions, revalidated evidence, and a PM-authorized current assignment. An emergency or pending escalation is not a bypass.",
+      "basis": "owner boundaries and Method change loop",
+      "effect": "remain on hold until valid"
+    },
+    {
+      "id": "VALID-22",
+      "when": "Updating progress after evidence is invalidated",
+      "instruction": "Keep historical reports intact. PM excludes unsupported completion from the current applicable state and assesses rework/forecast with SA; preserve actual consumed cost.",
+      "basis": "Method binary phase exits and tracking",
+      "effect": "no negative rewriting of historical effort"
+    },
+    {
+      "id": "VALID-23",
+      "when": "Evaluating a gate with missing or unverified evidence",
+      "instruction": "Return blocked or reassessment-required, not pass. A known failed criterion returns fail. Scope the hold to affected actions.",
+      "basis": "operational fail-closed rule",
+      "effect": "no approval inferred from absence of failure"
+    }
+  ],
+  "authority": "Use the responsible approval authority, or a higher authority explicitly delegated control. Human-owner approvals remain reserved to the human owner. Workers may stop their affected work and report a problem, but cannot revoke another role’s approval.",
+  "evidence_recording": "Use existing immutable change-request, review-record, decision-record, work-assignment, verification-report, and phase-exit contracts. No new runtime role or universal approver is introduced.",
+  "owner_decisions": [
+    "GOV-OD07",
+    "GOV-OD08",
+    "GOV-OD09"
+  ]
+}

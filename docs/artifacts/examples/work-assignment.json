@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-WORK-ASSIGNMENT",
+  "artifact_type": "work-assignment",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Bounded work assignment and handoff",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "project-manager"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 149,153,376,377",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        149,
+        153,
+        376,
+        377
+      ]
+    }
+  ],
+  "payload": {
+    "activity_id": "EXAMPLE-REPLACE",
+    "activity_kind": "requirements",
+    "assigned_worker": {
+      "actor_id": "EXAMPLE-REPLACE",
+      "role": "human-owner"
+    },
+    "assigned_by": {
+      "actor_id": "example-project-manager",
+      "role": "project-manager"
+    },
+    "component_id": null,
+    "requirements": [],
+    "system_design": [],
+    "detailed_design": [],
+    "design_review_decisions": [],
+    "selected_sdp": [],
+    "test_plan": [],
+    "test_plan_decisions": [],
+    "constraints": [
+      "EXAMPLE-REPLACE"
+    ],
+    "permitted_outputs": [
+      "EXAMPLE-REPLACE"
+    ],
+    "completion_criteria": [
+      "EXAMPLE-REPLACE"
+    ],
+    "authorized_phase": "EXAMPLE-REPLACE"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-AGENT-INSTRUCTIONS",
+  "artifact_type": "agent-instructions",
+  "revision": "example-r1",
+  "title": "Fictional draft example: Bounded architect instructions to agents",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "application-architect"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 150,376,377",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        150,
+        376,
+        377
+      ]
+    }
+  ],
+  "payload": {
+    "issuing_architect": {
+      "actor_id": "example-application-architect",
+      "role": "application-architect"
+    },
+    "work_assignment": {
+      "repository_id": "EXAMPLE-REPLACE",
+      "artifact_id": "EXAMPLE-REPLACE",
+      "artifact_type": "EXAMPLE-REPLACE",
+      "revision": "EXAMPLE-REPLACE",
+      "path": "EXAMPLE-REPLACE",
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "upstream_constraints": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "instructions": [
+      "EXAMPLE-REPLACE"
+    ],
+    "within_provided_bounds": false,
+    "impact_assessments": [],
+    "required_decision_refs": []
+  }
+}

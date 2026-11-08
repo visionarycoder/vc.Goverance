@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "record_mode": "example",
+  "artifact_id": "EXAMPLE-SYSTEM-TEST-PLAN",
+  "artifact_type": "system-test-plan",
+  "revision": "example-r1",
+  "title": "Fictional draft example: System test plan and harness design",
+  "scope": {
+    "suite_id": "example-suite",
+    "project_id": "example-project",
+    "component_id": "example-component"
+  },
+  "creator": {
+    "actor_id": "example-author",
+    "role": "test-architect"
+  },
+  "created_at": "2026-11-07T00:00:00Z",
+  "status": "draft",
+  "inputs": [],
+  "source_basis": [
+    {
+      "kind": "book",
+      "locator": "Printed pages 380,381",
+      "document": "docs/references/Righting Software.pdf",
+      "printed_pages": [
+        380,
+        381
+      ]
+    }
+  ],
+  "payload": {
+    "requirements": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "designs": [
+      {
+        "repository_id": "EXAMPLE-REPLACE",
+        "artifact_id": "EXAMPLE-REPLACE",
+        "artifact_type": "EXAMPLE-REPLACE",
+        "revision": "EXAMPLE-REPLACE",
+        "path": "EXAMPLE-REPLACE",
+        "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "test_cases": [
+      {
+        "case_id": "EXAMPLE-REPLACE",
+        "requirement_refs": [
+          {
+            "repository_id": "EXAMPLE-REPLACE",
+            "artifact_id": "EXAMPLE-REPLACE",
+            "artifact_type": "EXAMPLE-REPLACE",
+            "revision": "EXAMPLE-REPLACE",
+            "path": "EXAMPLE-REPLACE",
+            "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "conditions": "EXAMPLE-REPLACE",
+        "action": "EXAMPLE-REPLACE",
+        "expected_outcome": "EXAMPLE-REPLACE",
+        "pass_criterion": "EXAMPLE-REPLACE"
+      }
+    ],
+    "test_harness": "EXAMPLE-REPLACE",
+    "regression_scope": "EXAMPLE-REPLACE",
+    "environment_constraints": [],
+    "unresolved_questions": []
+  }
+}

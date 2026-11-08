@@ -1,0 +1,3034 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vc-governance:artifact:1.0.0",
+  "title": "vc.Governance artifact contract",
+  "description": "Structure only. Does not authenticate identities, resolve references, or grant authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_mode",
+    "artifact_id",
+    "artifact_type",
+    "revision",
+    "title",
+    "scope",
+    "creator",
+    "created_at",
+    "status",
+    "inputs",
+    "source_basis",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_mode": {
+      "enum": [
+        "example",
+        "operational"
+      ]
+    },
+    "artifact_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]+$"
+    },
+    "artifact_type": {
+      "enum": [
+        "governance-baseline",
+        "suite-vision",
+        "business-requirements",
+        "system-requirements",
+        "service-requirements",
+        "system-design",
+        "detailed-design",
+        "system-test-plan",
+        "service-test-plan",
+        "software-development-plan",
+        "work-assignment",
+        "review-record",
+        "decision-record",
+        "change-request",
+        "guideline-departure",
+        "implementation-submission",
+        "verification-report",
+        "integration-record",
+        "phase-exit",
+        "progress-report",
+        "conflict-record",
+        "qa-finding",
+        "agent-instructions"
+      ]
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "suite_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "component_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "suite_id",
+        "project_id"
+      ]
+    },
+    "creator": {
+      "$ref": "#/$defs/actor"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "submitted",
+        "final",
+        "superseded",
+        "withdrawn"
+      ]
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/reference"
+      },
+      "minItems": 0
+    },
+    "source_basis": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      },
+      "minItems": 1
+    },
+    "payload": {}
+  },
+  "$defs": {
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "actor_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "human-owner",
+            "ceo",
+            "solution-architect",
+            "product-owner",
+            "project-manager",
+            "application-architect",
+            "test-architect",
+            "qa",
+            "implementation-developer",
+            "test-developer",
+            "test-agent"
+          ]
+        }
+      },
+      "required": [
+        "actor_id",
+        "role"
+      ]
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repository_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifact_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\\\:]+$"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "repository_id",
+        "artifact_id",
+        "artifact_type",
+        "revision",
+        "path",
+        "content_sha256"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "book",
+            "owner-decision",
+            "governance-contract"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "document": {
+          "type": "string",
+          "minLength": 1
+        },
+        "printed_pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 430
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "document"
+      ]
+    },
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requirement_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "requirement_id",
+        "source_refs",
+        "condition",
+        "required_behavior",
+        "acceptance_criteria"
+      ]
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "finding_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": [
+            "blocking",
+            "recommendation"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disposition": {
+          "enum": [
+            "open",
+            "resolved",
+            "rejected-with-rationale"
+          ]
+        },
+        "resolution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "finding_id",
+        "severity",
+        "description",
+        "disposition",
+        "resolution",
+        "evidence"
+      ]
+    },
+    "impact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "domain": {
+          "enum": [
+            "business",
+            "system-requirements",
+            "system-design",
+            "detailed-design",
+            "test-design",
+            "project-commitment",
+            "framework"
+          ]
+        },
+        "affected_artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "required_owner_role": {
+          "enum": [
+            "human-owner",
+            "ceo",
+            "solution-architect",
+            "product-owner",
+            "project-manager",
+            "application-architect",
+            "test-architect",
+            "qa",
+            "implementation-developer",
+            "test-developer",
+            "test-agent"
+          ]
+        },
+        "assessment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "domain",
+        "affected_artifacts",
+        "required_owner_role",
+        "assessment",
+        "decision_refs"
+      ]
+    },
+    "payload-governance-baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method_source": {
+          "$ref": "#/$defs/reference"
+        },
+        "rule_sets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "delegations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "repository_boundaries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "amendment_reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "method_source",
+        "rule_sets",
+        "delegations",
+        "repository_boundaries",
+        "amendment_reason"
+      ]
+    },
+    "payload-suite-vision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "vision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "mission": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delegated_bounds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "business_glossary": {
+          "$ref": "#/$defs/reference"
+        }
+      },
+      "required": [
+        "vision",
+        "objectives",
+        "mission",
+        "delegated_bounds",
+        "business_glossary"
+      ]
+    },
+    "payload-business-requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behaviors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 1
+        },
+        "quality_requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 0
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "scope_statement",
+        "behaviors",
+        "quality_requirements",
+        "constraints",
+        "exclusions",
+        "unresolved_questions"
+      ]
+    },
+    "payload-system-requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behaviors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 1
+        },
+        "quality_requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 0
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "scope_statement",
+        "behaviors",
+        "quality_requirements",
+        "constraints",
+        "exclusions",
+        "unresolved_questions"
+      ]
+    },
+    "payload-service-requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behaviors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 1
+        },
+        "quality_requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 0
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "scope_statement",
+        "behaviors",
+        "quality_requirements",
+        "constraints",
+        "exclusions",
+        "unresolved_questions"
+      ]
+    },
+    "payload-system-design": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "volatility_rationale": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "component_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "enum": [
+                  "client",
+                  "manager",
+                  "engine",
+                  "access",
+                  "resource",
+                  "utility"
+                ]
+              },
+              "encapsulated_volatility": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "component_id",
+              "role",
+              "encapsulated_volatility"
+            ]
+          },
+          "minItems": 1
+        },
+        "allowed_edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caller_component": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target_component": {
+                "type": "string",
+                "minLength": 1
+              },
+              "interaction": {
+                "enum": [
+                  "synchronous",
+                  "queued",
+                  "event"
+                ]
+              },
+              "contract_ref": {
+                "$ref": "#/$defs/reference"
+              }
+            },
+            "required": [
+              "caller_component",
+              "target_component",
+              "interaction",
+              "contract_ref"
+            ]
+          },
+          "minItems": 0
+        },
+        "core_use_case_validation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "use_case_ref": {
+                "$ref": "#/$defs/reference"
+              },
+              "composition_evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "use_case_ref",
+              "composition_evidence"
+            ]
+          },
+          "minItems": 1
+        },
+        "technology_bounds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "project_design_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "volatility_rationale",
+        "components",
+        "allowed_edges",
+        "core_use_case_validation",
+        "technology_bounds",
+        "project_design_inputs"
+      ]
+    },
+    "payload-detailed-design": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "component_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "system_design": {
+          "$ref": "#/$defs/reference"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "contracts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "contract_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "operations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "operation_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "inputs": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 0
+                    },
+                    "outputs": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 0
+                    },
+                    "failure_behavior": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "operation_id",
+                    "inputs",
+                    "outputs",
+                    "failure_behavior"
+                  ]
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "contract_id",
+              "operations"
+            ]
+          },
+          "minItems": 1
+        },
+        "internal_design": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dependency_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "testability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "component_id",
+        "system_design",
+        "requirements",
+        "contracts",
+        "internal_design",
+        "dependency_constraints",
+        "testability",
+        "open_questions"
+      ]
+    },
+    "payload-system-test-plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "designs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "test_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "case_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "requirement_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "conditions": {
+                "type": "string",
+                "minLength": 1
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected_outcome": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pass_criterion": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "case_id",
+              "requirement_refs",
+              "conditions",
+              "action",
+              "expected_outcome",
+              "pass_criterion"
+            ]
+          },
+          "minItems": 1
+        },
+        "test_harness": {
+          "type": "string",
+          "minLength": 1
+        },
+        "regression_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "requirements",
+        "designs",
+        "test_cases",
+        "test_harness",
+        "regression_scope",
+        "environment_constraints",
+        "unresolved_questions"
+      ]
+    },
+    "payload-service-test-plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "designs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "test_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "case_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "requirement_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "conditions": {
+                "type": "string",
+                "minLength": 1
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected_outcome": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pass_criterion": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "case_id",
+              "requirement_refs",
+              "conditions",
+              "action",
+              "expected_outcome",
+              "pass_criterion"
+            ]
+          },
+          "minItems": 1
+        },
+        "test_harness": {
+          "type": "string",
+          "minLength": 1
+        },
+        "regression_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "requirements",
+        "designs",
+        "test_cases",
+        "test_harness",
+        "regression_scope",
+        "environment_constraints",
+        "unresolved_questions"
+      ]
+    },
+    "payload-software-development-plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "system_design": {
+          "$ref": "#/$defs/reference"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "option_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "classification": {
+                "enum": [
+                  "normal",
+                  "compressed",
+                  "subcritical",
+                  "other"
+                ]
+              },
+              "feasible": {
+                "type": "boolean"
+              },
+              "duration_workdays": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "direct_cost": {
+                "type": "number",
+                "minimum": 0
+              },
+              "indirect_cost": {
+                "type": "number",
+                "minimum": 0
+              },
+              "cost_unit": {
+                "type": "string",
+                "minLength": 1
+              },
+              "risk_model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "risk_value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "network_ref": {
+                "$ref": "#/$defs/reference"
+              },
+              "assumptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "option_id",
+              "classification",
+              "feasible",
+              "duration_workdays",
+              "direct_cost",
+              "indirect_cost",
+              "cost_unit",
+              "risk_model",
+              "risk_value",
+              "network_ref",
+              "assumptions"
+            ]
+          },
+          "minItems": 1
+        },
+        "selected_option_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "do_not_proceed_option": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calendar_and_availability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resource_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rate_baseline": {
+          "$ref": "#/$defs/reference"
+        },
+        "quality_activities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "phase_weight_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "within_owner_bounds": {
+          "type": "boolean"
+        },
+        "management_decision": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "system_design",
+        "options",
+        "selected_option_id",
+        "do_not_proceed_option",
+        "calendar_and_availability",
+        "resource_basis",
+        "rate_baseline",
+        "quality_activities",
+        "phase_weight_basis",
+        "within_owner_bounds",
+        "management_decision"
+      ]
+    },
+    "payload-work-assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "activity_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "activity_kind": {
+          "enum": [
+            "requirements",
+            "design",
+            "exploration",
+            "construction",
+            "test-design",
+            "test-implementation",
+            "integration",
+            "testing",
+            "noncoding"
+          ]
+        },
+        "assigned_worker": {
+          "$ref": "#/$defs/actor"
+        },
+        "assigned_by": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "actor_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "const": "project-manager"
+            }
+          },
+          "required": [
+            "actor_id",
+            "role"
+          ]
+        },
+        "component_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "system_design": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "detailed_design": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "design_review_decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "selected_sdp": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "test_plan": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "test_plan_decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "permitted_outputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "completion_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "authorized_phase": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "activity_id",
+        "activity_kind",
+        "assigned_worker",
+        "assigned_by",
+        "component_id",
+        "requirements",
+        "system_design",
+        "detailed_design",
+        "design_review_decisions",
+        "selected_sdp",
+        "test_plan",
+        "test_plan_decisions",
+        "constraints",
+        "permitted_outputs",
+        "completion_criteria",
+        "authorized_phase"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "activity_kind": {
+                "const": "construction"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "requirements": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "system_design": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "detailed_design": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "design_review_decisions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "selected_sdp": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "activity_kind": {
+                "const": "testing"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "test_plan": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              },
+              "test_plan_decisions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "payload-review-record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/reference"
+        },
+        "review_kind": {
+          "enum": [
+            "requirements",
+            "architecture",
+            "detailed-design",
+            "test-plan",
+            "code",
+            "harness",
+            "sdp",
+            "process"
+          ]
+        },
+        "moderator": {
+          "$ref": "#/$defs/actor"
+        },
+        "artifact_owner": {
+          "$ref": "#/$defs/actor"
+        },
+        "scribe": {
+          "$ref": "#/$defs/actor"
+        },
+        "critics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "actor": {
+                "$ref": "#/$defs/actor"
+              },
+              "expertise": {
+                "type": "string",
+                "minLength": 1
+              },
+              "position": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "actor",
+              "expertise",
+              "position"
+            ]
+          },
+          "minItems": 1
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding"
+          },
+          "minItems": 0
+        },
+        "outcome": {
+          "enum": [
+            "passed",
+            "changes-required",
+            "rejected"
+          ]
+        },
+        "follow_up": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "follow_up_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "subject",
+        "review_kind",
+        "moderator",
+        "artifact_owner",
+        "scribe",
+        "critics",
+        "findings",
+        "outcome",
+        "follow_up",
+        "follow_up_evidence"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "passed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "findings": {
+                "items": {
+                  "not": {
+                    "properties": {
+                      "severity": {
+                        "const": "blocking"
+                      },
+                      "disposition": {
+                        "const": "open"
+                      }
+                    },
+                    "required": [
+                      "severity",
+                      "disposition"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "payload-decision-record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/reference"
+        },
+        "action": {
+          "enum": [
+            "accept-artifact",
+            "select-project-option",
+            "assign-work",
+            "approve-phase-exit",
+            "approve-guideline-departure",
+            "authorize-change",
+            "accept-integration",
+            "accept-business",
+            "approve-instructions"
+          ]
+        },
+        "decider": {
+          "$ref": "#/$defs/actor"
+        },
+        "authority_basis": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "outcome": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected",
+            "changes-required"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decided_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "review_records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "prerequisite_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "requirement_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "result": {
+                "enum": [
+                  "pass",
+                  "fail",
+                  "not-applicable"
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "requirement_id",
+              "result",
+              "rationale",
+              "evidence"
+            ],
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "result": {
+                      "const": "pass"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/reference"
+                      },
+                      "minItems": 1
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "minItems": 0
+        },
+        "within_owner_bounds": {
+          "type": "boolean"
+        },
+        "bound_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "subject",
+        "action",
+        "decider",
+        "authority_basis",
+        "outcome",
+        "reason",
+        "decided_at",
+        "review_records",
+        "prerequisite_checks",
+        "within_owner_bounds",
+        "bound_inputs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "approved"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decided_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "prerequisite_checks": {
+                "minItems": 1,
+                "items": {
+                  "properties": {
+                    "result": {
+                      "enum": [
+                        "pass",
+                        "not-applicable"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "approve-guideline-departure"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decider": {
+                "properties": {
+                  "role": {
+                    "const": "human-owner"
+                  }
+                }
+              },
+              "subject": {
+                "properties": {
+                  "artifact_type": {
+                    "const": "guideline-departure"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "subject": {
+                "properties": {
+                  "artifact_type": {
+                    "enum": [
+                      "system-design",
+                      "system-requirements",
+                      "software-development-plan"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decider": {
+                "properties": {
+                  "role": {
+                    "enum": [
+                      "ceo",
+                      "human-owner"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "within_owner_bounds": {
+                "const": false
+              },
+              "action": {
+                "enum": [
+                  "select-project-option",
+                  "accept-business"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decider": {
+                "properties": {
+                  "role": {
+                    "const": "human-owner"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "payload-change-request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposed_change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "impact_assessments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/impact"
+          },
+          "minItems": 1
+        },
+        "dependent_evidence_to_reassess": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "implementation_disposition": {
+          "enum": [
+            "hold-affected-work",
+            "unaffected-work-may-continue"
+          ]
+        },
+        "requested_decisions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "subjects",
+        "reason",
+        "proposed_change",
+        "impact_assessments",
+        "dependent_evidence_to_reassess",
+        "implementation_disposition",
+        "requested_decisions"
+      ]
+    },
+    "payload-guideline-departure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "enum": [
+            "C-SD-1.a",
+            "C-SD-1.b",
+            "C-SD-1.c",
+            "C-SD-1.d",
+            "C-SD-1.e",
+            "C-SD-2.a",
+            "C-SD-2.b",
+            "C-SD-2.c",
+            "C-SD-2.d",
+            "C-SD-2.e",
+            "C-SD-3.a",
+            "C-SD-3.b",
+            "C-SD-3.c",
+            "C-SD-3.d",
+            "C-SD-3.e",
+            "C-SD-3.f",
+            "C-SD-4.a",
+            "C-SD-4.b",
+            "C-SD-4.c",
+            "C-SD-4.c.i",
+            "C-SD-4.c.ii",
+            "C-SD-4.c.iii",
+            "C-SD-4.c.iv",
+            "C-SD-4.d",
+            "C-SD-5.a",
+            "C-SD-5.b",
+            "C-SD-5.c",
+            "C-SD-5.d",
+            "C-SD-6.a",
+            "C-SD-6.b",
+            "C-SD-6.c",
+            "C-SD-6.d",
+            "C-SD-6.e",
+            "C-SD-6.f",
+            "C-SD-6.g",
+            "C-SD-6.h",
+            "C-SD-6.i",
+            "C-PD-1.a",
+            "C-PD-1.b",
+            "C-PD-1.c",
+            "C-PD-1.d",
+            "C-PD-1.e",
+            "C-PD-1.f",
+            "C-PD-1.g",
+            "C-PD-2.a",
+            "C-PD-2.b",
+            "C-PD-2.c",
+            "C-PD-2.d",
+            "C-PD-2.e",
+            "C-PD-2.f",
+            "C-PD-2.g",
+            "C-PD-2.h",
+            "C-PD-3.a",
+            "C-PD-3.b",
+            "C-PD-4.a",
+            "C-PD-4.b",
+            "C-PD-4.c",
+            "C-PD-4.d",
+            "C-PD-4.e",
+            "C-PD-4.f",
+            "C-PD-4.g",
+            "C-PD-5.a",
+            "C-PD-5.b",
+            "C-PD-5.c",
+            "C-PD-5.d",
+            "C-PD-5.e",
+            "C-PD-5.f",
+            "C-PD-5.g",
+            "C-PD-5.h",
+            "C-PD-5.i",
+            "C-PD-5.j",
+            "C-PD-6.a",
+            "C-PD-6.b",
+            "C-PD-6.c",
+            "C-PD-6.d",
+            "C-PD-6.e",
+            "C-PD-6.f",
+            "C-PD-6.g",
+            "C-PD-7.a",
+            "C-PD-7.b",
+            "C-PD-7.c",
+            "C-PD-7.c.i",
+            "C-PD-7.c.ii",
+            "C-PD-7.d",
+            "C-PD-7.e",
+            "C-PD-7.f",
+            "C-PD-7.g",
+            "C-PD-7.h",
+            "C-PD-7.i",
+            "C-PT-1",
+            "C-PT-2",
+            "C-PT-3",
+            "C-PT-4",
+            "C-PT-5",
+            "C-PT-6",
+            "C-SC-1",
+            "C-SC-2",
+            "C-SC-2.a",
+            "C-SC-2.b",
+            "C-SC-2.c",
+            "C-SC-3",
+            "C-SC-4",
+            "C-SC-5",
+            "C-SC-6"
+          ]
+        },
+        "classification": {
+          "const": "guideline"
+        },
+        "source_context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "strong_unusual_justification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conforming_alternatives_assessed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "consequences": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "bounded_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "affected_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "architect_assessment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "qa_review": {
+          "$ref": "#/$defs/reference"
+        },
+        "human_owner_decision": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "rule_id",
+        "classification",
+        "source_context",
+        "strong_unusual_justification",
+        "conforming_alternatives_assessed",
+        "consequences",
+        "bounded_scope",
+        "affected_inputs",
+        "architect_assessment",
+        "qa_review",
+        "human_owner_decision"
+      ]
+    },
+    "payload-implementation-submission": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "work_assignment": {
+          "$ref": "#/$defs/reference"
+        },
+        "source_snapshot": {
+          "$ref": "#/$defs/reference"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "detailed_design": {
+          "$ref": "#/$defs/reference"
+        },
+        "white_box_test_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "changes_from_design": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "proposed_review": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "work_assignment",
+        "source_snapshot",
+        "requirements",
+        "detailed_design",
+        "white_box_test_evidence",
+        "changes_from_design",
+        "proposed_review"
+      ]
+    },
+    "payload-verification-report": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "test_plan": {
+          "$ref": "#/$defs/reference"
+        },
+        "test_plan_decision": {
+          "$ref": "#/$defs/reference"
+        },
+        "implementation_snapshot": {
+          "$ref": "#/$defs/reference"
+        },
+        "integration_record": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "test_case_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "outcome": {
+                "enum": [
+                  "pass",
+                  "fail",
+                  "not-run"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "test_case_id",
+              "outcome",
+              "evidence"
+            ]
+          },
+          "minItems": 1
+        },
+        "overall_result": {
+          "enum": [
+            "pass",
+            "fail",
+            "incomplete"
+          ]
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "defects": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "test_plan",
+        "test_plan_decision",
+        "implementation_snapshot",
+        "integration_record",
+        "results",
+        "overall_result",
+        "environment",
+        "defects"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "overall_result": {
+                "const": "pass"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "results": {
+                "items": {
+                  "properties": {
+                    "outcome": {
+                      "const": "pass"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "payload-integration-record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "input_snapshots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "code_review_decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "integrated_snapshot": {
+          "$ref": "#/$defs/reference"
+        },
+        "integration_environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actual_dependency_checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "test_results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "authorized_identity": {
+          "$ref": "#/$defs/actor"
+        },
+        "remaining_tests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "input_snapshots",
+        "code_review_decisions",
+        "integrated_snapshot",
+        "integration_environment",
+        "actual_dependency_checks",
+        "test_results",
+        "authorized_identity",
+        "remaining_tests"
+      ]
+    },
+    "payload-phase-exit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "activity_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "enum": [
+            "requirements",
+            "detailed-design",
+            "test-plan",
+            "construction",
+            "integration",
+            "noncoding"
+          ]
+        },
+        "criterion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "credited_fraction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "weight_baseline": {
+          "$ref": "#/$defs/reference"
+        },
+        "recorded_by": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "actor_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "const": "project-manager"
+            }
+          },
+          "required": [
+            "actor_id",
+            "role"
+          ]
+        }
+      },
+      "required": [
+        "activity_id",
+        "phase",
+        "criterion",
+        "completed",
+        "evidence",
+        "credited_fraction",
+        "weight_baseline",
+        "recorded_by"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "completed": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "credited_fraction": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "completed": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reference"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "payload-progress-report": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "period_start": {
+          "type": "string",
+          "format": "date"
+        },
+        "period_end": {
+          "type": "string",
+          "format": "date"
+        },
+        "selected_sdp": {
+          "$ref": "#/$defs/reference"
+        },
+        "completed_phase_records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        },
+        "duration_weighted_progress": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "direct_cost_effort": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rate_baseline": {
+          "$ref": "#/$defs/reference"
+        },
+        "near_critical_float": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "forecast": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requested_commitment_changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "period_start",
+        "period_end",
+        "selected_sdp",
+        "completed_phase_records",
+        "duration_weighted_progress",
+        "direct_cost_effort",
+        "rate_baseline",
+        "near_critical_float",
+        "forecast",
+        "requested_commitment_changes"
+      ]
+    },
+    "payload-conflict-record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dispute": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "#/$defs/reference"
+        },
+        "applicable_constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "rounds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "round_number": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "disputed_subject": {
+                "$ref": "#/$defs/reference"
+              },
+              "architect_position": {
+                "type": "string",
+                "minLength": 1
+              },
+              "product_owner_position": {
+                "type": "string",
+                "minLength": 1
+              },
+              "project_manager_position": {
+                "type": "string",
+                "minLength": 1
+              },
+              "remaining_disagreement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "completed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "round_number",
+              "disputed_subject",
+              "architect_position",
+              "product_owner_position",
+              "project_manager_position",
+              "remaining_disagreement",
+              "completed"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "resolution_status": {
+          "enum": [
+            "open",
+            "resolved",
+            "escalated"
+          ]
+        },
+        "escalation_owner": {
+          "enum": [
+            "ceo",
+            "human-owner"
+          ]
+        },
+        "decision_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "dispute",
+        "subject",
+        "applicable_constraints",
+        "options",
+        "rounds",
+        "resolution_status",
+        "escalation_owner",
+        "decision_refs"
+      ]
+    },
+    "payload-qa-finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "observed_problem": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "root_cause_analysis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preventive_action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "affected_owner_roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "requires_framework_amendment": {
+          "type": "boolean"
+        },
+        "follow_up": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "observed_problem",
+        "evidence",
+        "root_cause_analysis",
+        "preventive_action",
+        "affected_owner_roles",
+        "requires_framework_amendment",
+        "follow_up"
+      ]
+    },
+    "payload-agent-instructions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "issuing_architect": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "actor_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "enum": [
+                "application-architect",
+                "test-architect",
+                "solution-architect"
+              ]
+            }
+          },
+          "required": [
+            "actor_id",
+            "role"
+          ]
+        },
+        "work_assignment": {
+          "$ref": "#/$defs/reference"
+        },
+        "upstream_constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1
+        },
+        "instructions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "within_provided_bounds": {
+          "type": "boolean"
+        },
+        "impact_assessments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/impact"
+          },
+          "minItems": 0
+        },
+        "required_decision_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "issuing_architect",
+        "work_assignment",
+        "upstream_constraints",
+        "instructions",
+        "within_provided_bounds",
+        "impact_assessments",
+        "required_decision_refs"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "governance-baseline"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-governance-baseline"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "suite-vision"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-suite-vision"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "business-requirements"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-business-requirements"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "system-requirements"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-system-requirements"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "service-requirements"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-service-requirements"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "system-design"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-system-design"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "detailed-design"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-detailed-design"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "system-test-plan"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-system-test-plan"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "service-test-plan"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-service-test-plan"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "software-development-plan"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-software-development-plan"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "work-assignment"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-work-assignment"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "review-record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-review-record"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "decision-record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-decision-record"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "change-request"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-change-request"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "guideline-departure"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-guideline-departure"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "implementation-submission"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-implementation-submission"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "verification-report"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-verification-report"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "integration-record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-integration-record"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "phase-exit"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-phase-exit"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "progress-report"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-progress-report"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "conflict-record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-conflict-record"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "qa-finding"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-qa-finding"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_type": {
+            "const": "agent-instructions"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/payload-agent-instructions"
+          }
+        }
+      }
+    }
+  ]
+}

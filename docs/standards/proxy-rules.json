@@ -1,0 +1,84 @@
+{
+  "format": "Standard Technical English component-proxy requirements",
+  "version": 1,
+  "adopted_on": "2026-11-07",
+  "authority": "Explicit human-owner request and boundary-scope clarification.",
+  "scope": "Calls between approved components; not internal collaborator calls.",
+  "dapr_status": "Accepted realization for service invocation; not mandatory or deployed.",
+  "rules": [
+    {
+      "id": "PROXY-01",
+      "when": "A call crosses an approved component boundary",
+      "instruction": "Route the call through a proxy implementing the reviewed component contract. Do not bypass the proxy because components share a process.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-02",
+      "when": "Constructing the call chain",
+      "instruction": "Support dependency injection for the proxy and its required collaborators. Keep registration and lifetime selection in the composition root.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-03",
+      "when": "No service-level separation exists",
+      "instruction": "Generate the typed proxy at build time. Use explicit typed forwarding to the approved implementation behind the boundary.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-04",
+      "when": "Selecting a proxy implementation",
+      "instruction": "Do not implement reflection-based proxy generation or dispatch. Do not use DispatchProxy, reflection emit, MethodInfo.Invoke, or equivalent runtime proxy machinery as a substitute for the required typed proxy.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-05",
+      "when": "A service boundary exists",
+      "instruction": "Use the approved service proxy or invocation boundary with DI-capable application-side wiring. A Dapr sidecar service-invocation route is an accepted realization.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-06",
+      "when": "Registering a component dependency",
+      "instruction": "Resolve the caller-facing contract to the approved proxy chain. Do not expose a direct target registration to callers that bypasses that chain.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-07",
+      "when": "Designing a proxy chain",
+      "instruction": "Preserve allowed Method interactions, reviewed contract semantics, dependency lifetimes, cancellation, and failure behavior. A proxy does not authorize an otherwise prohibited call.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-08",
+      "when": "A call remains inside one component",
+      "instruction": "Do not require a proxy solely because of this policy. Internal collaborator design remains within the reviewed component design.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    },
+    {
+      "id": "PROXY-09",
+      "when": "Changing proxy policy or generated inputs",
+      "instruction": "Escalate to the responsible architect. Workers cannot remove the proxy, weaken its checks, or amend upstream contracts to simplify implementation.",
+      "classification": "owner_implementation_constraint",
+      "decision_owner": "Solution Architect; Application Architect within system bounds",
+      "context": "docs/patterns/component-proxies.md"
+    }
+  ],
+  "implementation_repository": "vc.Ifx",
+  "repository_ownership": "docs/implementation/repository-ownership.md"
+}

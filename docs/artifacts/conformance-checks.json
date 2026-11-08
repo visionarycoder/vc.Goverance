@@ -1,0 +1,168 @@
+{
+  "version": "1.1.0",
+  "status": "Acceptance obligations for future independent validators; not an implemented authorization engine.",
+  "checks": [
+    {
+      "id": "GOV-C01",
+      "validation_layer": "structural",
+      "requirement": "Validate the schema dialect, required fields, conditional rules, and date/time formats.",
+      "rejection_case": "Reject an unsupported version, unknown artifact type, or missing required payload field."
+    },
+    {
+      "id": "GOV-C02",
+      "validation_layer": "operational",
+      "requirement": "Reject example-mode records as operational inputs or evidence.",
+      "rejection_case": "A placeholder example cannot authorize work even when its JSON validates."
+    },
+    {
+      "id": "GOV-C03",
+      "validation_layer": "operational",
+      "requirement": "Resolve references to exact owning-repository artifact revisions and verify byte hashes.",
+      "rejection_case": "Reject missing, moving, mismatched, or withdrawn references; cross-repository access requires separate authorization."
+    },
+    {
+      "id": "GOV-C04",
+      "validation_layer": "operational",
+      "requirement": "Authenticate creator, critics, decider, and delegation scope.",
+      "rejection_case": "A role claim or renamed actor field cannot establish an identity or delegation."
+    },
+    {
+      "id": "GOV-C05",
+      "validation_layer": "operational",
+      "requirement": "Resolve target-specific authority through the decision matrix and upstream bounds.",
+      "rejection_case": "Reject decisions by the wrong role or outside delegated authority."
+    },
+    {
+      "id": "GOV-C06",
+      "validation_layer": "operational",
+      "requirement": "Require CEO approval for Solution Architect-authored decisions and baseline changes.",
+      "rejection_case": "Architect authorship or a technical review alone cannot replace CEO acceptance."
+    },
+    {
+      "id": "GOV-C07",
+      "validation_layer": "operational",
+      "requirement": "Require human-owner approval for every allowed guideline departure.",
+      "rejection_case": "Reject directive waivers and explicit source absolute prohibitions, including twenty-operation contracts."
+    },
+    {
+      "id": "GOV-C08",
+      "validation_layer": "operational",
+      "requirement": "Verify required independent critics and findings disposition against exact reviewed bytes.",
+      "rejection_case": "Reject self-critique, absent required roles, or open blocking findings presented as successful review."
+    },
+    {
+      "id": "GOV-C09",
+      "validation_layer": "operational",
+      "requirement": "Keep implementation and test workers from approving their own deliverables.",
+      "rejection_case": "Changing claimed roles does not evade identity-based independence."
+    },
+    {
+      "id": "GOV-C10",
+      "validation_layer": "operational",
+      "requirement": "Validate the construction handoff against reviewed requirements, system design, detailed design, and selected SDP.",
+      "rejection_case": "A PM assignment cannot stand in for missing design reviews or management acceptance."
+    },
+    {
+      "id": "GOV-C11",
+      "validation_layer": "operational",
+      "requirement": "Preserve SRS-review branching and STP-review dependency.",
+      "rejection_case": "Do not require successful STP review ahead of construction; require it ahead of STP-based testing."
+    },
+    {
+      "id": "GOV-C12",
+      "validation_layer": "operational",
+      "requirement": "Resolve an instruction\u2019s declared bounds against the actual supplied upstream revisions.",
+      "rejection_case": "AA/TA instruction changes cannot silently alter another owner\u2019s input or PM assignment."
+    },
+    {
+      "id": "GOV-C13",
+      "validation_layer": "operational",
+      "requirement": "Require impact-specific decisions and reassessment for affected changed inputs.",
+      "rejection_case": "Old approval evidence does not approve a new revision or silently amend commitments."
+    },
+    {
+      "id": "GOV-C14",
+      "validation_layer": "operational",
+      "requirement": "Validate pass evidence against the reviewed plan and actual integrated source revisions.",
+      "rejection_case": "A passing component test does not replace required system, regression, or real-service integration tests."
+    },
+    {
+      "id": "GOV-C15",
+      "validation_layer": "operational",
+      "requirement": "Credit binary phase completion only from the applicable successful reviews/tests and approved weight basis.",
+      "rejection_case": "Reject spent tokens, time, commits, or incomplete phases presented as earned completion."
+    },
+    {
+      "id": "GOV-C16",
+      "validation_layer": "operational",
+      "requirement": "Check all three positions and summary before counting a conflict round.",
+      "rejection_case": "Reject duplicate round numbers or changed dispute references counted toward the same conflict."
+    },
+    {
+      "id": "GOV-C17",
+      "validation_layer": "operational",
+      "requirement": "Escalate remaining disagreement after three completed rounds.",
+      "rejection_case": "A fourth discussion round cannot postpone required CEO escalation."
+    },
+    {
+      "id": "GOV-C18",
+      "validation_layer": "operational",
+      "requirement": "Keep framework authority, role delegations, and integration settings protected from worker changes.",
+      "rejection_case": "Schema validity does not substitute for independent identities and permission boundaries."
+    },
+    {
+      "id": "GOV-C19",
+      "validation_layer": "operational",
+      "requirement": "Confirm PM assignments preserve one developer per component and one component per developer at a time.",
+      "rejection_case": "Multiple assignments cannot create unauthorized concurrent implementation ownership; preserve the book\u2019s pair-programming distinction."
+    },
+    {
+      "id": "GOV-C20",
+      "validation_layer": "operational",
+      "requirement": "Assess final versus draft state independently of authorization.",
+      "rejection_case": "A final review, test report, or artifact is not an approved work instruction without required decision evidence."
+    },
+    {
+      "id": "GOV-C21",
+      "validation_layer": "operational",
+      "requirement": "Evaluate lifecycle gates for an exact current context and required evidence.",
+      "rejection_case": "Do not treat an old passed gate result or a schema-valid flag as permanent permission."
+    },
+    {
+      "id": "GOV-C22",
+      "validation_layer": "operational",
+      "requirement": "Preserve bounded exploration before complete detailed design and parallel test planning.",
+      "rejection_case": "Do not require STP approval for construction or require complete detailed design to start assigned design exploration."
+    },
+    {
+      "id": "GOV-C23",
+      "validation_layer": "operational",
+      "requirement": "Use recorded no-impact review and a new revision-bound decision for editorial reaffirmation.",
+      "rejection_case": "A worker\u2019s editorial classification cannot transfer approval automatically."
+    },
+    {
+      "id": "GOV-C24",
+      "validation_layer": "operational",
+      "requirement": "Enforce only approved explicit freshness requirements.",
+      "rejection_case": "Age alone does not expire an approval; an explicit applicable expiry cannot be ignored."
+    },
+    {
+      "id": "GOV-C25",
+      "validation_layer": "operational",
+      "requirement": "Verify withdrawal/revocation authority and effective scope.",
+      "rejection_case": "Workers cannot revoke another role\u2019s approval; human-owner approvals remain reserved to that owner."
+    },
+    {
+      "id": "GOV-C26",
+      "validation_layer": "operational",
+      "requirement": "Reassess transitive affected evidence and keep unrelated approved work available.",
+      "rejection_case": "Do not resume affected work on stale inputs or impose an unassessed suite-wide invalidation."
+    },
+    {
+      "id": "GOV-C27",
+      "validation_layer": "operational",
+      "requirement": "Keep historical reports and decisions immutable while showing current rework and validity.",
+      "rejection_case": "Do not erase consumed effort or represent unsupported phase credit as current completion."
+    }
+  ]
+}

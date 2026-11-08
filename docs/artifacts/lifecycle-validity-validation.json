@@ -1,0 +1,423 @@
+{
+  "reviewed_on": "2026-11-08",
+  "status": "Policy-catalog and abstract fixture verification; not operational authorization enforcement.",
+  "gate_count": 13,
+  "validity_rule_count": 23,
+  "case_count": 65,
+  "all_cases_passed": true,
+  "checks": [
+    {
+      "case": "GATE-BASELINE-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-BASELINE-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-BASELINE-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-SDP-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-SDP-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-SDP-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-SRS-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-SRS-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-SRS-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-EXPLORE-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-EXPLORE-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-EXPLORE-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-DESIGN-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-DESIGN-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-DESIGN-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-CONSTRUCT-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-CONSTRUCT-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-CONSTRUCT-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-STP-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-STP-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-STP-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-CODE-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-CODE-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-CODE-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-INTEGRATE-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-INTEGRATE-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-INTEGRATE-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-VERIFY-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-VERIFY-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-VERIFY-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-PHASE-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-PHASE-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-PHASE-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-MILESTONE-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-MILESTONE-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-MILESTONE-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "GATE-RESUME-pass",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "GATE-RESUME-known-failure",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "GATE-RESUME-unverified",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "construction-before-stp-review",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "construction-while-stp-rework",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "construction-held-for-invalid-shared-design",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "exploration-before-complete-design",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "integration-before-stp-review",
+      "expected": "pass",
+      "observed": "pass",
+      "passed": true
+    },
+    {
+      "case": "testing-without-stp-approval",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "code-changed-after-approval",
+      "expected": "fail",
+      "observed": "fail",
+      "passed": true
+    },
+    {
+      "case": "resume-without-impact-disposition",
+      "expected": "blocked",
+      "observed": "blocked",
+      "passed": true
+    },
+    {
+      "case": "validity-exact-approved-context",
+      "expected": "usable",
+      "observed": "usable",
+      "passed": true
+    },
+    {
+      "case": "validity-pending-not-approved",
+      "expected": "not-approved",
+      "observed": "not-approved",
+      "passed": true
+    },
+    {
+      "case": "validity-unresolved-context",
+      "expected": "unresolved",
+      "observed": "unresolved",
+      "passed": true
+    },
+    {
+      "case": "validity-unverified-actor",
+      "expected": "unresolved",
+      "observed": "unresolved",
+      "passed": true
+    },
+    {
+      "case": "validity-missing-required-review",
+      "expected": "unresolved",
+      "observed": "unresolved",
+      "passed": true
+    },
+    {
+      "case": "validity-new-subject-old-approval",
+      "expected": "stale-for-context",
+      "observed": "stale-for-context",
+      "passed": true
+    },
+    {
+      "case": "validity-changed-bound-input",
+      "expected": "stale-for-context",
+      "observed": "stale-for-context",
+      "passed": true
+    },
+    {
+      "case": "validity-editorial-claim-without-new-decision",
+      "expected": "stale-for-context",
+      "observed": "stale-for-context",
+      "passed": true
+    },
+    {
+      "case": "validity-new-reaffirmation-bound-to-current-bytes",
+      "expected": "usable",
+      "observed": "usable",
+      "passed": true
+    },
+    {
+      "case": "validity-pending-impact-review",
+      "expected": "stale-for-context",
+      "observed": "stale-for-context",
+      "passed": true
+    },
+    {
+      "case": "validity-revoked-approval",
+      "expected": "revoked",
+      "observed": "revoked",
+      "passed": true
+    },
+    {
+      "case": "validity-withdrawn-input",
+      "expected": "revoked",
+      "observed": "revoked",
+      "passed": true
+    },
+    {
+      "case": "validity-explicit-freshness-expired",
+      "expected": "expired",
+      "observed": "expired",
+      "passed": true
+    },
+    {
+      "case": "validity-explicit-freshness-met",
+      "expected": "usable",
+      "observed": "usable",
+      "passed": true
+    },
+    {
+      "case": "validity-old-no-blanket-expiry",
+      "expected": "usable",
+      "observed": "usable",
+      "passed": true
+    },
+    {
+      "case": "validity-routine-agent-replacement",
+      "expected": "usable",
+      "observed": "usable",
+      "passed": true
+    },
+    {
+      "case": "validity-replacement-plus-effective-revocation",
+      "expected": "revoked",
+      "observed": "revoked",
+      "passed": true
+    },
+    {
+      "case": "validity-unrelated-scope-changed",
+      "expected": "usable",
+      "observed": "usable",
+      "passed": true
+    }
+  ],
+  "schema_compatibility": {
+    "core_schema_sha256": "3cbe0eaa5facd6cc33273ac8ca461d52dd267ec72cc61f24bac68adfbc3d6bb4",
+    "core_schema_unchanged": true,
+    "existing_examples_revalidated": 23
+  },
+  "policy_hashes": {
+    "docs/process/lifecycle-gates.json": "278f962727f5c73b346d1888ac3de9c600eb69a731d94fbedc6c4694a334cdcc",
+    "docs/governance/change-approval-validity.json": "79f2539d658e9f2628d03a3c06069f61ba4435219b8440d6538ed01f11cf0db7",
+    "docs/artifacts/lifecycle-validity-cases.json": "1b59245b0fb01c12ea1669ff22d228d7de611ec95bcffaf2913f1180640ea538"
+  },
+  "limitations": [
+    "Synthetic facts are not authenticated evidence or permission grants.",
+    "Fixture evaluation checks the documented predicate semantics, not real repositories, identities, or transitive dependency resolution.",
+    "Runtime actor, byte integrity, delegation, source-code correctness, and permission enforcement are not tested here."
+  ],
+  "navigation_checks": {
+    "local_markdown_links_checked": 466,
+    "broken_local_links": 0,
+    "active_json_document_paths_checked": 427,
+    "current_supporting_source_hashes_verified": 4,
+    "removed_technology_sources_restored": false,
+    "governance_artifact_folders_visible_to_git": true
+  }
+}
