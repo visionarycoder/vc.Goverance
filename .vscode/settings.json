@@ -1,0 +1,4 @@
+{
+    "dotnet.preferCSharpExtension": true,
+    "sarif-viewer.connectToGithubCodeScanning": "off"
+}
