@@ -1,7 +1,7 @@
 ---
 metadata-version: "1.0.0"
 title: "Repository-local agent skills"
-description: "Route documentation tasks to focused skills within vc.Governance."
+description: "Route governance documentation and coordination tasks to focused skills."
 document-type: "index"
 repository: "vc.Governance"
 language: "Standard Technical English"
@@ -10,7 +10,7 @@ updated: "2026-11-08"
 
 # Repository-local agent skills
 
-These skills support governance documentation in this repository. They use the existing Method standards, role hierarchy, artifact contracts, and approval routes. They do not instantiate leadership roles, authenticate approvals, enforce worker isolation, or authorize changes in sibling repositories.
+These skills support governance documentation and coordination. They use the existing Method standards, role hierarchy, artifact contracts, and approval routes. They do not instantiate leadership roles, authenticate approvals, enforce worker isolation, or authorize changes in sibling repositories.
 
 The root [agent instructions](../AGENTS.md) remain the repository instructions. No nested override is required.
 
@@ -20,6 +20,7 @@ The root [agent instructions](../AGENTS.md) remain the repository instructions. 
 | Maintain artifact contracts, field descriptions, and fictional examples | [document-governance-artifacts](skills/document-governance-artifacts/SKILL.md) |
 | Record decision context and adopted approval structure | [record-governance-decisions](skills/record-governance-decisions/SKILL.md) |
 | Review Method fidelity, authority, and cross-document consistency | [review-agentic-workflow-docs](skills/review-agentic-workflow-docs/SKILL.md) |
+| Prepare status briefs and escalation packets within existing authority | [governance-admin-assistant](skills/governance-admin-assistant/SKILL.md) |
 
 Invoke a skill by its name, such as `$document-agentic-workflows`, in a client that discovers repository-local skills. Automatic selection depends on the client's skill support. If a skill is not discovered, read its linked instructions directly; do not claim it was installed globally.
 

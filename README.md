@@ -47,3 +47,7 @@ Retained coding constraints and implementation-reference notes are indexed separ
 ## Document quality
 
 Every Markdown file uses the [frontmatter and Standard Technical English contract](docs/standards/markdown-authoring.md). Run `python tools/validate_markdown.py` to check metadata, headings, local file links, and selected wording rules. Run `python -m unittest discover -s tests -p test_markdown_validation.py` to check validator behavior.
+
+## License
+
+Original repository material uses the [MIT License](LICENSE). Third-party material and referenced publications retain their existing terms. The repository license does not replace those terms or license the cited books and external standards.
