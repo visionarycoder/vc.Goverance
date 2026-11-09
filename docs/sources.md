@@ -18,7 +18,7 @@ The Method's source authority and adopted rules remain unchanged. Use printed pa
 
 ## Governing book
 
-[Righting Software: A Method for System and Project Design](https://www.amazon.com/dp/0136524036), Juval Löwy, Addison-Wesley Professional, copyright 2020, ISBN 9780136524038. Appendix C, printed pp. 425–430, is the adopted design standard. See [source authority](governance/source-authority.md) and [review scope](research/source-review.md).
+[Righting Software: A Method for System and Project Design](https://www.amazon.com/dp/0136524036), Juval Löwy, first edition, Addison-Wesley Professional, published December 10, 2019, copyright 2020, ISBN 9780136524038. Appendix C, printed pp. 425–430, is the adopted design standard. See [source authority](governance/source-authority.md) and [review scope](research/source-review.md).
 
 ## Supporting books
 
@@ -26,12 +26,24 @@ These books support specific pattern investigations. Their inclusion does not ad
 
 | Book | Author and reviewed edition | Amazon |
 | --- | --- | --- |
-| Anti-fragile ICT Systems | Kjell Jørgen Hole, 2016; ISBN 9783319300689 | [Book](https://www.amazon.com/dp/3319300687) |
+| Anti-fragile ICT Systems | Kjell Jørgen Hole, first edition, 2016; print ISBN 9783319300689 | [Book](https://www.amazon.com/dp/3319300687) |
 | Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries | Krzysztof Cwalina and Brad Abrams, second edition; ISBN 9780321545619 | [Book](https://www.amazon.com/dp/0321545613) |
 | Metaprogramming in .NET | Kevin Hazzard and Jason Bock, 2013; source copy removed before the reference-directory deletion | [Book](https://www.amazon.com/dp/1617290262) |
 | Designing Data Visualizations | Noah Iliinsky and Julie Steele, 2011; source copy removed before the reference-directory deletion | [Book](https://www.amazon.com/dp/1449312284) |
 
 Amazon links are bibliographic access links, not a claim about current stock, price, or licensing. The Framework Design Guidelines link preserves the reviewed second edition; it does not replace current Microsoft implementation guidance.
+
+## Book-link verification
+
+Checked on 2026-11-08 after automated requests returned Amazon shopping interstitials for three books. No wrong title, author, or edition was identified. The existing Amazon product identifiers are retained.
+
+| Amazon product identifier | Required book and edition | Evidence and result |
+| --- | --- | --- |
+| 0136524036 | Righting Software, Juval Löwy, first edition | [Amazon product details](https://www.amazon.com/dp/0136524036) identify the first edition, publication date December 10, 2019, and ISBN 9780136524038. The listing matches the governing edition. |
+| 0321545613 | Framework Design Guidelines, Krzysztof Cwalina and Brad Abrams, second edition | [Amazon product details](https://www.amazon.com/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613) identify the second edition and ISBN 9780321545619. The listing matches the reviewed edition; do not substitute the third edition. |
+| 3319300687 | Anti-fragile ICT Systems, Kjell Jørgen Hole, first edition, 2016 | [Springer bibliographic details](https://link.springer.com/book/10.1007/978-3-319-30070-2) identify edition 1 and print ISBN 9783319300689. Its ISBN-10 equivalent is 3319300687, matching the Amazon identifier. Amazon's product body remained unavailable, so this is publisher/ISBN corroboration rather than direct Amazon-content verification. |
+
+Amazon can return a shopping interstitial or retrieval error even for a matching product identifier. An HTTP success response alone does not verify a book. Use the evidence above to distinguish an access limitation from a title or edition mismatch. For Anti-fragile ICT Systems, the Springer page also provides an external access route; no source copy is restored to this repository. Its eBook ISBN is 9783319300702, which differs from the print ISBN used by the Amazon link.
 
 ## Supporting papers and articles
 
