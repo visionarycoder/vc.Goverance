@@ -1,18 +1,26 @@
 ---
 metadata-version: "1.0.0"
 title: "vc.Governance"
-description: "Define the repository purpose and the primary governance reading path."
+description: "Govern system and project design, owner architecture constraints, decision rights, and software delivery evidence."
 document-type: "overview"
 repository: "vc.Governance"
 language: "Standard Technical English"
-updated: "2026-11-08"
+updated: "2026-11-09"
 ---
 
 # vc.Governance
 
-vc.Governance defines how agent teams design, assign, write, review, test, integrate, and change software.
+vc.Governance defines the reusable rules, architectural constraints, roles, review and approval responsibilities, and evidence contracts for agent-assisted software projects. It governs how teams design systems and projects, assign work, construct components, review results, test, integrate, and manage change.
 
-Juval Löwy's **The Method** governs system and project design. Appendix C of [Righting Software](https://www.amazon.com/dp/0136524036) is the adopted design standard. The human owner's decisions define the role hierarchy and approval authority.
+Juval Löwy's **The Method**, including volatility-based decomposition, governs system and project design. Appendix C of [Righting Software](https://www.amazon.com/dp/0136524036) is the adopted design standard. The human owner's decisions define additional architecture and implementation constraints, the role hierarchy, and approval authority. Owner-selected constraints remain distinct from rules attributed to Löwy.
+
+## Contents
+
+- Source authority, design standards, and source-review records.
+- Owner-selected technical constraints, including component proxy requirements and coding standards.
+- Role responsibilities, decision routes, lifecycle gates, and change-control policies.
+- Artifact schemas, templates, fictional examples, and validation tools.
+- Repository-local skills for maintaining governance documentation.
 
 ## Start here
 
@@ -36,7 +44,15 @@ Juval Löwy's **The Method** governs system and project design. Appendix C of [R
 
 ## Repository boundaries
 
-vc.Governance owns the rules, process, decision rights, required evidence, and acceptance criteria. Reusable technical mechanisms belong in the distinct vc.Ifx repository. Agent orchestration belongs in its distinct repository; application business artifacts belong with the consuming application. See [repository ownership](docs/implementation/repository-ownership.md). Shared project access does not merge repository authority or authorize cross-repository edits.
+| Repository or environment | Responsibility |
+| --- | --- |
+| vc.Governance | Method rules, owner constraints, roles, process, decision rights, artifact contracts, and acceptance criteria |
+| vc.Agentic | Reusable agent skills, supporting task resources, templates, and illustrative component examples |
+| vc.Ifx | Reusable runtime libraries, integrations, proxies, compiler tooling, and their executable tests |
+| Consuming application | Its business requirements, accepted system and detailed designs, implementation, tests, and operational evidence |
+| Selected execution platform | Worker isolation, authenticated identities, permissions, orchestration, and protected integration |
+
+See [repository ownership](docs/implementation/repository-ownership.md) and [enforcement boundaries](docs/implementation/enforcement-boundaries.md). Shared project access does not merge repository authority or authorize cross-repository edits.
 
 ## Status
 
